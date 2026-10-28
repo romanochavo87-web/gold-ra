@@ -1,0 +1,535 @@
+const I18N={
+en:{"Золотой Базар":"Gold Bazaar","5 стран":"5 countries",
+"Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск всегда бесплатный, а до {u} бесплатно и размещение.":"Buy and sell gold: jewellery, watches, bars and scrap. Search is always free, and posting is free until {u}.",
+"Страна":"Country","Имя":"Name","Как к вам обращаться":"Your name","Телефон":"Phone","Город":"City","Москва":"Moscow",
+"Название магазина (если есть)":"Shop name (optional)","Зарегистрироваться":"Sign up","Размещение объявлений":"Posting listings","бесплатно до {u}":"free until {u}",
+"Поиск: цепь, кольцо 585, часы…":"Search: chain, ring 585, watch…","Все страны":"All countries","Все изделия":"All items"," · пример":" · sample","проба":"gold","г":"g",
+"Ничего не нашлось. Попробуйте другое слово или раздел.":"Nothing found. Try another word or category.","Назад":"Back","Новое объявление":"New listing","Изменить объявление":"Edit listing",
+"Раздел":"Category","Выберите изделие":"Choose an item","Название":"Title","Например: цепь бисмарк":"For example: Bismarck chain","Проба":"Fineness","Вес, г":"Weight, g","Цена":"Price",
+"Кто продаёт":"Seller type","Фото":"Photo","Размещение":"Posting","Перейти к оплате":"Continue to payment","Опубликовать бесплатно":"Publish for free","Сохранить изменения":"Save changes",
+"Изменить":"Edit","Оплата размещения":"Posting fee","Объявление":"Listing","Цена товара":"Item price","К оплате":"To pay","Оплатить":"Pay",
+"Это демо: деньги не списываются. В настоящем приложении здесь будет оплата картой через ЮKassa или другой платёжный сервис.":"This is a demo: no money is charged. The real app will take card payments here through YooKassa or another payment service.",
+"К ленте":"Back to feed","Вес":"Weight","Цена за грамм":"Price per gram","Продавец":"Seller","Телефон продавца":"Seller's phone","Скопировать номер":"Copy number",
+"Встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.":"Meet in a public place and have a jeweller check the fineness before you pay.",
+"Подписаться":"Follow","Вы подписаны":"Following","подписчиков":"followers","объявлений":"listings",
+"Объявления продавца":"Seller's listings","У продавца пока нет активных объявлений.":"This seller has no active listings yet.",
+"Когда продавец выставит новое изделие, оно появится у вас в «Подписках».":"When this seller lists something new, it will show up in your Following tab.",
+"Это ваша страница. Так её видят покупатели.":"This is your page. This is how buyers see it.",
+"Подписки":"Following","Новое от продавцов, на которых вы подписаны":"New from sellers you follow",
+"Вы пока ни на кого не подписаны. Откройте объявление, нажмите на продавца и подпишитесь, чтобы видеть его новые изделия здесь.":"You aren't following anyone yet. Open a listing, tap the seller and follow them to see their new items here.",
+"Лента":"Feed","Кабинет":"Account","Личный кабинет":"My account","Активные":"Active","Проданные":"Sold","Подписчики":"Followers","Моя страница":"My page",
+"Редактировать профиль":"Edit profile","Сохранить":"Save","Мои объявления":"My listings","Пока пусто. Нажмите «+», чтобы выставить изделие.":"Nothing yet. Tap “+” to list an item.",
+"Здесь будут проданные изделия.":"Sold items will appear here.","Продано":"Sold","Выставить снова":"Relist","Удалить":"Delete","Удалить объявление?":"Delete this listing?","Да, удалить":"Yes, delete","Отмена":"Cancel",
+"Язык приложения":"App language","Для проверки":"For testing","Посмотрите, как приложение будет работать после бесплатного месяца.":"See how the app will work after the free month.",
+"Вернуть бесплатный месяц":"Back to the free month","Представить, что месяц прошёл":"Pretend the month is over","Выйти":"Log out",
+"Бесплатно до {u}":"Free until {u}","Потом 100 ₽ за объявление":"Then 100 ₽ per listing","Запуск: первый месяц без оплаты":"Launch offer: first month free",
+"Оплата за размещение одного объявления":"Fee for posting one listing","Бесплатно":"Free","В стране «{c}» размещение пока бесплатное":"Posting is free in {c} for now",
+"Режим после бесплатного месяца":"After-free-month mode","Бесплатный месяц включён":"Free month is on","Оплачено. Объявление опубликовано":"Paid. Your listing is live",
+"Объявление опубликовано бесплатно":"Listing published for free","Изменения сохранены":"Changes saved","Номер скопирован":"Number copied","Выделите номер и скопируйте":"Select the number and copy it",
+"Объявление удалено":"Listing deleted","Отмечено как продано":"Marked as sold","Объявление снова в продаже":"Listing is back on sale","Вы подписались на {n}":"You're following {n}",
+"Подписка отменена":"Unfollowed","Профиль сохранён":"Profile saved","Это вы":"This is you",
+"Цепь":"Chain","Браслет":"Bracelet","Кольцо":"Ring","Серьги":"Earrings","Часы":"Watch","Кулон":"Pendant","Крест":"Cross","Монеты и слитки":"Coins & bars","Лом":"Scrap","Другое":"Other",
+"Частник":"Private seller","Магазин":"Shop","Россия":"Russia","Казахстан":"Kazakhstan","Беларусь":"Belarus","Кыргызстан":"Kyrgyzstan","Узбекистан":"Uzbekistan"},
+uz:{"Золотой Базар":"Oltin Bozor","5 стран":"5 ta davlat",
+"Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск всегда бесплатный, а до {u} бесплатно и размещение.":"Oltin sotib oling va soting: zargarlik buyumlari, soatlar, quymalar va lom. Qidiruv doim bepul, {u} gacha e'lon joylash ham bepul.",
+"Страна":"Davlat","Имя":"Ism","Как к вам обращаться":"Ismingiz","Телефон":"Telefon","Город":"Shahar","Москва":"Toshkent",
+"Название магазина (если есть)":"Do'kon nomi (ixtiyoriy)","Зарегистрироваться":"Ro'yxatdan o'tish","Размещение объявлений":"E'lon joylash","бесплатно до {u}":"{u} gacha bepul",
+"Поиск: цепь, кольцо 585, часы…":"Qidiruv: zanjir, uzuk 585, soat…","Все страны":"Barcha davlatlar","Все изделия":"Barcha buyumlar"," · пример":" · namuna","проба":"proba","г":"g",
+"Ничего не нашлось. Попробуйте другое слово или раздел.":"Hech narsa topilmadi. Boshqa so'z yoki bo'limni sinab ko'ring.","Назад":"Orqaga","Новое объявление":"Yangi e'lon","Изменить объявление":"E'lonni tahrirlash",
+"Раздел":"Bo'lim","Выберите изделие":"Buyumni tanlang","Название":"Nomi","Например: цепь бисмарк":"Masalan: bismark zanjir","Проба":"Proba","Вес, г":"Og'irligi, g","Цена":"Narxi",
+"Кто продаёт":"Kim sotadi","Фото":"Rasm","Размещение":"Joylash","Перейти к оплате":"To'lovga o'tish","Опубликовать бесплатно":"Bepul joylash","Сохранить изменения":"O'zgarishlarni saqlash",
+"Изменить":"Tahrirlash","Оплата размещения":"Joylash to'lovi","Объявление":"E'lon","Цена товара":"Buyum narxi","К оплате":"To'lov","Оплатить":"To'lash",
+"Это демо: деньги не списываются. В настоящем приложении здесь будет оплата картой через ЮKassa или другой платёжный сервис.":"Bu demo: pul yechilmaydi. Haqiqiy ilovada bu yerda karta orqali to'lov bo'ladi.",
+"К ленте":"Lentaga","Вес":"Og'irligi","Цена за грамм":"Gramm narxi","Продавец":"Sotuvchi","Телефон продавца":"Sotuvchi telefoni","Скопировать номер":"Raqamni nusxalash",
+"Встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.":"Gavjum joyda uchrashing va to'lovdan oldin probani zargarga tekshirtiring.",
+"Подписаться":"Obuna bo'lish","Вы подписаны":"Obunasiz","подписчиков":"obunachi","объявлений":"e'lon",
+"Объявления продавца":"Sotuvchi e'lonlari","У продавца пока нет активных объявлений.":"Sotuvchida hozircha faol e'lonlar yo'q.",
+"Когда продавец выставит новое изделие, оно появится у вас в «Подписках».":"Sotuvchi yangi buyum qo'yganda, u «Obunalar» bo'limida chiqadi.",
+"Это ваша страница. Так её видят покупатели.":"Bu sizning sahifangiz. Xaridorlar uni shunday ko'radi.",
+"Подписки":"Obunalar","Новое от продавцов, на которых вы подписаны":"Obuna bo'lgan sotuvchilardan yangi",
+"Вы пока ни на кого не подписаны. Откройте объявление, нажмите на продавца и подпишитесь, чтобы видеть его новые изделия здесь.":"Siz hali hech kimga obuna bo'lmagansiz. E'lonni oching, sotuvchini bosing va obuna bo'ling — uning yangi buyumlari shu yerda chiqadi.",
+"Лента":"Lenta","Кабинет":"Kabinet","Личный кабинет":"Shaxsiy kabinet","Активные":"Faol","Проданные":"Sotilgan","Подписчики":"Obunachilar","Моя страница":"Mening sahifam",
+"Редактировать профиль":"Profilni tahrirlash","Сохранить":"Saqlash","Мои объявления":"Mening e'lonlarim","Пока пусто. Нажмите «+», чтобы выставить изделие.":"Hozircha bo'sh. Buyum qo'yish uchun «+» ni bosing.",
+"Здесь будут проданные изделия.":"Sotilgan buyumlar shu yerda bo'ladi.","Продано":"Sotildi","Выставить снова":"Qayta qo'yish","Удалить":"O'chirish","Удалить объявление?":"E'lon o'chirilsinmi?","Да, удалить":"Ha, o'chirish","Отмена":"Bekor qilish",
+"Язык приложения":"Ilova tili","Для проверки":"Sinov uchun","Посмотрите, как приложение будет работать после бесплатного месяца.":"Bepul oydan keyin ilova qanday ishlashini ko'ring.",
+"Вернуть бесплатный месяц":"Bepul oyni qaytarish","Представить, что месяц прошёл":"Oy o'tdi deb tasavvur qilish","Выйти":"Chiqish",
+"Бесплатно до {u}":"{u} gacha bepul","Потом 100 ₽ за объявление":"Keyin har bir e'lon 100 ₽","Запуск: первый месяц без оплаты":"Ishga tushirish: birinchi oy bepul",
+"Оплата за размещение одного объявления":"Bitta e'lon joylash to'lovi","Бесплатно":"Bepul","В стране «{c}» размещение пока бесплатное":"{c}da e'lon joylash hozircha bepul",
+"Режим после бесплатного месяца":"Bepul oydan keyingi rejim","Бесплатный месяц включён":"Bepul oy yoqildi","Оплачено. Объявление опубликовано":"To'landi. E'lon joylandi",
+"Объявление опубликовано бесплатно":"E'lon bepul joylandi","Изменения сохранены":"O'zgarishlar saqlandi","Номер скопирован":"Raqam nusxalandi","Выделите номер и скопируйте":"Raqamni belgilab nusxalang",
+"Объявление удалено":"E'lon o'chirildi","Отмечено как продано":"Sotilgan deb belgilandi","Объявление снова в продаже":"E'lon yana sotuvda","Вы подписались на {n}":"{n} ga obuna bo'ldingiz",
+"Подписка отменена":"Obuna bekor qilindi","Профиль сохранён":"Profil saqlandi","Это вы":"Bu siz",
+"Цепь":"Zanjir","Браслет":"Bilaguzuk","Кольцо":"Uzuk","Серьги":"Sirg'a","Часы":"Soat","Кулон":"Kulon","Крест":"Xoch","Монеты и слитки":"Tangalar va quymalar","Лом":"Lom","Другое":"Boshqa",
+"Частник":"Xususiy shaxs","Магазин":"Do'kon","Россия":"Rossiya","Казахстан":"Qozog'iston","Беларусь":"Belarus","Кыргызстан":"Qirg'iziston","Узбекистан":"O'zbekiston"},
+kk:{"Золотой Базар":"Алтын Базар","5 стран":"5 ел",
+"Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск всегда бесплатный, а до {u} бесплатно и размещение.":"Алтын сатып алыңыз және сатыңыз: зергерлік бұйымдар, сағаттар, құймалар және сынық. Іздеу әрқашан тегін, ал {u} дейін хабарландыру орналастыру да тегін.",
+"Страна":"Ел","Имя":"Аты","Как к вам обращаться":"Атыңыз","Телефон":"Телефон","Город":"Қала","Москва":"Алматы",
+"Название магазина (если есть)":"Дүкен атауы (міндетті емес)","Зарегистрироваться":"Тіркелу","Размещение объявлений":"Хабарландыру орналастыру","бесплатно до {u}":"{u} дейін тегін",
+"Поиск: цепь, кольцо 585, часы…":"Іздеу: шынжыр, сақина 585, сағат…","Все страны":"Барлық елдер","Все изделия":"Барлық бұйымдар"," · пример":" · үлгі","проба":"сынама","г":"г",
+"Ничего не нашлось. Попробуйте другое слово или раздел.":"Ештеңе табылмады. Басқа сөзді немесе бөлімді көріңіз.","Назад":"Артқа","Новое объявление":"Жаңа хабарландыру","Изменить объявление":"Хабарландыруды өзгерту",
+"Раздел":"Бөлім","Выберите изделие":"Бұйымды таңдаңыз","Название":"Атауы","Например: цепь бисмарк":"Мысалы: бисмарк шынжыр","Проба":"Сынама","Вес, г":"Салмағы, г","Цена":"Бағасы",
+"Кто продаёт":"Кім сатады","Фото":"Фото","Размещение":"Орналастыру","Перейти к оплате":"Төлемге өту","Опубликовать бесплатно":"Тегін жариялау","Сохранить изменения":"Өзгерістерді сақтау",
+"Изменить":"Өзгерту","Оплата размещения":"Орналастыру төлемі","Объявление":"Хабарландыру","Цена товара":"Тауар бағасы","К оплате":"Төлеуге","Оплатить":"Төлеу",
+"Это демо: деньги не списываются. В настоящем приложении здесь будет оплата картой через ЮKassa или другой платёжный сервис.":"Бұл демо: ақша алынбайды. Нақты қосымшада мұнда картамен төлем болады.",
+"К ленте":"Лентаға","Вес":"Салмағы","Цена за грамм":"Грамм бағасы","Продавец":"Сатушы","Телефон продавца":"Сатушының телефоны","Скопировать номер":"Нөмірді көшіру",
+"Встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.":"Адам көп жерде кездесіңіз және төлемге дейін сынаманы зергерге тексертіңіз.",
+"Подписаться":"Жазылу","Вы подписаны":"Жазылдыңыз","подписчиков":"жазылушы","объявлений":"хабарландыру",
+"Объявления продавца":"Сатушының хабарландырулары","У продавца пока нет активных объявлений.":"Сатушыда әзірге белсенді хабарландыру жоқ.",
+"Когда продавец выставит новое изделие, оно появится у вас в «Подписках».":"Сатушы жаңа бұйым қойғанда, ол «Жазылымдар» бөлімінде шығады.",
+"Это ваша страница. Так её видят покупатели.":"Бұл сіздің парақшаңыз. Сатып алушылар оны осылай көреді.",
+"Подписки":"Жазылымдар","Новое от продавцов, на которых вы подписаны":"Жазылған сатушылардан жаңалары",
+"Вы пока ни на кого не подписаны. Откройте объявление, нажмите на продавца и подпишитесь, чтобы видеть его новые изделия здесь.":"Сіз әлі ешкімге жазылмадыңыз. Хабарландыруды ашып, сатушыны басыңыз да, жазылыңыз — оның жаңа бұйымдары осында шығады.",
+"Лента":"Лента","Кабинет":"Кабинет","Личный кабинет":"Жеке кабинет","Активные":"Белсенді","Проданные":"Сатылған","Подписчики":"Жазылушылар","Моя страница":"Менің парақшам",
+"Редактировать профиль":"Профильді өңдеу","Сохранить":"Сақтау","Мои объявления":"Менің хабарландыруларым","Пока пусто. Нажмите «+», чтобы выставить изделие.":"Әзірге бос. Бұйым қою үшін «+» басыңыз.",
+"Здесь будут проданные изделия.":"Сатылған бұйымдар осында болады.","Продано":"Сатылды","Выставить снова":"Қайта қою","Удалить":"Жою","Удалить объявление?":"Хабарландыру жойылсын ба?","Да, удалить":"Иә, жою","Отмена":"Болдырмау",
+"Язык приложения":"Қосымша тілі","Для проверки":"Тексеру үшін","Посмотрите, как приложение будет работать после бесплатного месяца.":"Тегін айдан кейін қосымша қалай жұмыс істейтінін көріңіз.",
+"Вернуть бесплатный месяц":"Тегін айды қайтару","Представить, что месяц прошёл":"Ай өтті деп елестету","Выйти":"Шығу",
+"Бесплатно до {u}":"{u} дейін тегін","Потом 100 ₽ за объявление":"Кейін әр хабарландыру 100 ₽","Запуск: первый месяц без оплаты":"Іске қосу: алғашқы ай тегін",
+"Оплата за размещение одного объявления":"Бір хабарландыру орналастыру төлемі","Бесплатно":"Тегін","В стране «{c}» размещение пока бесплатное":"{c} елінде орналастыру әзірге тегін",
+"Режим после бесплатного месяца":"Тегін айдан кейінгі режим","Бесплатный месяц включён":"Тегін ай қосылды","Оплачено. Объявление опубликовано":"Төленді. Хабарландыру жарияланды",
+"Объявление опубликовано бесплатно":"Хабарландыру тегін жарияланды","Изменения сохранены":"Өзгерістер сақталды","Номер скопирован":"Нөмір көшірілді","Выделите номер и скопируйте":"Нөмірді белгілеп көшіріңіз",
+"Объявление удалено":"Хабарландыру жойылды","Отмечено как продано":"Сатылды деп белгіленді","Объявление снова в продаже":"Хабарландыру қайта сатылымда","Вы подписались на {n}":"{n} жазылдыңыз",
+"Подписка отменена":"Жазылым тоқтатылды","Профиль сохранён":"Профиль сақталды","Это вы":"Бұл сіз",
+"Цепь":"Шынжыр","Браслет":"Білезік","Кольцо":"Сақина","Серьги":"Сырға","Часы":"Сағат","Кулон":"Кулон","Крест":"Крест","Монеты и слитки":"Монеталар мен құймалар","Лом":"Сынық","Другое":"Басқа",
+"Частник":"Жеке тұлға","Магазин":"Дүкен","Россия":"Ресей","Казахстан":"Қазақстан","Беларусь":"Беларусь","Кыргызстан":"Қырғызстан","Узбекистан":"Өзбекстан"}};
+
+
+/* ===== Золотой Базар — рабочая версия на Supabase ===== */
+const SB_URL="https://zhzvwzsmscsdyztelvmi.supabase.co";
+const SB_KEY="sb_publishable_GmABLepcccmopGVEIN-eFQ_FxrfWCLh";
+const sb=window.supabase.createClient(SB_URL,SB_KEY);
+
+const CATS=["Цепь","Браслет","Кольцо","Серьги","Часы","Кулон","Крест","Монеты и слитки","Лом","Другое"];
+const TYPES=["Частник","Магазин","Лом"];
+const PROBES=["375","500","583","585","750","900","958","999"];
+const COUNTRIES={RU:"Россия",KZ:"Казахстан",BY:"Беларусь",KG:"Кыргызстан",UZ:"Узбекистан"};
+const CUR={ru:{RU:"₽",KZ:"₸",BY:"Br",KG:"сом",UZ:"сум"},en:{RU:"₽",KZ:"₸",BY:"Br",KG:"som",UZ:"sum"},
+ uz:{RU:"₽",KZ:"₸",BY:"Br",KG:"som",UZ:"so'm"},kk:{RU:"₽",KZ:"₸",BY:"Br",KG:"сом",UZ:"сум"},ky:{RU:"₽",KZ:"₸",BY:"Br",KG:"сом",UZ:"сум"}};
+const LANGS={ru:"Русский",kk:"Қазақша",ky:"Кыргызча",uz:"Oʻzbekcha",en:"English"};
+const LANG_FLAG={ru:"🇷🇺",kk:"🇰🇿",ky:"🇰🇬",uz:"🇺🇿",en:"🇬🇧"};
+const LANG_CODE={ru:"RU",kk:"KZ",ky:"KG",uz:"UZ",en:"EN"};
+const LOCALE={ru:"ru-RU",en:"en-GB",uz:"uz-UZ",kk:"kk-KZ",ky:"ky-KG"};
+const APP="Gold Ra";
+const LOGO="logo.png";
+const FLAG={RU:"🇷🇺",KZ:"🇰🇿",BY:"🇧🇾",KG:"🇰🇬",UZ:"🇺🇿"};
+/* Страна → город → районы */
+const LOC={
+RU:{"Москва":["Центральный","Северный","Северо-Восточный","Восточный","Юго-Восточный","Южный","Юго-Западный","Западный","Северо-Западный","Зеленоградский","Новомосковский"],
+ "Санкт-Петербург":["Адмиралтейский","Василеостровский","Выборгский","Калининский","Кировский","Красногвардейский","Московский","Невский","Петроградский","Приморский","Фрунзенский","Центральный"],
+ "Новосибирск":["Дзержинский","Железнодорожный","Заельцовский","Калининский","Кировский","Ленинский","Октябрьский","Первомайский","Советский","Центральный"],
+ "Екатеринбург":["Академический","Верх-Исетский","Железнодорожный","Кировский","Ленинский","Октябрьский","Орджоникидзевский","Чкаловский"],
+ "Казань":["Авиастроительный","Вахитовский","Кировский","Московский","Ново-Савиновский","Приволжский","Советский"],
+ "Ростов-на-Дону":["Ворошиловский","Железнодорожный","Кировский","Ленинский","Октябрьский","Первомайский","Пролетарский","Советский"],
+ "Нижний Новгород":[],"Краснодар":[],"Самара":[],"Уфа":[],"Челябинск":[],"Воронеж":[]},
+KZ:{"Алматы":["Алатауский","Алмалинский","Ауэзовский","Бостандыкский","Жетысуский","Медеуский","Наурызбайский","Турксибский"],
+ "Астана":["Алматы","Байконур","Есиль","Нура","Сарыарка"],
+ "Шымкент":["Абайский","Аль-Фарабийский","Енбекшинский","Каратауский","Туран"],
+ "Караганда":[],"Актобе":[],"Атырау":[],"Павлодар":[],"Усть-Каменогорск":[]},
+BY:{"Минск":["Заводской","Ленинский","Московский","Октябрьский","Партизанский","Первомайский","Советский","Фрунзенский","Центральный"],
+ "Гомель":[],"Брест":[],"Гродно":[],"Витебск":[],"Могилёв":[]},
+KG:{"Бишкек":["Ленинский","Октябрьский","Первомайский","Свердловский"],
+ "Ош":[],"Джалал-Абад":[],"Каракол":[],"Токмок":[],"Нарын":[],"Талас":[],"Баткен":[]},
+UZ:{"Ташкент":["Алмазарский","Бектемирский","Мирабадский","Мирзо-Улугбекский","Сергелийский","Учтепинский","Чиланзарский","Шайхантахурский","Юнусабадский","Яккасарайский","Яшнабадский","Янгихаётский"],
+ "Самарканд":[],"Бухара":[],"Андижан":[],"Наманган":[],"Фергана":[],"Карши":[],"Нукус":[],"Ургенч":[]}};
+const ALL_RU={RU:"Вся Россия",KZ:"Весь Казахстан",BY:"Вся Беларусь",KG:"Весь Кыргызстан",UZ:"Весь Узбекистан"};
+const MORE_LOC={
+en:{"Выберите страну":"Choose a country","Весь город":"Whole city","Район":"District","Где искать":"Where to search"},
+uz:{"Выберите страну":"Davlatni tanlang","Весь город":"Butun shahar","Район":"Tuman","Где искать":"Qayerdan qidirish"},
+kk:{"Выберите страну":"Елді таңдаңыз","Весь город":"Бүкіл қала","Район":"Аудан","Где искать":"Қайдан іздеу"}};
+
+
+
+const FEE_RUB=100;
+
+/* Дополнительные строки к общему словарю */
+const MORE={
+en:{"Вход":"Log in","Эл. почта":"Email","Пароль":"Password","Минимум 6 символов":"At least 6 characters","Войти":"Log in",
+"Уже есть аккаунт? Войти":"Already have an account? Log in","Нет аккаунта? Зарегистрироваться":"No account? Sign up","Неверная почта или пароль.":"Wrong email or password.",
+"Мы отправили письмо на {e}. Откройте его, подтвердите почту и войдите.":"We sent an email to {e}. Open it, confirm your address and log in.",
+"Не удалось загрузить. Проверьте интернет и попробуйте ещё раз.":"Couldn't load. Check your connection and try again.","Загрузка…":"Loading…",
+"Пока нет объявлений. Станьте первым — нажмите «+».":"No listings yet. Be the first — tap “+”.","Ждёт оплаты":"Awaiting payment",
+"Объявление сохранено и ждёт оплаты. Приём платежей подключим в ближайшее время — объявление появится в ленте сразу после оплаты.":"Your listing is saved and awaiting payment. Card payments are coming soon — it will go live right after payment.",
+"Публикуем…":"Publishing…","Ошибка: {m}":"Error: {m}","Установить приложение":"Install the app",
+"Добавьте на главный экран: меню браузера → «На главный экран».":"Add it to your home screen: browser menu → “Add to Home screen”.","Установить":"Install",
+"Заполните профиль":"Complete your profile","Повторить":"Try again","Это ваше объявление":"This is your listing"},
+uz:{"Вход":"Kirish","Эл. почта":"Elektron pochta","Пароль":"Parol","Минимум 6 символов":"Kamida 6 ta belgi","Войти":"Kirish",
+"Уже есть аккаунт? Войти":"Akkauntingiz bormi? Kirish","Нет аккаунта? Зарегистрироваться":"Akkaunt yo'qmi? Ro'yxatdan o'ting","Неверная почта или пароль.":"Pochta yoki parol noto'g'ri.",
+"Мы отправили письмо на {e}. Откройте его, подтвердите почту и войдите.":"{e} manziliga xat yubordik. Uni oching, pochtani tasdiqlang va kiring.",
+"Не удалось загрузить. Проверьте интернет и попробуйте ещё раз.":"Yuklab bo'lmadi. Internetni tekshirib, qayta urinib ko'ring.","Загрузка…":"Yuklanmoqda…",
+"Пока нет объявлений. Станьте первым — нажмите «+».":"Hozircha e'lonlar yo'q. Birinchi bo'ling — «+» ni bosing.","Ждёт оплаты":"To'lov kutilmoqda",
+"Объявление сохранено и ждёт оплаты. Приём платежей подключим в ближайшее время — объявление появится в ленте сразу после оплаты.":"E'lon saqlandi va to'lovni kutmoqda. To'lov tez orada ulanadi — to'lovdan so'ng e'lon lentada chiqadi.",
+"Публикуем…":"Joylanmoqda…","Ошибка: {m}":"Xato: {m}","Установить приложение":"Ilovani o'rnatish",
+"Добавьте на главный экран: меню браузера → «На главный экран».":"Bosh ekranga qo'shing: brauzer menyusi → «Bosh ekranga qo'shish».","Установить":"O'rnatish",
+"Заполните профиль":"Profilni to'ldiring","Повторить":"Qayta urinish","Это ваше объявление":"Bu sizning e'loningiz"},
+kk:{"Вход":"Кіру","Эл. почта":"Эл. пошта","Пароль":"Құпиясөз","Минимум 6 символов":"Кемінде 6 таңба","Войти":"Кіру",
+"Уже есть аккаунт? Войти":"Аккаунтыңыз бар ма? Кіру","Нет аккаунта? Зарегистрироваться":"Аккаунт жоқ па? Тіркеліңіз","Неверная почта или пароль.":"Пошта немесе құпиясөз қате.",
+"Мы отправили письмо на {e}. Откройте его, подтвердите почту и войдите.":"{e} поштасына хат жібердік. Оны ашып, поштаны растаңыз да, кіріңіз.",
+"Не удалось загрузить. Проверьте интернет и попробуйте ещё раз.":"Жүктеу мүмкін болмады. Интернетті тексеріп, қайталап көріңіз.","Загрузка…":"Жүктелуде…",
+"Пока нет объявлений. Станьте первым — нажмите «+».":"Әзірге хабарландыру жоқ. Бірінші болыңыз — «+» басыңыз.","Ждёт оплаты":"Төлемді күтуде",
+"Объявление сохранено и ждёт оплаты. Приём платежей подключим в ближайшее время — объявление появится в ленте сразу после оплаты.":"Хабарландыру сақталды және төлемді күтуде. Төлем жақында қосылады — төлегеннен кейін лентада шығады.",
+"Публикуем…":"Жариялануда…","Ошибка: {m}":"Қате: {m}","Установить приложение":"Қосымшаны орнату",
+"Добавьте на главный экран: меню браузера → «На главный экран».":"Басты экранға қосыңыз: браузер мәзірі → «Басты экранға қосу».","Установить":"Орнату",
+"Заполните профиль":"Профильді толтырыңыз","Повторить":"Қайталау","Это ваше объявление":"Бұл сіздің хабарландыруыңыз"}};
+I18N.ky={"Страна":"Өлкө","Имя":"Аты","Как к вам обращаться":"Атыңыз","Телефон":"Телефон","Город":"Шаар","Москва":"Бишкек",
+"Название магазина (если есть)":"Дүкөндүн аты (бар болсо)","Зарегистрироваться":"Катталуу",
+"Поиск: цепь, кольцо 585, часы…":"Издөө: чынжыр, шакек 585, саат…","Все страны":"Бардык өлкөлөр","Все изделия":"Бардык буюмдар"," · пример":" · үлгү","проба":"проба","г":"г",
+"Ничего не нашлось. Попробуйте другое слово или раздел.":"Эч нерсе табылган жок. Башка сөздү же бөлүмдү байкап көрүңүз.","Назад":"Артка","Новое объявление":"Жаңы жарнама","Изменить объявление":"Жарнаманы өзгөртүү",
+"Раздел":"Бөлүм","Выберите изделие":"Буюмду тандаңыз","Название":"Аталышы","Например: цепь бисмарк":"Мисалы: бисмарк чынжыры","Проба":"Проба","Вес, г":"Салмагы, г","Цена":"Баасы",
+"Кто продаёт":"Ким сатат","Фото":"Сүрөт","Опубликовать бесплатно":"Акысыз жарыялоо","Сохранить изменения":"Өзгөрүүлөрдү сактоо","Изменить":"Өзгөртүү",
+"К ленте":"Лентага","Вес":"Салмагы","Цена за грамм":"Граммдын баасы","Продавец":"Сатуучу","Телефон продавца":"Сатуучунун телефону","Скопировать номер":"Номерди көчүрүү",
+"Встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.":"Эл көп жерде жолугуңуз жана төлөөдөн мурун пробаны зергерге текшертиңиз.",
+"Подписаться":"Жазылуу","Вы подписаны":"Жазылдыңыз","подписчиков":"жазылуучу","объявлений":"жарнама",
+"Объявления продавца":"Сатуучунун жарнамалары","У продавца пока нет активных объявлений.":"Сатуучуда азырынча активдүү жарнама жок.",
+"Когда продавец выставит новое изделие, оно появится у вас в «Подписках».":"Сатуучу жаңы буюм койгондо, ал «Жазылуулар» бөлүмүндө чыгат.",
+"Это ваша страница. Так её видят покупатели.":"Бул сиздин барагыңыз. Сатып алуучулар аны ушундай көрөт.",
+"Подписки":"Жазылуулар","Новое от продавцов, на которых вы подписаны":"Жазылган сатуучулардын жаңылары",
+"Вы пока ни на кого не подписаны. Откройте объявление, нажмите на продавца и подпишитесь, чтобы видеть его новые изделия здесь.":"Сиз азырынча эч кимге жазыла элексиз. Жарнаманы ачып, сатуучуну басыңыз да жазылыңыз — анын жаңы буюмдары ушул жерде чыгат.",
+"Лента":"Лента","Кабинет":"Кабинет","Личный кабинет":"Жеке кабинет","Активные":"Активдүү","Проданные":"Сатылган","Подписчики":"Жазылуучулар","Моя страница":"Менин барагым",
+"Редактировать профиль":"Профилди өзгөртүү","Сохранить":"Сактоо","Мои объявления":"Менин жарнамаларым","Пока пусто. Нажмите «+», чтобы выставить изделие.":"Азырынча бош. Буюм коюу үчүн «+» басыңыз.",
+"Здесь будут проданные изделия.":"Бул жерде сатылган буюмдар болот.","Продано":"Сатылды","Выставить снова":"Кайра коюу","Удалить":"Өчүрүү","Удалить объявление?":"Жарнама өчүрүлсүнбү?","Да, удалить":"Ооба, өчүрүү","Отмена":"Жокко чыгаруу",
+"Язык приложения":"Колдонмонун тили","Выйти":"Чыгуу","Бесплатно":"Акысыз",
+"Объявление опубликовано бесплатно":"Жарнама акысыз жарыяланды","Изменения сохранены":"Өзгөрүүлөр сакталды","Номер скопирован":"Номер көчүрүлдү","Выделите номер и скопируйте":"Номерди белгилеп көчүрүңүз",
+"Объявление удалено":"Жарнама өчүрүлдү","Отмечено как продано":"Сатылды деп белгиленди","Объявление снова в продаже":"Жарнама кайра сатыкта","Вы подписались на {n}":"{n} жазылдыңыз",
+"Подписка отменена":"Жазылуу токтотулду","Профиль сохранён":"Профиль сакталды","Это вы":"Бул сиз",
+"Цепь":"Чынжыр","Браслет":"Билерик","Кольцо":"Шакек","Серьги":"Сөйкө","Часы":"Саат","Кулон":"Кулон","Крест":"Крест","Монеты и слитки":"Тыйындар жана куймалар","Лом":"Сынык","Другое":"Башка",
+"Частник":"Жеке адам","Магазин":"Дүкөн","Россия":"Россия","Казахстан":"Казакстан","Беларусь":"Беларусь","Кыргызстан":"Кыргызстан","Узбекистан":"Өзбекстан",
+"Выберите страну":"Өлкөнү тандаңыз","Весь город":"Бүт шаар","Район":"Район","Где искать":"Кайдан издөө",
+"Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск и размещение объявлений — бесплатно.":"Алтын сатып алыңыз жана сатыңыз: зергер буюмдары, сааттар, куймалар жана сынык. Издөө жана жарнама жайгаштыруу — акысыз."};
+I18N.en["Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск и размещение объявлений — бесплатно."]="Buy and sell gold: jewellery, watches, bars and scrap. Searching and posting listings is free.";
+I18N.uz["Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск и размещение объявлений — бесплатно."]="Oltin sotib oling va soting: zargarlik buyumlari, soatlar, quymalar va lom. Qidiruv va e'lon joylash — bepul.";
+I18N.kk["Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск и размещение объявлений — бесплатно."]="Алтын сатып алыңыз және сатыңыз: зергерлік бұйымдар, сағаттар, құймалар және сынық. Іздеу және хабарландыру орналастыру — тегін.";
+
+MORE.ky={"Вход":"Кирүү","Эл. почта":"Эл. почта","Пароль":"Сырсөз","Минимум 6 символов":"Кеминде 6 белги","Войти":"Кирүү",
+"Уже есть аккаунт? Войти":"Аккаунтуңуз барбы? Кирүү","Нет аккаунта? Зарегистрироваться":"Аккаунт жокпу? Катталыңыз","Неверная почта или пароль.":"Почта же сырсөз туура эмес.",
+"Мы отправили письмо на {e}. Откройте его, подтвердите почту и войдите.":"{e} дарегине кат жөнөттүк. Аны ачып, почтаны ырастаңыз да кириңиз.",
+"Не удалось загрузить. Проверьте интернет и попробуйте ещё раз.":"Жүктөө мүмкүн болгон жок. Интернетти текшерип, кайра аракет кылыңыз.","Загрузка…":"Жүктөлүүдө…",
+"Пока нет объявлений. Станьте первым — нажмите «+».":"Азырынча жарнама жок. Биринчи болуңуз — «+» басыңыз.","Публикуем…":"Жарыяланууда…","Ошибка: {m}":"Ката: {m}",
+"Установить приложение":"Колдонмону орнотуу","Добавьте на главный экран: меню браузера → «На главный экран».":"Башкы экранга кошуңуз: браузердин менюсу → «Башкы экранга кошуу».","Установить":"Орнотуу",
+"Заполните профиль":"Профилди толтуруңуз","Повторить":"Кайталоо","Это ваше объявление":"Бул сиздин жарнамаңыз"};
+for(const l in MORE)Object.assign(I18N[l],MORE[l]);
+for(const l in MORE_LOC)Object.assign(I18N[l],MORE_LOC[l]);
+
+/* ---------- Состояние ---------- */
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const navLang=(navigator.language||"ru").slice(0,2).toLowerCase();
+const S={session:null,me:null,settings:{free_until:"2026-11-27T00:00:00Z",paid_countries:["RU"]},
+ ads:[],profiles:{},counts:{},subs:[],view:"loading",authMode:"signup",q:"",cat:"",cc:"",
+ draft:null,editId:null,open:null,seller:null,back:"feed",tab:"active",editProfile:false,confirmDel:null,busy:false,err:"",
+ lang:store.get("zb_lang")||(LANGS[navLang]?navLang:({kz:"kk",kg:"ky",be:"ru"}[navLang]||"ru")),installEvt:null,
+ pick:null,loc:(()=>{try{return JSON.parse(store.get("zb_loc"))||{cc:"",city:"",dist:""}}catch(e){return {cc:"",city:"",dist:""}}})()};
+
+/* ---------- Помощники ---------- */
+const t=(ru,v)=>{let s=(I18N[S.lang]||{})[ru]||ru;if(v)for(const k in v)s=s.replace("{"+k+"}",v[k]);return s};
+const cname=c=>t(COUNTRIES[c]);
+const allOf=c=>({ru:ALL_RU[c],en:"All of "+cname(c),uz:cname(c)+" bo'ylab",kk:"Бүкіл "+cname(c),ky:"Бүт "+cname(c)})[S.lang];
+const locLabel=()=>!S.loc.cc?t("Все страны"):S.loc.city?S.loc.city+(S.loc.dist?", "+S.loc.dist:""):allOf(S.loc.cc);
+const inLoc=a=>(!S.loc.cc||a.country===S.loc.cc)&&(!S.loc.city||a.city===S.loc.city)&&(!S.loc.dist||a.dist===S.loc.dist);
+const place=a=>`${FLAG[a.country]||""} ${esc(a.city)}${a.dist?", "+esc(a.dist):""}`;
+const isNative=!!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform());
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=(n,c)=>Number(n).toLocaleString(S.lang==="en"?"en-US":"ru-RU")+" "+CUR[S.lang][c||"RU"];
+const freeUntil=()=>new Date(S.settings.free_until);
+const freeMonth=()=>new Date()<freeUntil();
+const isPaid=c=>(S.settings.paid_countries||[]).includes(c);
+const fee=c=>0; /* пока размещение бесплатное везде */
+const untilStr=()=>{try{return freeUntil().toLocaleDateString(LOCALE[S.lang],{day:"numeric",month:"long"})}catch(e){return freeUntil().toLocaleDateString("ru-RU")}};
+const uid=()=>S.session?.user?.id;
+const prof=id=>S.profiles[id]||{name:"…",city:"",country:"RU",phone:""};
+const sname=p=>p.shop||p.name;
+const stype=p=>p.shop?"Магазин":"Частник";
+const followers=id=>S.counts[id]||0;
+function feeLine(c){const f=fee(c),u=untilStr();
+ if(freeMonth())return {f,txt:t("Бесплатно до {u}",{u}),sub:isPaid(c)?t("Потом 100 ₽ за объявление"):t("Запуск: первый месяц без оплаты")};
+ if(f)return {f,txt:`${f} ₽`,sub:t("Оплата за размещение одного объявления")};
+ return {f,txt:t("Бесплатно"),sub:t("В стране «{c}» размещение пока бесплатное",{c:cname(c)})}}
+function toast(m){const el=$("#toast");el.textContent=m;el.hidden=false;clearTimeout(el._t);el._t=setTimeout(()=>el.hidden=true,2600)}
+function fail(e){console.error(e);toast(t("Ошибка: {m}",{m:e?.message||e}))}
+function go(v){S.view=v;S.confirmDel=null;render();window.scrollTo(0,0)}
+function ph(a,cls){return a.photo_url?`<img class="${cls}" src="${esc(a.photo_url)}" alt="" loading="lazy">`:`<div class="${cls}">Au</div>`}
+const ava=(id,big)=>`<span class="ava${big?" big":""}">${esc((sname(prof(id))||"?").replace(/[«"]/g,"").trim()[0]||"?")}</span>`;
+const langSwitch=()=>`<div class="chips" style="padding:0;flex-wrap:wrap">${Object.entries(LANGS).map(([k,v])=>`<button class="chip ${S.lang===k?"on":""}" data-lang="${k}">${v}</button>`).join("")}</div>`;
+const card=a=>`<button class="item" data-open="${a.id}">${ph(a,"ph")}
+  <div class="t"><span class="tag">${esc(t(a.cat))}</span>
+  <span class="price">${money(a.price,a.country)}</span><span class="name">${esc(a.title)}</span>
+  <span class="meta">${esc(a.probe)} ${t("проба")} · ${Number(a.weight)} ${t("г")} · ${place(a)}</span></div></button>`;
+const followBtn=id=>id===uid()?"":`<button class="btn ${S.subs.includes(id)?"ghost":"gold"} follow" data-follow="${id}">${S.subs.includes(id)?"✓ "+t("Вы подписаны"):t("Подписаться")}</button>`;
+const installBox=()=>window.matchMedia("(display-mode: standalone)").matches?"":`<div class="box" style="margin-top:12px"><b>${t("Установить приложение")}</b>
+ ${S.installEvt?`<button class="btn gold" id="install">${t("Установить")}</button>`:`<p class="note" style="margin:0">${t("Добавьте на главный экран: меню браузера → «На главный экран».")}</p>`}</div>`;
+
+/* ---------- Данные ---------- */
+async function loadProfiles(ids){const need=[...new Set(ids)].filter(id=>id&&!S.profiles[id]);if(!need.length)return;
+ const {data,error}=await sb.from("profiles").select("id,name,shop,phone,city,country").in("id",need);if(error)throw error;
+ data.forEach(p=>S.profiles[p.id]=p)}
+async function loadCounts(ids){const list=[...new Set(ids)].filter(Boolean);if(!list.length)return;
+ const {data,error}=await sb.from("follower_counts").select("seller,followers").in("seller",list);if(error)throw error;
+ list.forEach(id=>S.counts[id]=0);data.forEach(r=>S.counts[r.seller]=r.followers)}
+async function loadFeed(){const {data,error}=await sb.from("ads").select("*").eq("status","active").order("created_at",{ascending:false}).limit(300);
+ if(error)throw error;S.ads=data;await loadProfiles(data.map(a=>a.user_id))}
+async function loadMine(){if(!uid())return [];const {data,error}=await sb.from("ads").select("*").eq("user_id",uid()).order("created_at",{ascending:false});if(error)throw error;return data}
+async function loadSubs(){if(!uid())return;const {data,error}=await sb.from("follows").select("seller").eq("follower",uid());if(error)throw error;S.subs=data.map(r=>r.seller)}
+async function loadSettings(){const {data}=await sb.from("app_settings").select("free_until,paid_countries").eq("id",1).maybeSingle();if(data)S.settings=data}
+async function loadMe(){if(!uid()){S.me=null;return}
+ const {data,error}=await sb.from("profiles").select("*").eq("id",uid()).maybeSingle();if(error)throw error;
+ if(!data){const pend=JSON.parse(store.get("zb_pending")||"null");
+  if(pend){const ins={...pend,id:uid(),lang:S.lang};const r=await sb.from("profiles").insert(ins).select().single();if(r.error)throw r.error;S.me=r.data;store.set("zb_pending","")}
+  else S.me=null}
+ else S.me=data;
+ if(S.me)S.profiles[S.me.id]=S.me}
+
+/* ---------- Экраны ---------- */
+function vPick(){const p=S.pick;let title,body;
+ if(p.step==="lang"){title=t("Язык приложения");
+  body=Object.keys(LANGS).map(k=>`<button class="prow ${S.lang===k?"on":""}" data-lang="${k}">${LANG_FLAG[k]} ${LANGS[k]}${S.lang===k?"<span>✓</span>":""}</button>`).join("")}
+ else if(p.step==="cc"){title=t("Выберите страну");
+  body=`<button class="prow strong ${!S.loc.cc?"on":""}" data-pcc="">🌍 ${t("Все страны")}</button>`+Object.keys(COUNTRIES).map(k=>`<button class="prow ${S.loc.cc===k?"on":""}" data-pcc="${k}">${FLAG[k]} ${cname(k)}<span>›</span></button>`).join("")}
+ else if(p.step==="city"){title=`${FLAG[p.cc]} ${cname(p.cc)}`;
+  body=`<button class="prow strong ${S.loc.cc===p.cc&&!S.loc.city?"on":""}" data-pcity="">${allOf(p.cc)}</button>`+Object.keys(LOC[p.cc]).map(c=>`<button class="prow ${S.loc.city===c?"on":""}" data-pcity="${esc(c)}">${esc(c)}${LOC[p.cc][c].length?"<span>›</span>":""}</button>`).join("")}
+ else{title=esc(p.city);
+  body=`<button class="prow strong ${S.loc.city===p.city&&!S.loc.dist?"on":""}" data-pdist="">${t("Весь город")}</button>`+LOC[p.cc][p.city].map(x=>`<button class="prow ${S.loc.dist===x?"on":""}" data-pdist="${esc(x)}">${esc(x)}</button>`).join("")}
+ return `<div class="sheet-bg" data-pclose="1"></div><div class="sheet" role="dialog" aria-label="${t("Где искать")}"><div class="sheet-h">${p.step==="city"||p.step==="dist"?`<button class="back" data-pback="1">← ${t("Назад")}</button>`:"<span></span>"}<b>${title}</b><button class="back" data-pclose="1" aria-label="close">✕</button></div><div class="sheet-list">${body}</div></div>`}
+const langBtn=()=>`<button class="langbtn" data-picklang="1" aria-label="${t("Язык приложения")}">${LANG_FLAG[S.lang]} ${LANG_CODE[S.lang]}</button>`;
+function setLoc(l){S.loc=l;S.pick=null;store.set("zb_loc",JSON.stringify(l));render();window.scrollTo(0,0)}
+
+function vLoading(){return `<div class="empty" style="margin-top:40vh">${S.err?`${t("Не удалось загрузить. Проверьте интернет и попробуйте ещё раз.")}<br><br><button class="btn ghost" id="retry">${t("Повторить")}</button>`:t("Загрузка…")}</div>`}
+
+function vAuth(){const up=S.authMode==="signup";return `
+<div class="screen" style="margin-top:20px">
+ <div class="authtop">${langBtn()}</div>
+ <div class="hero"><img src="${LOGO}" alt="Gold Ra"><h1>${APP}</h1></div>
+ <p class="note" style="font-size:15px;text-align:center">${t("Покупайте и продавайте золото: украшения, часы, слитки и лом. Поиск и размещение объявлений — бесплатно.")}</p>
+ <form class="form" id="auth">
+  <label>${t("Эл. почта")}<input id="a-email" type="email" required autocomplete="email"></label>
+  <label>${t("Пароль")}<input id="a-pass" type="password" required minlength="6" placeholder="${t("Минимум 6 символов")}" autocomplete="${up?"new-password":"current-password"}"></label>
+  ${up?profileFields({}):""}
+  <button class="btn gold" ${S.busy?"disabled":""}>${up?t("Зарегистрироваться"):t("Войти")}</button>
+ </form>
+ <button class="back" id="swap" style="text-align:center">${up?t("Уже есть аккаунт? Войти"):t("Нет аккаунта? Зарегистрироваться")}</button>
+ ${S.err?`<p class="note" style="color:var(--gold)">${esc(S.err)}</p>`:""}
+</div>`}
+
+function profileFields(u){return `
+  <div class="row2"><label>${t("Страна")}<select id="p-country">${Object.keys(COUNTRIES).map(k=>`<option value="${k}" ${u.country===k?"selected":""}>${cname(k)}</option>`).join("")}</select></label>
+  <label>${t("Город")}<input id="p-city" required maxlength="80" value="${esc(u.city)}" placeholder="${t("Москва")}"></label></div>
+  <label>${t("Имя")}<input id="p-name" required maxlength="80" value="${esc(u.name)}" placeholder="${t("Как к вам обращаться")}"></label>
+  <label>${t("Телефон")}<input id="p-phone" required type="tel" maxlength="30" value="${esc(u.phone)}" placeholder="+7 900 000-00-00"></label>
+  <label>${t("Название магазина (если есть)")}<input id="p-shop" maxlength="80" value="${esc(u.shop)}"></label>`}
+const readProfile=()=>({name:$("#p-name").value.trim(),phone:$("#p-phone").value.trim(),city:$("#p-city").value.trim(),country:$("#p-country").value,shop:$("#p-shop").value.trim()||null});
+
+function vOnboard(){return `<div class="screen" style="margin-top:20px"><h1>${t("Заполните профиль")}</h1>
+ <form class="form" id="onb">${profileFields({})}<button class="btn gold">${t("Сохранить")}</button></form></div>`}
+
+function vFeed(){
+ const q=S.q.trim().toLowerCase();
+ const hay=a=>{const p=prof(a.user_id);return [a.title,a.cat,...Object.values(I18N).map(d=>d[a.cat]),a.city,a.dist,a.probe,p.name,p.shop,COUNTRIES[a.country],...Object.values(I18N).map(d=>d[COUNTRIES[a.country]])].join(" ").toLowerCase()};
+ const list=S.ads.filter(a=>inLoc(a)&&(!S.cat||a.cat===S.cat)&&(!q||hay(a).includes(q)));
+ return `
+<div class="top"><button class="locbtn" data-pickopen="1" aria-label="${t("Где искать")}">${S.loc.cc?FLAG[S.loc.cc]:"🌍"}</button>
+<div class="brandname"><img src="${LOGO}" alt=""><h1>${APP}</h1></div>${langBtn()}</div>
+<button class="locline" data-pickopen="1">${esc(locLabel())} ▾</button>
+<div class="search"><input id="q" type="search" placeholder="${t("Поиск: цепь, кольцо 585, часы…")}" value="${esc(S.q)}"></div>
+<div class="chips"><button class="chip ${S.cat?"":"on"}" data-cat="">${t("Все изделия")}</button>${CATS.map(c=>`<button class="chip ${S.cat===c?"on":""}" data-cat="${c}">${t(c)}</button>`).join("")}</div>
+<div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${S.ads.length?t("Ничего не нашлось. Попробуйте другое слово или раздел."):t("Пока нет объявлений. Станьте первым — нажмите «+».")}</div>`}</div>`}
+
+function vSubs(){const list=S.ads.filter(a=>S.subs.includes(a.user_id));
+ return `<h1>${t("Подписки")}</h1>
+ ${S.subs.length?`<div class="chips">${S.subs.map(id=>`<button class="chip sel" data-seller="${id}">${ava(id)}${esc(sname(prof(id)))}</button>`).join("")}</div>
+ <h2 style="margin-top:12px;font-size:18px">${t("Новое от продавцов, на которых вы подписаны")}</h2>
+ <div class="feed">${list.map(card).join("")}</div>`
+ :`<div class="box" style="margin-top:14px"><p class="note" style="margin:0;font-size:14.5px">${t("Вы пока ни на кого не подписаны. Откройте объявление, нажмите на продавца и подпишитесь, чтобы видеть его новые изделия здесь.")}</p></div>`}`}
+
+function vNew(){const d=S.draft||{},editing=!!S.editId,me=S.me;return `
+<button class="back" data-go="${editing?"me":"feed"}">← ${t("Назад")}</button>
+<h2>${editing?t("Изменить объявление"):t("Новое объявление")}</h2>
+<form class="form" id="adf">
+ <label>${t("Раздел")}<select id="f-cat" required><option value="">${t("Выберите изделие")}</option>${CATS.map(c=>`<option value="${c}" ${d.cat===c?"selected":""}>${t(c)}</option>`).join("")}</select></label>
+ <label>${t("Название")}<input id="f-title" required maxlength="120" placeholder="${t("Например: цепь бисмарк")}" value="${esc(d.title)}"></label>
+ <div class="row2">
+  <label>${t("Проба")}<select id="f-probe">${PROBES.map(p=>`<option ${(d.probe||"585")===p?"selected":""}>${p}</option>`).join("")}</select></label>
+  <label>${t("Вес, г")}<input id="f-weight" required type="number" step="0.01" min="0.01" value="${esc(d.weight)}"></label>
+ </div>
+ <div class="row2">
+  <label>${t("Цена")}, ${CUR[S.lang][me.country]}<input id="f-price" required type="number" min="1" step="1" value="${esc(d.price)}"></label>
+  <label>${t("Кто продаёт")}<select id="f-seller">${TYPES.map(p=>`<option value="${p}" ${(d.seller_type||stype(me))===p?"selected":""}>${t(p)}</option>`).join("")}</select></label>
+ </div>
+ <div class="row2"><label>${t("Город")}<input id="f-city" required maxlength="80" list="cities" value="${esc(d.city||me.city)}"></label>
+ <label>${t("Район")}<input id="f-dist" maxlength="80" list="dists" value="${esc(d.dist||"")}"></label></div>
+ <datalist id="cities">${Object.keys(LOC[me.country]||{}).map(c=>`<option value="${esc(c)}">`).join("")}</datalist>
+ <datalist id="dists">${((LOC[me.country]||{})[d.city||me.city]||[]).map(x=>`<option value="${esc(x)}">`).join("")}</datalist>
+ <label>${t("Фото")}<input id="f-photo" type="file" accept="image/*"></label>
+ <button class="btn gold" ${S.busy?"disabled":""}>${S.busy?t("Публикуем…"):(editing?t("Сохранить изменения"):t("Опубликовать бесплатно"))}</button>
+</form>`}
+
+function vPending(){return `<h2>${t("Оплата размещения")}</h2>
+<div class="box" style="margin-top:12px"><div class="fee"><span>${t("К оплате")}</span><b>${FEE_RUB} ₽</b></div>
+<p class="note" style="margin:0">${t("Объявление сохранено и ждёт оплаты. Приём платежей подключим в ближайшее время — объявление появится в ленте сразу после оплаты.")}</p></div>
+<div class="form"><button class="btn" data-go="me">${t("Личный кабинет")}</button></div>`}
+
+function vOpen(){const a=S.ads.find(x=>x.id==S.open)||S.mine?.find(x=>x.id==S.open);if(!a)return vFeed();const p=prof(a.user_id);return `
+<button class="back" data-go="${S.back||"feed"}">← ${t("Назад")}</button>
+<div class="screen" style="margin-top:6px">${ph(a,"big")}
+ <span class="tag">${esc(t(a.cat))}${a.status==="sold"?" · "+t("Продано"):""}${a.status==="pending"?" · "+t("Ждёт оплаты"):""}</span>
+ <h2>${esc(a.title)}</h2><div class="price" style="font-size:22px">${money(a.price,a.country)}</div>
+ <div class="box">
+  <div class="kv"><span>${t("Проба")}</span><span>${esc(a.probe)}</span></div>
+  <div class="kv"><span>${t("Вес")}</span><span>${Number(a.weight)} ${t("г")}</span></div>
+  <div class="kv"><span>${t("Цена за грамм")}</span><span>${money(Math.round(a.price/a.weight),a.country)}</span></div>
+  <div class="kv"><span>${t("Кто продаёт")}</span><span>${esc(t(a.seller_type))}</span></div>
+  <div class="kv"><span>${t("Город")}</span><span>${place(a)}, ${esc(cname(a.country))}</span></div>
+ </div>
+ <div class="box">
+  <button class="sellerrow" data-seller="${a.user_id}">${ava(a.user_id)}<span><b>${esc(sname(p))}</b><br><span class="meta">${esc(t(stype(p)))} · ${followers(a.user_id)} ${t("подписчиков")}</span></span><span class="meta">›</span></button>
+  ${a.user_id===uid()?`<span class="note">${t("Это ваше объявление")}</span>`:followBtn(a.user_id)}
+ </div>
+ <div class="box"><span class="meta">${t("Телефон продавца")}</span><b style="font-size:18px;user-select:all">${esc(p.phone)}</b>
+ <button class="btn" id="copy" data-p="${esc(p.phone)}">${t("Скопировать номер")}</button></div>
+ <p class="note">${t("Встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.")}</p>
+</div>`}
+
+function vSeller(){const id=S.seller,p=prof(id);const list=(S.sellerAds||[]);return `
+<button class="back" data-go="${S.back||"feed"}">← ${t("Назад")}</button>
+<div class="profile">${ava(id,1)}<div style="min-width:0"><h2>${esc(sname(p))}</h2><span class="meta">${esc(t(stype(p)))} · ${esc(p.city)}, ${esc(cname(p.country))}</span></div></div>
+<div class="stats"><div><b>${list.length}</b><span>${t("объявлений")}</span></div><div><b>${followers(id)}</b><span>${t("подписчиков")}</span></div></div>
+${id===uid()?`<p class="note">${t("Это ваша страница. Так её видят покупатели.")}</p>`:followBtn(id)+`<p class="note">${t("Когда продавец выставит новое изделие, оно появится у вас в «Подписках».")}</p>`}
+<h2 style="margin-top:8px;font-size:18px">${t("Объявления продавца")}</h2>
+<div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${t("У продавца пока нет активных объявлений.")}</div>`}</div>`}
+
+function vMe(){const u=S.me,mine=S.mine||[];const act=mine.filter(a=>a.status!=="sold"),sold=mine.filter(a=>a.status==="sold");
+ const list=S.tab==="sold"?sold:act;return `
+<h1>${t("Личный кабинет")}</h1>
+<div class="profile" style="margin-top:12px">${ava(u.id,1)}<div style="min-width:0"><h2>${esc(sname(u))}</h2><span class="meta">${esc(u.city)}, ${esc(cname(u.country))} · ${esc(u.phone)}</span></div></div>
+<div class="stats"><div><b>${act.length}</b><span>${t("Активные")}</span></div><div><b>${sold.length}</b><span>${t("Проданные")}</span></div><div><b>${followers(u.id)}</b><span>${t("Подписчики")}</span></div></div>
+<div class="row2"><button class="btn ghost" data-seller="${u.id}">${t("Моя страница")}</button><button class="btn ghost" id="editp">${t("Редактировать профиль")}</button></div>
+${S.editProfile?`<form class="form box" id="pf" style="margin-top:12px">${profileFields(u)}<button class="btn gold">${t("Сохранить")}</button></form>`:""}
+<h2 style="margin-top:20px">${t("Мои объявления")}</h2>
+<div class="seg"><button class="${S.tab!=="sold"?"on":""}" data-tab="active">${t("Активные")} · ${act.length}</button><button class="${S.tab==="sold"?"on":""}" data-tab="sold">${t("Проданные")} · ${sold.length}</button></div>
+<div class="mylist">${list.length?list.map(a=>`
+ <div class="myrow">
+  <button class="mythumb" data-open="${a.id}">${ph(a,"ph")}</button>
+  <div class="myinfo"><span class="name">${esc(a.title)}</span><span class="price">${money(a.price,a.country)}</span><span class="meta">${esc(t(a.cat))} · ${Number(a.weight)} ${t("г")}${a.status==="pending"?" · <b>"+t("Ждёт оплаты")+"</b>":""}</span></div>
+  <div class="myact">${S.confirmDel==a.id?`<span class="meta">${t("Удалить объявление?")}</span>
+    <button class="mini danger" data-del="${a.id}">${t("Да, удалить")}</button><button class="mini" data-cancel="1">${t("Отмена")}</button>`
+   :(a.status==="active"?`<button class="mini" data-edit="${a.id}">${t("Изменить")}</button><button class="mini" data-sold="${a.id}">${t("Продано")}</button>`
+   :a.status==="sold"?`<button class="mini" data-relist="${a.id}">${t("Выставить снова")}</button>`:`<button class="mini" data-edit="${a.id}">${t("Изменить")}</button>`)+`<button class="mini" data-ask="${a.id}">${t("Удалить")}</button>`}</div>
+ </div>`).join(""):`<div class="empty">${S.tab==="sold"?t("Здесь будут проданные изделия."):t("Пока пусто. Нажмите «+», чтобы выставить изделие.")}</div>`}</div>
+${isNative?"":installBox()}
+<button class="box langrow" style="margin-top:12px" data-picklang="1"><span class="meta">${t("Язык приложения")}</span><b>${LANG_FLAG[S.lang]} ${LANGS[S.lang]} ›</b></button>
+<div class="form"><button class="btn ghost" id="out">${t("Выйти")}</button></div>`}
+
+function render(){
+ document.documentElement.lang=S.lang;
+ document.body.classList.toggle("cover",!S.session||!S.me);
+ const app=$("#app"),tabs=$("#tabs");
+ const sheet=()=>S.pick?vPick():"";
+ if(S.view==="loading"){tabs.hidden=true;app.innerHTML=vLoading();return}
+ if(!S.session){tabs.hidden=true;app.innerHTML=vAuth()+sheet();return}
+ if(!S.me){tabs.hidden=true;app.innerHTML=vOnboard();return}
+ tabs.hidden=false;
+ $("#t-feed span").textContent=t("Лента");$("#t-subs span").textContent=t("Подписки");$("#t-me span").textContent=t("Кабинет");
+ app.innerHTML=(({feed:vFeed,subs:vSubs,new:vNew,pending:vPending,open:vOpen,seller:vSeller,me:vMe})[S.view]?.()||vFeed())+sheet();
+ $("#t-feed").classList.toggle("on",["feed","open"].includes(S.view));
+ $("#t-subs").classList.toggle("on",S.view==="subs");
+ $("#t-me").classList.toggle("on",S.view==="me");
+ const q=$("#q"); if(q){q.oninput=e=>{S.q=e.target.value;const p=q.selectionStart;render();const n=$("#q");n.focus();n.setSelectionRange(p,p)}}
+}
+
+/* ---------- Переходы с загрузкой данных ---------- */
+async function openFeed(){S.view="feed";render();try{await loadFeed();render()}catch(e){fail(e)}}
+async function openSubs(){go("subs");try{await loadSubs();await loadFeed();await loadProfiles(S.subs);render()}catch(e){fail(e)}}
+async function openMe(){try{S.mine=await loadMine();await loadCounts([uid()])}catch(e){fail(e)}go("me")}
+async function openSeller(id){S.back=S.view==="seller"?S.back:S.view;S.seller=id;S.sellerAds=[];go("seller");
+ try{await loadProfiles([id]);await loadCounts([id]);const {data,error}=await sb.from("ads").select("*").eq("user_id",id).eq("status","active").order("created_at",{ascending:false});if(error)throw error;S.sellerAds=data;render()}catch(e){fail(e)}}
+async function openAd(id){S.back=S.view==="open"?S.back:S.view;S.open=id;go("open");
+ const a=S.ads.find(x=>x.id==id)||S.mine?.find(x=>x.id==id)||S.sellerAds?.find(x=>x.id==id);
+ if(a&&!S.ads.includes(a))S.ads.push(a);
+ if(a){try{await loadProfiles([a.user_id]);await loadCounts([a.user_id]);render()}catch(e){fail(e)}}}
+
+/* ---------- Фото: уменьшаем перед загрузкой ---------- */
+function shrink(file){return new Promise((res,rej)=>{const img=new Image();const url=URL.createObjectURL(file);
+ img.onload=()=>{const m=1280,k=Math.min(1,m/Math.max(img.width,img.height));const c=document.createElement("canvas");c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);
+  c.getContext("2d").drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(url);c.toBlob(b=>b?res(b):rej(new Error("image")),"image/jpeg",0.82)};
+ img.onerror=()=>rej(new Error("image"));img.src=url})}
+async function uploadPhoto(file){const blob=await shrink(file);const path=`${uid()}/${Date.now()}.jpg`;
+ const {error}=await sb.storage.from("ad-photos").upload(path,blob,{contentType:"image/jpeg"});if(error)throw error;
+ return sb.storage.from("ad-photos").getPublicUrl(path).data.publicUrl}
+
+/* ---------- Нажатия ---------- */
+const mineById=id=>(S.mine||[]).find(a=>a.id==id);
+async function updAd(id,patch,msg){const {error}=await sb.from("ads").update(patch).eq("id",id);if(error)return fail(error);toast(msg);await openMe()}
+document.addEventListener("click",async e=>{
+ if(e.target.closest("[data-pclose]")){S.pick=null;render();return}
+ const el=e.target.closest("button"); if(!el)return; const d=el.dataset;
+ if(d.lang){S.lang=d.lang;S.pick=null;store.set("zb_lang",S.lang);if(S.me)sb.from("profiles").update({lang:S.lang}).eq("id",uid()).then(()=>{});render();return}
+ if(d.pickopen){S.pick={step:"cc"};render();return}
+ if(d.picklang){S.pick={step:"lang"};render();return}
+ if(d.pback){S.pick=S.pick.step==="dist"?{step:"city",cc:S.pick.cc}:{step:"cc"};render();return}
+ if(d.pcc!==undefined){if(!d.pcc)return setLoc({cc:"",city:"",dist:""});S.pick={step:"city",cc:d.pcc};render();return}
+ if(d.pcity!==undefined){const cc=S.pick.cc;if(!d.pcity||!LOC[cc][d.pcity].length)return setLoc({cc,city:d.pcity,dist:""});S.pick={step:"dist",cc,city:d.pcity};render();return}
+ if(d.pdist!==undefined)return setLoc({cc:S.pick.cc,city:S.pick.city,dist:d.pdist});
+ if(el.id==="retry"){boot();return}
+ if(el.id==="swap"){S.authMode=S.authMode==="signup"?"login":"signup";S.err="";render();return}
+ if(d.go){const v=d.go;if(v==="feed")return openFeed();if(v==="subs")return openSubs();if(v==="me")return openMe();
+  if(v==="new"){S.editId=null;S.draft=null}go(v);return}
+ if(d.cc!==undefined){S.cc=d.cc;render();return}
+ if(d.cat!==undefined){S.cat=d.cat;render();return}
+ if(d.open)return openAd(d.open);
+ if(d.seller)return openSeller(d.seller);
+ if(d.follow){const id=d.follow,on=S.subs.includes(id);
+  const r=on?await sb.from("follows").delete().eq("follower",uid()).eq("seller",id):await sb.from("follows").insert({follower:uid(),seller:id});
+  if(r.error)return fail(r.error);
+  S.subs=on?S.subs.filter(x=>x!==id):[...S.subs,id];S.counts[id]=(S.counts[id]||0)+(on?-1:1);
+  toast(on?t("Подписка отменена"):t("Вы подписались на {n}",{n:sname(prof(id))}));render();return}
+ if(d.tab){S.tab=d.tab;render();return}
+ if(d.edit){const a=mineById(d.edit);S.editId=a.id;S.draft={...a};go("new");return}
+ if(d.sold)return updAd(d.sold,{status:"sold"},t("Отмечено как продано"));
+ if(d.relist)return updAd(d.relist,{status:"active"},t("Объявление снова в продаже"));
+ if(d.ask){S.confirmDel=d.ask;render();return}
+ if(d.cancel){S.confirmDel=null;render();return}
+ if(d.del){const {error}=await sb.from("ads").delete().eq("id",d.del);if(error)return fail(error);toast(t("Объявление удалено"));S.ads=S.ads.filter(a=>a.id!=d.del);return openMe()}
+ if(el.id==="editp"){S.editProfile=!S.editProfile;render();return}
+ if(el.id==="copy"){const p=d.p;navigator.clipboard?.writeText(p).then(()=>toast(t("Номер скопирован")),()=>toast(t("Выделите номер и скопируйте")));return}
+ if(el.id==="install"&&S.installEvt){S.installEvt.prompt();S.installEvt=null;render();return}
+ if(el.id==="out"){await sb.auth.signOut();S.me=null;S.session=null;S.subs=[];S.mine=[];render()}
+});
+
+document.addEventListener("submit",async e=>{
+ e.preventDefault();const id=e.target.id;
+ if(id==="auth"){const email=$("#a-email").value.trim(),password=$("#a-pass").value;S.err="";S.busy=true;
+  if(S.authMode==="signup"){const p=readProfile();store.set("zb_pending",JSON.stringify(p));
+   const {data,error}=await sb.auth.signUp({email,password});S.busy=false;
+   if(error){S.err=error.message;return render()}
+   if(!data.session){S.err=t("Мы отправили письмо на {e}. Откройте его, подтвердите почту и войдите.",{e:email});S.authMode="login";return render()}
+  }else{const {error}=await sb.auth.signInWithPassword({email,password});S.busy=false;if(error){S.err=t("Неверная почта или пароль.");return render()}}
+  return}
+ if(id==="onb"){const r=await sb.from("profiles").insert({...readProfile(),id:uid(),lang:S.lang}).select().single();if(r.error)return fail(r.error);S.me=r.data;S.profiles[uid()]=r.data;return openFeed()}
+ if(id==="pf"){const r=await sb.from("profiles").update(readProfile()).eq("id",uid()).select().single();if(r.error)return fail(r.error);
+  S.me=r.data;S.profiles[uid()]=r.data;S.editProfile=false;toast(t("Профиль сохранён"));return openMe()}
+ if(id==="adf"){if(S.busy)return;
+  const f=$("#f-photo").files[0];
+  const row={cat:$("#f-cat").value,title:$("#f-title").value.trim(),probe:$("#f-probe").value,weight:+$("#f-weight").value,price:Math.round(+$("#f-price").value),seller_type:$("#f-seller").value,city:$("#f-city").value.trim(),dist:$("#f-dist").value.trim()||null};
+  S.draft={...(S.draft||{}),...row};S.busy=true;render();
+  try{
+   if(f)row.photo_url=await uploadPhoto(f);
+   if(S.editId){const {error}=await sb.from("ads").update(row).eq("id",S.editId);if(error)throw error;S.busy=false;S.editId=null;toast(t("Изменения сохранены"));return openMe()}
+   const {data,error}=await sb.from("ads").insert({...row,user_id:uid()}).select().single();if(error)throw error;S.busy=false;
+   if(data.status==="pending"){go("pending");return}
+   toast(t("Объявление опубликовано бесплатно"));return openFeed()}
+  catch(err){S.busy=false;render();fail(err)}}
+});
+/* поле формы теряет значения при перерисовке во время отправки — сохраняем черновик */
+document.addEventListener("input",e=>{if(e.target.closest("#adf")){const g=i=>$(i)?.value;S.draft={...(S.draft||{}),cat:g("#f-cat"),title:g("#f-title"),probe:g("#f-probe"),weight:g("#f-weight"),price:g("#f-price"),seller_type:g("#f-seller"),city:g("#f-city")}}});
+
+document.addEventListener("input",e=>{if(e.target.id==="f-city"&&S.me){const l=(LOC[S.me.country]||{})[e.target.value.trim()]||[];const dl=$("#dists");if(dl)dl.innerHTML=l.map(x=>`<option value="${esc(x)}">`).join("")}});
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();S.installEvt=e;if(S.view==="me")render()});
+if(!isNative&&"serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+
+/* ---------- Запуск ---------- */
+async function boot(){S.err="";S.view="loading";render();
+ try{await loadSettings();const {data}=await sb.auth.getSession();S.session=data.session;
+  if(S.session){await loadMe();await loadSubs()}
+  S.view="feed";render();if(S.session&&S.me)await openFeed()}
+ catch(e){console.error(e);S.err=e.message||"error";render()}}
+sb.auth.onAuthStateChange(async(ev,session)=>{const was=S.session?.user?.id;S.session=session;
+ if(ev==="SIGNED_IN"&&session&&session.user.id!==was){try{await loadMe();await loadSubs()}catch(e){fail(e)}openFeed()}});
+boot();
+(()=>{const sp=$("#splash");if(!sp)return;if(isNative){sp.remove();return}setTimeout(()=>{sp.classList.add("out");setTimeout(()=>sp.remove(),500)},1100)})();

@@ -1,0 +1,75 @@
+name: iOS
+
+# Запускается вручную, когда готов аккаунт Apple Developer и добавлены секреты:
+# IOS_P12_BASE64, IOS_P12_PASSWORD, IOS_PROFILE_BASE64, IOS_TEAM_ID,
+# APPSTORE_API_KEY_ID, APPSTORE_API_ISSUER_ID, APPSTORE_API_KEY_P8
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Установить зависимости
+        run: npm install
+
+      - name: Собрать веб-часть и iOS-проект
+        run: |
+          npm run build
+          npx cap add ios
+          npm run assets -- --ios
+          npx cap sync ios
+
+      - name: Подписать и собрать IPA
+        env:
+          P12: ${{ secrets.IOS_P12_BASE64 }}
+          P12_PASS: ${{ secrets.IOS_P12_PASSWORD }}
+          PROFILE: ${{ secrets.IOS_PROFILE_BASE64 }}
+          TEAM_ID: ${{ secrets.IOS_TEAM_ID }}
+        run: |
+          KC=$RUNNER_TEMP/build.keychain-db
+          security create-keychain -p tmp "$KC"
+          security set-keychain-settings -lut 21600 "$KC"
+          security unlock-keychain -p tmp "$KC"
+          echo "$P12" | base64 -d > $RUNNER_TEMP/cert.p12
+          security import $RUNNER_TEMP/cert.p12 -P "$P12_PASS" -A -t cert -f pkcs12 -k "$KC"
+          security list-keychain -d user -s "$KC"
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          echo "$PROFILE" | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/goldra.mobileprovision
+          UUID=$(/usr/libexec/PlistBuddy -c "Print UUID" /dev/stdin <<< $(security cms -D -i ~/Library/MobileDevice/Provisioning\ Profiles/goldra.mobileprovision))
+          cd ios/App
+          xcodebuild -workspace App.xcworkspace -scheme App -configuration Release -archivePath $RUNNER_TEMP/App.xcarchive \
+            -destination 'generic/platform=iOS' archive \
+            CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM=$TEAM_ID PROVISIONING_PROFILE_SPECIFIER=$UUID CODE_SIGN_IDENTITY="Apple Distribution"
+          cat > $RUNNER_TEMP/export.plist <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>teamID</key><string>$TEAM_ID</string>
+            <key>provisioningProfiles</key><dict><key>com.goldra.app</key><string>$UUID</string></dict>
+          </dict></plist>
+          PLIST
+          xcodebuild -exportArchive -archivePath $RUNNER_TEMP/App.xcarchive -exportOptionsPlist $RUNNER_TEMP/export.plist -exportPath $RUNNER_TEMP/out
+          cp $RUNNER_TEMP/out/*.ipa $GITHUB_WORKSPACE/GoldRa.ipa
+
+      - name: Отправить в App Store Connect (TestFlight)
+        env:
+          KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+          ISSUER: ${{ secrets.APPSTORE_API_ISSUER_ID }}
+          KEY_P8: ${{ secrets.APPSTORE_API_KEY_P8 }}
+        run: |
+          mkdir -p ~/.appstoreconnect/private_keys
+          echo "$KEY_P8" > ~/.appstoreconnect/private_keys/AuthKey_$KEY_ID.p8
+          xcrun altool --upload-app -f GoldRa.ipa -t ios --apiKey "$KEY_ID" --apiIssuer "$ISSUER"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gold-ra-ios
+          path: GoldRa.ipa

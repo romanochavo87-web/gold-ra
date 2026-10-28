@@ -1,0 +1,22 @@
+{
+  "name": "gold-ra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gold Ra — покупка и продажа золота: украшения, часы, слитки и лом",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "assets": "capacitor-assets generate --iconBackgroundColor '#0a0805' --iconBackgroundColorDark '#0a0805' --splashBackgroundColor '#0a0805' --splashBackgroundColorDark '#0a0805'"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor/ios": "^7.4.0",
+    "@capacitor/splash-screen": "^7.0.1",
+    "@capacitor/status-bar": "^7.0.1",
+    "@supabase/supabase-js": "2.45.4"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.0"
+  }
+}

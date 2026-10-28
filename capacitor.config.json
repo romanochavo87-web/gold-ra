@@ -1,0 +1,18 @@
+{
+  "appId": "com.goldra.app",
+  "appName": "Gold Ra",
+  "webDir": "www",
+  "backgroundColor": "#0a0805",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "launchAutoHide": true,
+      "backgroundColor": "#0a0805",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0a0805"
+    }
+  }
+}
