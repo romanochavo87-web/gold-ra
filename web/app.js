@@ -279,6 +279,8 @@ ky:{"Сообщения":"Билдирүүлөр","Написать продав
 [R4]:"Каалаган жарнамага даттанууга жана каалаган колдонуучуну бөгөттөөгө болот.",
 [R5]:"Gold Ra — жарнама тактасы. Бүтүмдөр адамдардын ортосунда түз болот: эл көп жерде жолугуп, төлөөдөн мурун пробаны зергерге текшертиңиз."}};
 for(const l in CHAT_I18N)Object.assign(I18N[l],CHAT_I18N[l]);
+const QR_I18N={"en": {"Мой QR": "My QR", "QR приложения": "App QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "Show this QR to a buyer — it opens your page in Gold Ra.", "Отсканируйте, чтобы открыть Gold Ra.": "Scan to open Gold Ra.", "Поделиться": "Share", "Скачать картинку": "Save image", "Ссылка скопирована": "Link copied", "Сканируйте — мои изделия в Gold Ra": "Scan to see my items on Gold Ra", "Покупка и продажа золота": "Buy and sell gold"}, "uz": {"Мой QR": "Mening QR", "QR приложения": "Ilova QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "QR ni xaridorga ko'rsating — u Gold Ra'da sahifangizni ochadi.", "Отсканируйте, чтобы открыть Gold Ra.": "Gold Ra'ni ochish uchun skanerlang.", "Поделиться": "Ulashish", "Скачать картинку": "Rasmni saqlash", "Ссылка скопирована": "Havola nusxalandi", "Сканируйте — мои изделия в Gold Ra": "Skanerlang — Gold Ra'dagi buyumlarim", "Покупка и продажа золота": "Oltin sotib olish va sotish"}, "kk": {"Мой QR": "Менің QR", "QR приложения": "Қосымша QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "QR-ды сатып алушыға көрсетіңіз — ол Gold Ra-да парақшаңызды ашады.", "Отсканируйте, чтобы открыть Gold Ra.": "Gold Ra ашу үшін сканерлеңіз.", "Поделиться": "Бөлісу", "Скачать картинку": "Суретті сақтау", "Ссылка скопирована": "Сілтеме көшірілді", "Сканируйте — мои изделия в Gold Ra": "Сканерлеңіз — Gold Ra-дағы бұйымдарым", "Покупка и продажа золота": "Алтын сату және сатып алу"}, "ky": {"Мой QR": "Менин QR", "QR приложения": "Колдонмо QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "QRды сатып алуучуга көрсөтүңүз — ал Gold Ra'да барагыңызды ачат.", "Отсканируйте, чтобы открыть Gold Ra.": "Gold Ra ачуу үчүн сканерлеңиз.", "Поделиться": "Бөлүшүү", "Скачать картинку": "Сүрөттү сактоо", "Ссылка скопирована": "Шилтеме көчүрүлдү", "Сканируйте — мои изделия в Gold Ra": "Сканерлеңиз — Gold Ra'дагы буюмдарым", "Покупка и продажа золота": "Алтын сатуу жана сатып алуу"}};
+for(const l in QR_I18N)Object.assign(I18N[l],QR_I18N[l]);
 
 /* ---------- Состояние ---------- */
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
@@ -287,7 +289,7 @@ const S={session:null,me:null,settings:{free_until:"2026-11-27T00:00:00Z",paid_c
  ads:[],profiles:{},counts:{},subs:[],view:"loading",authMode:"signup",q:"",cat:"",cc:"",
  draft:null,editId:null,open:null,seller:null,back:"feed",tab:"active",editProfile:false,confirmDel:null,busy:false,err:"",
  lang:store.get("zb_lang")||(LANGS[navLang]?navLang:({kz:"kk",kg:"ky",be:"ru"}[navLang]||"ru")),installEvt:null,
- msgs:[],chatWith:null,chatAd:null,chatDraft:"",blocks:[],blockedBy:[],report:null,rules:false,confirmAcc:false,photos:[],adCache:{},
+ msgs:[],chatWith:null,chatAd:null,chatDraft:"",blocks:[],blockedBy:[],report:null,rules:false,qr:null,confirmAcc:false,photos:[],adCache:{},
  pick:null,loc:(()=>{try{return JSON.parse(store.get("zb_loc"))||{cc:"",city:"",dist:""}}catch(e){return {cc:"",city:"",dist:""}}})()};
 
 /* ---------- Помощники ---------- */
@@ -466,7 +468,7 @@ function vSeller(){const id=S.seller,p=prof(id);const list=(S.sellerAds||[]);ret
 <button class="back" data-go="${S.back||"feed"}">← ${t("Назад")}</button>
 <div class="profile">${ava(id,1)}<div style="min-width:0"><h2>${esc(sname(p))}</h2><span class="meta">${esc(t(stype(p)))} · ${esc(p.city)}, ${esc(cname(p.country))}</span></div></div>
 <div class="stats"><div><b>${list.length}</b><span>${t("объявлений")}</span></div><div><b>${followers(id)}</b><span>${t("подписчиков")}</span></div></div>
-${id===uid()?`<p class="note">${t("Это ваша страница. Так её видят покупатели.")}</p>`:`<div class="row2"><div>${followBtn(id)}</div><button class="btn ghost follow" data-chat="${id}">💬 ${t("Сообщения")}</button></div>`+`<p class="note">${t("Когда продавец выставит новое изделие, оно появится у вас в «Подписках».")}</p>`+safetyRow(id,null)}
+${id===uid()?`<p class="note">${t("Это ваша страница. Так её видят покупатели.")}</p><button class="btn gold" data-qr="seller">▦ ${t("Мой QR")}</button>`:`<div class="row2"><div>${followBtn(id)}</div><button class="btn ghost follow" data-chat="${id}">💬 ${t("Сообщения")}</button></div>`+`<p class="note">${t("Когда продавец выставит новое изделие, оно появится у вас в «Подписках».")}</p>`+safetyRow(id,null)}
 <h2 style="margin-top:8px;font-size:18px">${t("Объявления продавца")}</h2>
 <div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${t("У продавца пока нет активных объявлений.")}</div>`}</div>`}
 
@@ -490,10 +492,33 @@ ${S.editProfile?`<form class="form box" id="pf" style="margin-top:12px">${profil
  </div>`).join(""):`<div class="empty">${S.tab==="sold"?t("Здесь будут проданные изделия."):t("Пока пусто. Нажмите «+», чтобы выставить изделие.")}</div>`}</div>
 ${isNative?"":installBox()}
 <button class="box langrow" style="margin-top:12px" data-picklang="1"><span class="meta">${t("Язык приложения")}</span><b>${LANG_FLAG[S.lang]} ${LANGS[S.lang]} ›</b></button>
+<div class="row2" style="margin-top:12px"><button class="btn gold" data-qr="seller">▦ ${t("Мой QR")}</button><button class="btn ghost" data-qr="app">▦ ${t("QR приложения")}</button></div>
 <button class="box langrow" style="margin-top:12px" data-rules="1"><span class="meta">${t("Правила")}</span><b>›</b></button>
 <div class="form"><button class="btn ghost" id="out">${t("Выйти")}</button>
 ${S.confirmAcc?`<div class="box"><b>${t("Удалить аккаунт и все объявления? Это нельзя отменить.")}</b><button class="btn danger" id="delacc2" ${S.busy?"disabled":""}>${t("Да, удалить навсегда")}</button><button class="btn ghost" id="delacc0">${t("Отмена")}</button></div>`
  :`<button class="back danger-text" id="delacc">${t("Удалить аккаунт")}</button>`}</div>`}
+
+/* ---------- QR-коды ---------- */
+const SITE=isNative||!/^https?:/.test(location.protocol)?"https://zolotoy-bazar.netlify.app/":location.origin+location.pathname;
+const sellerLink=id=>SITE+"#s="+id;
+(()=>{const m=location.hash.match(/s=([0-9a-f-]{36})/i);if(m){store.set("zb_deep",m[1]);history.replaceState(null,"",location.pathname+location.search)}})();
+function openDeep(){const id=store.get("zb_deep");if(!id||!S.me)return;store.set("zb_deep","");openSeller(id)}
+function qrSvg(text){const q=qrcode(0,"M");q.addData(text);q.make();const n=q.getModuleCount(),m=2;let d="";
+ for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(q.isDark(r,c))d+=`M${c+m},${r+m}h1v1h-1z`;
+ return `<svg class="qr" viewBox="0 0 ${n+m*2} ${n+m*2}" shape-rendering="crispEdges" role="img" aria-label="QR"><rect width="100%" height="100%" fill="#fff"/><path d="${d}" fill="#1a1306"/></svg>`}
+function qrPng(text,title,sub){const q=qrcode(0,"M");q.addData(text);q.make();const n=q.getModuleCount(),cell=Math.floor(560/n),qs=cell*n,W=720,H=qs+370;
+ const c=document.createElement("canvas");c.width=W;c.height=H;const g=c.getContext("2d");
+ g.fillStyle="#0a0805";g.fillRect(0,0,W,H);g.fillStyle="#f6d47a";g.textAlign="center";g.font="600 44px Georgia,serif";g.fillText("Gold Ra",W/2,70);
+ const x=(W-qs)/2,y=140;g.fillStyle="#fff";g.fillRect(x-24,y-24,qs+48,qs+48);g.fillStyle="#1a1306";
+ for(let r=0;r<n;r++)for(let col=0;col<n;col++)if(q.isDark(r,col))g.fillRect(x+col*cell,y+r*cell,cell,cell);
+ g.fillStyle="#f4e6c4";g.font="600 34px system-ui,sans-serif";g.fillText(String(title).slice(0,30),W/2,y+qs+80);
+ g.fillStyle="#cdbb92";g.font="26px system-ui,sans-serif";g.fillText(sub,W/2,y+qs+125);
+ return c.toDataURL("image/png")}
+function vQr(){const k=S.qr,mine=k.kind==="seller";const link=mine?sellerLink(k.id):SITE;const title=mine?sname(prof(k.id)):APP;
+ const sub=mine?t("Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra."):t("Отсканируйте, чтобы открыть Gold Ra.");
+ return sheetBox("qrx",mine?t("Мой QR"):t("QR приложения"),`<div class="qrbox">${qrSvg(link)}<b>${esc(title)}</b><p class="note">${sub}</p>
+  <span class="meta qrlink">${esc(link)}</span>
+  <div class="row2"><button class="btn gold" data-qrshare="1">${t("Поделиться")}</button><button class="btn ghost" data-qrsave="1">${t("Скачать картинку")}</button></div></div>`)}
 
 /* ---------- Фото: до 4 штук ---------- */
 const MAXPH=4;
@@ -576,7 +601,7 @@ function render(){
  document.documentElement.lang=S.lang;
  document.body.classList.toggle("cover",!S.session||!S.me);
  const app=$("#app"),tabs=$("#tabs");
- const sheet=()=>S.rules?vRules():S.report?vReport():S.pick?vPick():"";
+ const sheet=()=>S.qr?vQr():S.rules?vRules():S.report?vReport():S.pick?vPick():"";
  if(S.view==="loading"){tabs.hidden=true;app.innerHTML=vLoading();return}
  if(!S.session){tabs.hidden=true;app.innerHTML=vAuth()+sheet();return}
  if(!S.me){tabs.hidden=true;app.innerHTML=vOnboard();return}
@@ -623,6 +648,7 @@ document.addEventListener("click",async e=>{
  if(e.target.closest("[data-pclose]")){S.pick=null;render();return}
  if(e.target.closest("[data-rclose]")){S.report=null;render();return}
  if(e.target.closest("[data-rulesx]")){S.rules=false;render();return}
+ if(e.target.closest("[data-qrx]")){S.qr=null;render();return}
  if(e.target.closest("[data-rules]")){e.preventDefault();S.rules=true;render();return}
  const el=e.target.closest("button"); if(!el)return; const d=el.dataset;
  if(d.lang){S.lang=d.lang;S.pick=null;store.set("zb_lang",S.lang);if(S.me)sb.from("profiles").update({lang:S.lang}).eq("id",uid()).then(()=>{});render();return}
@@ -639,6 +665,12 @@ document.addEventListener("click",async e=>{
   if(v==="new"){S.editId=null;S.draft=null;S.photos=[]}go(v);return}
  if(d.cc!==undefined){S.cc=d.cc;render();return}
  if(d.cat!==undefined){S.cat=d.cat;render();return}
+ if(d.qr){S.qr={kind:d.qr,id:uid()};render();return}
+ if(d.qrshare){const k=S.qr,link=k.kind==="seller"?sellerLink(k.id):SITE,title=k.kind==="seller"?sname(prof(k.id)):APP;
+  try{if(navigator.share){await navigator.share({title:"Gold Ra",text:title,url:link});return}}catch(err){if(err?.name==="AbortError")return}
+  navigator.clipboard?.writeText(link).then(()=>toast(t("Ссылка скопирована")),()=>toast(link));return}
+ if(d.qrsave){const k=S.qr,mine=k.kind==="seller";const url=qrPng(mine?sellerLink(k.id):SITE,mine?sname(prof(k.id)):APP,mine?t("Сканируйте — мои изделия в Gold Ra"):t("Покупка и продажа золота"));
+  const a=document.createElement("a");a.href=url;a.download=mine?"goldra-my-qr.png":"goldra-app-qr.png";document.body.appendChild(a);a.click();a.remove();return}
  if(d.rmph!==undefined){S.photos.splice(Number(d.rmph),1);render();return}
  if(d.chat)return openChat(d.chat,d.ad?Number(d.ad):null);
  if(d.open)return openAd(d.open);
@@ -718,14 +750,19 @@ window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();S.installEv
 if(!isNative&&"serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 
 /* ---------- Запуск ---------- */
-async function boot(){S.err="";S.view="loading";render();
+let booting=true;
+async function boot(){S.err="";S.view="loading";render();booting=true;
+ const tm=setTimeout(()=>{if(S.view==="loading"&&!S.err){S.err="timeout";render()}},15000);
  try{await loadSettings();const {data}=await sb.auth.getSession();S.session=data.session;
   if(S.session){await loadMe();await afterLogin()}
-  S.view="feed";render();if(S.session&&S.me)await openFeed()}
- catch(e){console.error(e);S.err=e.message||"error";render()}}
-sb.auth.onAuthStateChange(async(ev,session)=>{const was=S.session?.user?.id;S.session=session;
- if(ev==="SIGNED_IN"&&session&&session.user.id!==was){try{await loadMe();await afterLogin()}catch(e){fail(e)}openFeed()}
- if(ev==="SIGNED_OUT")stopRealtime()});
+  S.view="feed";render();if(S.session&&S.me){await openFeed();openDeep()}}
+ catch(e){console.error(e);S.err=e.message||"error";render()}
+ finally{clearTimeout(tm);booting=false}}
+sb.auth.onAuthStateChange((ev,session)=>{const was=S.session?.user?.id;S.session=session;
+ if(ev==="SIGNED_OUT"){stopRealtime();return}
+ /* базу нельзя вызывать прямо внутри этого обработчика — supabase зависает на «Загрузке», поэтому откладываем */
+ if(ev==="SIGNED_IN"&&session&&session.user.id!==was&&!booting)
+  setTimeout(async()=>{try{await loadMe();await afterLogin()}catch(e){fail(e)}await openFeed();openDeep()},0)});
 document.addEventListener("visibilitychange",()=>{if(!document.hidden&&S.view==="chat"&&S.chatWith)markRead(S.chatWith).then(render)});
 if(LN())LN().addListener("localNotificationActionPerformed",a=>{const f=a?.notification?.extra?.from;if(f)openChat(f)});
 boot();
