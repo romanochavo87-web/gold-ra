@@ -187,6 +187,10 @@ body.cover .chip.on{background:#d9a845;border-color:#d9a845;color:#1a1306}
 <div class="toast" id="toast" hidden></div>
 <div id="splash"><img src="logo.png" alt="Gold Ra"><b>Gold Ra</b></div>
 <script src="vendor/supabase.js"></script>
+<script>/* если своя копия библиотеки не загрузилась — берём её с CDN */
+if(!window.supabase)document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>')</script>
 <script src="app.js"></script>
+<script>/* страховка: заставка не должна висеть, даже если что-то сломалось */
+setTimeout(function(){var sp=document.getElementById("splash");if(sp){sp.classList.add("out");setTimeout(function(){sp.remove()},500)}},4000)</script>
 </body>
 </html>

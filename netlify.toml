@@ -1,0 +1,7 @@
+# Netlify собирает сайт сам: копирует web/ в www/ и добавляет библиотеку Supabase
+[build]
+  command = "npm run build"
+  publish = "www"
+
+[build.environment]
+  NODE_VERSION = "20"
