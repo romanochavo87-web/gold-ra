@@ -209,6 +209,77 @@ MORE.ky={"Вход":"Кирүү","Эл. почта":"Эл. почта","Паро
 for(const l in MORE)Object.assign(I18N[l],MORE[l]);
 for(const l in MORE_LOC)Object.assign(I18N[l],MORE_LOC[l]);
 
+/* Строки для чата, жалоб, блокировки, правил и удаления аккаунта */
+const R1="Продавайте только настоящие изделия из золота и указывайте честную пробу и вес.";
+const R2="Запрещены подделки, краденые вещи, оскорбления, угрозы, спам и любой недопустимый контент.";
+const R3="Нарушителей мы блокируем, а их объявления удаляем. Жалобы проверяем в течение 24 часов.";
+const R4="На любое объявление можно пожаловаться, а любого пользователя — заблокировать.";
+const R5="Gold Ra — доска объявлений. Сделки проходят напрямую между людьми: встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.";
+const RULES=[R1,R2,R3,R4,R5];
+const NO_MSG="Пока нет сообщений. Откройте объявление и нажмите «Написать продавцу» — переписка появится здесь.";
+const CHAT_I18N={
+en:{"Сообщения":"Messages","Написать продавцу":"Message seller",[NO_MSG]:"No messages yet. Open a listing and tap “Message seller” — the chat will appear here.",
+"Сообщение…":"Message…","Отправить":"Send","Вы":"You","По объявлению":"About listing","Пожаловаться":"Report","Заблокировать":"Block","Разблокировать":"Unblock",
+"Пользователь заблокирован":"User blocked","Пользователь разблокирован":"User unblocked",
+"Вы заблокировали этого пользователя. Разблокируйте, чтобы переписываться.":"You blocked this user. Unblock them to chat.",
+"Этот пользователь ограничил переписку с вами.":"This user has restricted messaging with you.",
+"Почему вы жалуетесь?":"Why are you reporting this?","Подделка или не золото":"Fake or not gold","Мошенничество":"Scam","Запрещённый товар":"Prohibited item","Оскорбления или спам":"Abuse or spam",
+"Жалоба отправлена. Мы проверим её в течение 24 часов.":"Report sent. We will review it within 24 hours.",
+"Сделать фото":"Take photo","Выбрать из галереи":"From gallery","Фото выбрано":"Photo selected",
+"Удалить аккаунт":"Delete account","Удалить аккаунт и все объявления? Это нельзя отменить.":"Delete your account and all listings? This cannot be undone.",
+"Да, удалить навсегда":"Yes, delete forever","Аккаунт удалён":"Account deleted","Правила Gold Ra":"Gold Ra rules","Я принимаю {r}":"I accept the {r}","правила":"rules","Правила":"Rules",
+[R1]:"Sell only genuine gold items and state the true fineness and weight.",
+[R2]:"Fakes, stolen goods, insults, threats, spam and any objectionable content are prohibited.",
+[R3]:"We block violators and remove their listings. Reports are reviewed within 24 hours.",
+[R4]:"You can report any listing and block any user.",
+[R5]:"Gold Ra is a classifieds board. Deals happen directly between people: meet in a public place and have a jeweller check the fineness before you pay."},
+uz:{"Сообщения":"Xabarlar","Написать продавцу":"Sotuvchiga yozish",[NO_MSG]:"Hozircha xabar yo'q. E'lonni oching va «Sotuvchiga yozish»ni bosing — yozishma shu yerda chiqadi.",
+"Сообщение…":"Xabar…","Отправить":"Yuborish","Вы":"Siz","По объявлению":"E'lon bo'yicha","Пожаловаться":"Shikoyat qilish","Заблокировать":"Bloklash","Разблокировать":"Blokdan chiqarish",
+"Пользователь заблокирован":"Foydalanuvchi bloklandi","Пользователь разблокирован":"Foydalanuvchi blokdan chiqarildi",
+"Вы заблокировали этого пользователя. Разблокируйте, чтобы переписываться.":"Siz bu foydalanuvchini bloklagansiz. Yozishish uchun blokdan chiqaring.",
+"Этот пользователь ограничил переписку с вами.":"Bu foydalanuvchi siz bilan yozishmani cheklagan.",
+"Почему вы жалуетесь?":"Nima uchun shikoyat qilyapsiz?","Подделка или не золото":"Qalbaki yoki oltin emas","Мошенничество":"Firibgarlik","Запрещённый товар":"Taqiqlangan mahsulot","Оскорбления или спам":"Haqorat yoki spam",
+"Жалоба отправлена. Мы проверим её в течение 24 часов.":"Shikoyat yuborildi. 24 soat ichida tekshiramiz.",
+"Сделать фото":"Rasmga olish","Выбрать из галереи":"Galereyadan","Фото выбрано":"Rasm tanlandi",
+"Удалить аккаунт":"Akkauntni o'chirish","Удалить аккаунт и все объявления? Это нельзя отменить.":"Akkaunt va barcha e'lonlar o'chirilsinmi? Buni qaytarib bo'lmaydi.",
+"Да, удалить навсегда":"Ha, butunlay o'chirish","Аккаунт удалён":"Akkaunt o'chirildi","Правила Gold Ra":"Gold Ra qoidalari","Я принимаю {r}":"Men {r}ni qabul qilaman","правила":"qoidalar","Правила":"Qoidalar",
+[R1]:"Faqat haqiqiy oltin buyumlarni soting va proba hamda og'irlikni to'g'ri ko'rsating.",
+[R2]:"Qalbaki va o'g'irlangan buyumlar, haqorat, tahdid, spam va har qanday nomaqbul kontent taqiqlanadi.",
+[R3]:"Qoidabuzarlarni bloklaymiz va e'lonlarini o'chiramiz. Shikoyatlar 24 soat ichida ko'rib chiqiladi.",
+[R4]:"Har qanday e'londan shikoyat qilish va har qanday foydalanuvchini bloklash mumkin.",
+[R5]:"Gold Ra — e'lonlar taxtasi. Bitimlar odamlar o'rtasida bevosita bo'ladi: gavjum joyda uchrashing va to'lovdan oldin probani zargarga tekshirtiring."},
+kk:{"Сообщения":"Хабарламалар","Написать продавцу":"Сатушыға жазу",[NO_MSG]:"Әзірге хабарлама жоқ. Хабарландыруды ашып, «Сатушыға жазу» басыңыз — хат алмасу осында шығады.",
+"Сообщение…":"Хабарлама…","Отправить":"Жіберу","Вы":"Сіз","По объявлению":"Хабарландыру бойынша","Пожаловаться":"Шағымдану","Заблокировать":"Бұғаттау","Разблокировать":"Бұғаттан шығару",
+"Пользователь заблокирован":"Пайдаланушы бұғатталды","Пользователь разблокирован":"Пайдаланушы бұғаттан шығарылды",
+"Вы заблокировали этого пользователя. Разблокируйте, чтобы переписываться.":"Сіз бұл пайдаланушыны бұғаттадыңыз. Жазысу үшін бұғаттан шығарыңыз.",
+"Этот пользователь ограничил переписку с вами.":"Бұл пайдаланушы сізбен хат алмасуды шектеді.",
+"Почему вы жалуетесь?":"Неге шағымданасыз?","Подделка или не золото":"Жалған немесе алтын емес","Мошенничество":"Алаяқтық","Запрещённый товар":"Тыйым салынған тауар","Оскорбления или спам":"Қорлау немесе спам",
+"Жалоба отправлена. Мы проверим её в течение 24 часов.":"Шағым жіберілді. 24 сағат ішінде тексереміз.",
+"Сделать фото":"Суретке түсіру","Выбрать из галереи":"Галереядан","Фото выбрано":"Фото таңдалды",
+"Удалить аккаунт":"Аккаунтты жою","Удалить аккаунт и все объявления? Это нельзя отменить.":"Аккаунт пен барлық хабарландыру жойылсын ба? Мұны қайтару мүмкін емес.",
+"Да, удалить навсегда":"Иә, біржола жою","Аккаунт удалён":"Аккаунт жойылды","Правила Gold Ra":"Gold Ra ережелері","Я принимаю {r}":"Мен {r} қабылдаймын","правила":"ережелерді","Правила":"Ережелер",
+[R1]:"Тек нағыз алтын бұйымдарды сатыңыз және сынама мен салмақты дұрыс көрсетіңіз.",
+[R2]:"Жалған және ұрланған заттар, қорлау, қорқыту, спам және кез келген жол берілмейтін контентке тыйым салынады.",
+[R3]:"Ереже бұзушыларды бұғаттап, хабарландыруларын жоямыз. Шағымдар 24 сағат ішінде қаралады.",
+[R4]:"Кез келген хабарландыруға шағымдануға және кез келген пайдаланушыны бұғаттауға болады.",
+[R5]:"Gold Ra — хабарландыру тақтасы. Мәмілелер адамдар арасында тікелей жасалады: адам көп жерде кездесіп, төлемге дейін сынаманы зергерге тексертіңіз."},
+ky:{"Сообщения":"Билдирүүлөр","Написать продавцу":"Сатуучуга жазуу",[NO_MSG]:"Азырынча билдирүү жок. Жарнаманы ачып, «Сатуучуга жазуу» басыңыз — кат алышуу ушул жерде чыгат.",
+"Сообщение…":"Билдирүү…","Отправить":"Жөнөтүү","Вы":"Сиз","По объявлению":"Жарнама боюнча","Пожаловаться":"Даттануу","Заблокировать":"Бөгөттөө","Разблокировать":"Бөгөттөн чыгаруу",
+"Пользователь заблокирован":"Колдонуучу бөгөттөлдү","Пользователь разблокирован":"Колдонуучу бөгөттөн чыгарылды",
+"Вы заблокировали этого пользователя. Разблокируйте, чтобы переписываться.":"Сиз бул колдонуучуну бөгөттөдүңүз. Жазышуу үчүн бөгөттөн чыгарыңыз.",
+"Этот пользователь ограничил переписку с вами.":"Бул колдонуучу сиз менен кат алышууну чектеди.",
+"Почему вы жалуетесь?":"Эмне үчүн даттанып жатасыз?","Подделка или не золото":"Жасалма же алтын эмес","Мошенничество":"Алдамчылык","Запрещённый товар":"Тыюу салынган буюм","Оскорбления или спам":"Кордоо же спам",
+"Жалоба отправлена. Мы проверим её в течение 24 часов.":"Даттануу жөнөтүлдү. 24 сааттын ичинде текшеребиз.",
+"Сделать фото":"Сүрөткө тартуу","Выбрать из галереи":"Галереядан","Фото выбрано":"Сүрөт тандалды",
+"Удалить аккаунт":"Аккаунтту өчүрүү","Удалить аккаунт и все объявления? Это нельзя отменить.":"Аккаунт жана бардык жарнамалар өчүрүлсүнбү? Муну кайтаруу мүмкүн эмес.",
+"Да, удалить навсегда":"Ооба, биротоло өчүрүү","Аккаунт удалён":"Аккаунт өчүрүлдү","Правила Gold Ra":"Gold Ra эрежелери","Я принимаю {r}":"Мен {r} кабыл алам","правила":"эрежелерди","Правила":"Эрежелер",
+[R1]:"Чыныгы алтын буюмдарды гана сатыңыз жана пробасын, салмагын туура көрсөтүңүз.",
+[R2]:"Жасалма жана уурдалган буюмдар, кордоо, коркутуу, спам жана ар кандай жол берилбеген контентке тыюу салынат.",
+[R3]:"Эрежени бузгандарды бөгөттөп, жарнамаларын өчүрөбүз. Даттануулар 24 сааттын ичинде каралат.",
+[R4]:"Каалаган жарнамага даттанууга жана каалаган колдонуучуну бөгөттөөгө болот.",
+[R5]:"Gold Ra — жарнама тактасы. Бүтүмдөр адамдардын ортосунда түз болот: эл көп жерде жолугуп, төлөөдөн мурун пробаны зергерге текшертиңиз."}};
+for(const l in CHAT_I18N)Object.assign(I18N[l],CHAT_I18N[l]);
+
 /* ---------- Состояние ---------- */
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const navLang=(navigator.language||"ru").slice(0,2).toLowerCase();
@@ -216,6 +287,7 @@ const S={session:null,me:null,settings:{free_until:"2026-11-27T00:00:00Z",paid_c
  ads:[],profiles:{},counts:{},subs:[],view:"loading",authMode:"signup",q:"",cat:"",cc:"",
  draft:null,editId:null,open:null,seller:null,back:"feed",tab:"active",editProfile:false,confirmDel:null,busy:false,err:"",
  lang:store.get("zb_lang")||(LANGS[navLang]?navLang:({kz:"kk",kg:"ky",be:"ru"}[navLang]||"ru")),installEvt:null,
+ msgs:[],chatWith:null,chatAd:null,chatDraft:"",blocks:[],blockedBy:[],report:null,rules:false,confirmAcc:false,photoFile:null,adCache:{},
  pick:null,loc:(()=>{try{return JSON.parse(store.get("zb_loc"))||{cc:"",city:"",dist:""}}catch(e){return {cc:"",city:"",dist:""}}})()};
 
 /* ---------- Помощники ---------- */
@@ -301,7 +373,7 @@ function vAuth(){const up=S.authMode==="signup";return `
  <form class="form" id="auth">
   <label>${t("Эл. почта")}<input id="a-email" type="email" required autocomplete="email"></label>
   <label>${t("Пароль")}<input id="a-pass" type="password" required minlength="6" placeholder="${t("Минимум 6 символов")}" autocomplete="${up?"new-password":"current-password"}"></label>
-  ${up?profileFields({}):""}
+  ${up?profileFields({})+`<label class="agree"><input id="a-agree" type="checkbox" required><span>${t("Я принимаю {r}",{r:`<a href="#" data-rules="1">${t("правила")}</a>`})}</span></label>`:""}
   <button class="btn gold" ${S.busy?"disabled":""}>${up?t("Зарегистрироваться"):t("Войти")}</button>
  </form>
  <button class="back" id="swap" style="text-align:center">${up?t("Уже есть аккаунт? Войти"):t("Нет аккаунта? Зарегистрироваться")}</button>
@@ -322,7 +394,7 @@ function vOnboard(){return `<div class="screen" style="margin-top:20px"><h1>${t(
 function vFeed(){
  const q=S.q.trim().toLowerCase();
  const hay=a=>{const p=prof(a.user_id);return [a.title,a.cat,...Object.values(I18N).map(d=>d[a.cat]),a.city,a.dist,a.probe,p.name,p.shop,COUNTRIES[a.country],...Object.values(I18N).map(d=>d[COUNTRIES[a.country]])].join(" ").toLowerCase()};
- const list=S.ads.filter(a=>inLoc(a)&&(!S.cat||a.cat===S.cat)&&(!q||hay(a).includes(q)));
+ const list=S.ads.filter(a=>!S.blocks.includes(a.user_id)&&inLoc(a)&&(!S.cat||a.cat===S.cat)&&(!q||hay(a).includes(q)));
  return `
 <div class="top"><button class="locbtn" data-pickopen="1" aria-label="${t("Где искать")}">${S.loc.cc?FLAG[S.loc.cc]:"🌍"}</button>
 <div class="brandname"><img src="${LOGO}" alt=""><h1>${APP}</h1></div>${langBtn()}</div>
@@ -331,7 +403,7 @@ function vFeed(){
 <div class="chips"><button class="chip ${S.cat?"":"on"}" data-cat="">${t("Все изделия")}</button>${CATS.map(c=>`<button class="chip ${S.cat===c?"on":""}" data-cat="${c}">${t(c)}</button>`).join("")}</div>
 <div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${S.ads.length?t("Ничего не нашлось. Попробуйте другое слово или раздел."):t("Пока нет объявлений. Станьте первым — нажмите «+».")}</div>`}</div>`}
 
-function vSubs(){const list=S.ads.filter(a=>S.subs.includes(a.user_id));
+function vSubs(){const list=S.ads.filter(a=>S.subs.includes(a.user_id)&&!S.blocks.includes(a.user_id));
  return `<h1>${t("Подписки")}</h1>
  ${S.subs.length?`<div class="chips">${S.subs.map(id=>`<button class="chip sel" data-seller="${id}">${ava(id)}${esc(sname(prof(id)))}</button>`).join("")}</div>
  <h2 style="margin-top:12px;font-size:18px">${t("Новое от продавцов, на которых вы подписаны")}</h2>
@@ -356,7 +428,7 @@ function vNew(){const d=S.draft||{},editing=!!S.editId,me=S.me;return `
  <label>${t("Район")}<input id="f-dist" maxlength="80" list="dists" value="${esc(d.dist||"")}"></label></div>
  <datalist id="cities">${Object.keys(LOC[me.country]||{}).map(c=>`<option value="${esc(c)}">`).join("")}</datalist>
  <datalist id="dists">${((LOC[me.country]||{})[d.city||me.city]||[]).map(x=>`<option value="${esc(x)}">`).join("")}</datalist>
- <label>${t("Фото")}<input id="f-photo" type="file" accept="image/*"></label>
+ <div class="photopick"><span class="meta">${t("Фото")}</span><div class="row2"><label class="btn ghost pickbtn">📷 ${t("Сделать фото")}<input id="f-cam" type="file" accept="image/*" capture="environment" hidden></label><label class="btn ghost pickbtn">🖼 ${t("Выбрать из галереи")}<input id="f-photo" type="file" accept="image/*" hidden></label></div><span class="meta" id="f-picked">${S.photoFile?"✓ "+t("Фото выбрано"):""}</span></div>
  <button class="btn gold" ${S.busy?"disabled":""}>${S.busy?t("Публикуем…"):(editing?t("Сохранить изменения"):t("Опубликовать бесплатно"))}</button>
 </form>`}
 
@@ -381,16 +453,18 @@ function vOpen(){const a=S.ads.find(x=>x.id==S.open)||S.mine?.find(x=>x.id==S.op
   <button class="sellerrow" data-seller="${a.user_id}">${ava(a.user_id)}<span><b>${esc(sname(p))}</b><br><span class="meta">${esc(t(stype(p)))} · ${followers(a.user_id)} ${t("подписчиков")}</span></span><span class="meta">›</span></button>
   ${a.user_id===uid()?`<span class="note">${t("Это ваше объявление")}</span>`:followBtn(a.user_id)}
  </div>
+ ${a.user_id===uid()?"":`<button class="btn gold" data-chat="${a.user_id}" data-ad="${a.id}">💬 ${t("Написать продавцу")}</button>`}
  <div class="box"><span class="meta">${t("Телефон продавца")}</span><b style="font-size:18px;user-select:all">${esc(p.phone)}</b>
  <button class="btn" id="copy" data-p="${esc(p.phone)}">${t("Скопировать номер")}</button></div>
  <p class="note">${t("Встречайтесь в людном месте и проверяйте пробу у ювелира до оплаты.")}</p>
+ ${safetyRow(a.user_id,a.id)}
 </div>`}
 
 function vSeller(){const id=S.seller,p=prof(id);const list=(S.sellerAds||[]);return `
 <button class="back" data-go="${S.back||"feed"}">← ${t("Назад")}</button>
 <div class="profile">${ava(id,1)}<div style="min-width:0"><h2>${esc(sname(p))}</h2><span class="meta">${esc(t(stype(p)))} · ${esc(p.city)}, ${esc(cname(p.country))}</span></div></div>
 <div class="stats"><div><b>${list.length}</b><span>${t("объявлений")}</span></div><div><b>${followers(id)}</b><span>${t("подписчиков")}</span></div></div>
-${id===uid()?`<p class="note">${t("Это ваша страница. Так её видят покупатели.")}</p>`:followBtn(id)+`<p class="note">${t("Когда продавец выставит новое изделие, оно появится у вас в «Подписках».")}</p>`}
+${id===uid()?`<p class="note">${t("Это ваша страница. Так её видят покупатели.")}</p>`:`<div class="row2"><div>${followBtn(id)}</div><button class="btn ghost follow" data-chat="${id}">💬 ${t("Сообщения")}</button></div>`+`<p class="note">${t("Когда продавец выставит новое изделие, оно появится у вас в «Подписках».")}</p>`+safetyRow(id,null)}
 <h2 style="margin-top:8px;font-size:18px">${t("Объявления продавца")}</h2>
 <div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${t("У продавца пока нет активных объявлений.")}</div>`}</div>`}
 
@@ -414,22 +488,96 @@ ${S.editProfile?`<form class="form box" id="pf" style="margin-top:12px">${profil
  </div>`).join(""):`<div class="empty">${S.tab==="sold"?t("Здесь будут проданные изделия."):t("Пока пусто. Нажмите «+», чтобы выставить изделие.")}</div>`}</div>
 ${isNative?"":installBox()}
 <button class="box langrow" style="margin-top:12px" data-picklang="1"><span class="meta">${t("Язык приложения")}</span><b>${LANG_FLAG[S.lang]} ${LANGS[S.lang]} ›</b></button>
-<div class="form"><button class="btn ghost" id="out">${t("Выйти")}</button></div>`}
+<button class="box langrow" style="margin-top:12px" data-rules="1"><span class="meta">${t("Правила")}</span><b>›</b></button>
+<div class="form"><button class="btn ghost" id="out">${t("Выйти")}</button>
+${S.confirmAcc?`<div class="box"><b>${t("Удалить аккаунт и все объявления? Это нельзя отменить.")}</b><button class="btn danger" id="delacc2" ${S.busy?"disabled":""}>${t("Да, удалить навсегда")}</button><button class="btn ghost" id="delacc0">${t("Отмена")}</button></div>`
+ :`<button class="back danger-text" id="delacc">${t("Удалить аккаунт")}</button>`}</div>`}
+
+/* ---------- Чат, жалобы, блокировка ---------- */
+const other=m=>m.sender===uid()?m.receiver:m.sender;
+const unread=()=>S.msgs.filter(m=>m.receiver===uid()&&!m.read_at&&!S.blocks.includes(m.sender)).length;
+const adById=id=>id?(S.ads.find(a=>a.id==id)||S.adCache[id]||(S.mine||[]).find(a=>a.id==id)):null;
+const hhmm=s=>new Date(s).toLocaleTimeString(LOCALE[S.lang],{hour:"2-digit",minute:"2-digit"});
+const when=s=>{const d=new Date(s);return d.toDateString()===new Date().toDateString()?hhmm(s):d.toLocaleDateString(LOCALE[S.lang],{day:"numeric",month:"short"})};
+const lastAdWith=id=>[...S.msgs].reverse().find(m=>other(m)===id&&m.ad_id)?.ad_id||null;
+async function loadMsgs(){if(!uid())return;
+ const {data,error}=await sb.from("messages").select("*").or(`sender.eq.${uid()},receiver.eq.${uid()}`).order("created_at",{ascending:true}).limit(2000);
+ if(error)throw error;S.msgs=data;await loadProfiles(data.map(other));
+ const ids=[...new Set(data.map(m=>m.ad_id).filter(Boolean))].filter(id=>!adById(id));
+ if(ids.length){const r=await sb.from("ads").select("*").in("id",ids);(r.data||[]).forEach(a=>S.adCache[a.id]=a)}}
+async function loadBlocks(){if(!uid())return;const {data,error}=await sb.from("blocks").select("blocker,blocked");if(error)throw error;
+ S.blocks=data.filter(b=>b.blocker===uid()).map(b=>b.blocked);S.blockedBy=data.filter(b=>b.blocked===uid()).map(b=>b.blocker)}
+function threads(){const g={};for(const m of S.msgs){const o=other(m);if(S.blocks.includes(o))continue;(g[o]=g[o]||[]).push(m)}
+ return Object.entries(g).map(([id,l])=>({id,last:l[l.length-1],ad:[...l].reverse().find(m=>m.ad_id)?.ad_id,un:l.filter(m=>m.receiver===uid()&&!m.read_at).length}))
+  .sort((a,b)=>b.last.created_at.localeCompare(a.last.created_at))}
+async function markRead(id){if(!S.msgs.some(m=>m.sender===id&&m.receiver===uid()&&!m.read_at))return;
+ const now=new Date().toISOString();S.msgs.forEach(m=>{if(m.sender===id&&m.receiver===uid()&&!m.read_at)m.read_at=now});
+ const {error}=await sb.rpc("mark_read",{other:id});if(error)console.error(error)}
+async function openChats(){go("chats");try{await loadMsgs();render()}catch(e){fail(e)}}
+async function openChat(id,adId){if(id===uid())return;S.chatWith=id;S.chatAd=adId||lastAdWith(id);S.chatDraft="";go("chat");askNotify();
+ try{await loadProfiles([id]);if(S.chatAd&&!adById(S.chatAd)){const r=await sb.from("ads").select("*").eq("id",S.chatAd).maybeSingle();if(r.data)S.adCache[r.data.id]=r.data}
+  await markRead(id);render()}catch(e){fail(e)}}
+
+/* уведомления: в приложении — системные (Capacitor), на сайте — браузерные */
+const LN=()=>isNative?window.Capacitor?.Plugins?.LocalNotifications:null;
+async function askNotify(){try{if(LN()){const p=await LN().checkPermissions();if(p.display!=="granted")await LN().requestPermissions();return}
+ if("Notification" in window&&Notification.permission==="default")await Notification.requestPermission()}catch(e){}}
+async function notify(from,body){const title=sname(prof(from));toast(("💬 "+title+": "+body).slice(0,90));
+ if(!document.hidden)return;
+ try{if(LN()){await LN().schedule({notifications:[{id:Math.floor(Math.random()*2e9),title,body,extra:{from}}]});return}
+  if("Notification" in window&&Notification.permission==="granted"){const n=new Notification(title,{body,icon:"icon-192.png",tag:"msg-"+from});n.onclick=()=>{window.focus();openChat(from)}}}catch(e){}}
+let rt=null;
+function startRealtime(){if(rt||!uid())return;
+ rt=sb.channel("inbox-"+uid()).on("postgres_changes",{event:"INSERT",schema:"public",table:"messages",filter:"receiver=eq."+uid()},async ({new:m})=>{
+  if(S.msgs.some(x=>x.id===m.id)||S.blocks.includes(m.sender))return;S.msgs.push(m);
+  try{await loadProfiles([m.sender])}catch(e){}
+  if(S.view==="chat"&&S.chatWith===m.sender&&!document.hidden)await markRead(m.sender);else notify(m.sender,m.body);
+  render()}).subscribe()}
+function stopRealtime(){if(rt){sb.removeChannel(rt);rt=null}}
+async function afterLogin(){await Promise.all([loadSubs(),loadBlocks()]);try{await loadMsgs()}catch(e){console.error(e)}startRealtime()}
+
+function vChats(){const th=threads();return `<h1>${t("Сообщения")}</h1>
+<div class="mylist">${th.length?th.map(x=>{const p=prof(x.id),a=adById(x.ad);return `<button class="thread" data-chat="${x.id}">${ava(x.id)}
+ <span class="tinfo"><b>${esc(sname(p))}</b>${a?`<span class="meta">${esc(a.title)}</span>`:""}<span class="tlast">${x.last.sender===uid()?t("Вы")+": ":""}${esc(x.last.body)}</span></span>
+ <span class="tside"><span class="meta">${when(x.last.created_at)}</span>${x.un?`<span class="badge">${x.un}</span>`:""}</span></button>`}).join("")
+ :`<div class="box" style="margin-top:4px"><p class="note" style="margin:0;font-size:14.5px">${t(NO_MSG)}</p></div>`}</div>`}
+
+function vChat(){const id=S.chatWith,p=prof(id),list=S.msgs.filter(m=>other(m)===id),a=adById(S.chatAd);
+ const mine=S.blocks.includes(id),theirs=S.blockedBy.includes(id);return `
+<div class="chathead"><button class="back" data-go="chats" aria-label="${t("Назад")}">←</button>
+ <button class="sellerrow" data-seller="${id}">${ava(id)}<span><b>${esc(sname(p))}</b><br><span class="meta">${esc(p.city||"")}</span></span></button>
+ <button class="mini" data-blk="${id}">${mine?t("Разблокировать"):t("Заблокировать")}</button></div>
+${a?`<button class="chatad" data-open="${a.id}">${ph(a,"ph")}<span><span class="meta">${t("По объявлению")}</span><br><b>${esc(a.title)}</b><br><span class="price">${money(a.price,a.country)}</span></span></button>`:""}
+<div class="msgs">${list.map(m=>`<div class="msg ${m.sender===uid()?"me":""}">${esc(m.body)}<span>${when(m.created_at)}</span></div>`).join("")}</div>
+${mine?`<p class="note">${t("Вы заблокировали этого пользователя. Разблокируйте, чтобы переписываться.")}</p>`
+ :theirs?`<p class="note">${t("Этот пользователь ограничил переписку с вами.")}</p>`
+ :`<form class="composer" id="chatf"><input id="c-text" maxlength="2000" autocomplete="off" enterkeyhint="send" placeholder="${t("Сообщение…")}" value="${esc(S.chatDraft)}"><button class="btn gold" aria-label="${t("Отправить")}">➤</button></form>`}`}
+
+const REASONS=["Подделка или не золото","Мошенничество","Запрещённый товар","Оскорбления или спам","Другое"];
+const sheetBox=(close,title,body)=>`<div class="sheet-bg" data-${close}="1"></div><div class="sheet" role="dialog" aria-label="${title}"><div class="sheet-h"><span></span><b>${title}</b><button class="back" data-${close}="1" aria-label="close">✕</button></div><div class="sheet-list">${body}</div></div>`;
+const vReport=()=>sheetBox("rclose",t("Почему вы жалуетесь?"),REASONS.map(r=>`<button class="prow" data-reason="${r}">${t(r)}</button>`).join(""));
+const vRules=()=>sheetBox("rulesx",t("Правила Gold Ra"),`<div class="rules">${RULES.map(r=>`<p>${t(r)}</p>`).join("")}</div>`);
+const safetyRow=(userId,adId)=>userId===uid()?"":`<div class="row2"><button class="btn ghost" data-report="${adId||""}" data-ruser="${userId}">⚑ ${t("Пожаловаться")}</button>
+ <button class="btn ghost" data-blk="${userId}">${S.blocks.includes(userId)?t("Разблокировать"):t("Заблокировать")}</button></div>`;
 
 function render(){
+ const typing=document.activeElement?.id==="c-text";
  document.documentElement.lang=S.lang;
  document.body.classList.toggle("cover",!S.session||!S.me);
  const app=$("#app"),tabs=$("#tabs");
- const sheet=()=>S.pick?vPick():"";
+ const sheet=()=>S.rules?vRules():S.report?vReport():S.pick?vPick():"";
  if(S.view==="loading"){tabs.hidden=true;app.innerHTML=vLoading();return}
  if(!S.session){tabs.hidden=true;app.innerHTML=vAuth()+sheet();return}
  if(!S.me){tabs.hidden=true;app.innerHTML=vOnboard();return}
- tabs.hidden=false;
- $("#t-feed span").textContent=t("Лента");$("#t-subs span").textContent=t("Подписки");$("#t-me span").textContent=t("Кабинет");
- app.innerHTML=(({feed:vFeed,subs:vSubs,new:vNew,pending:vPending,open:vOpen,seller:vSeller,me:vMe})[S.view]?.()||vFeed())+sheet();
+ tabs.hidden=S.view==="chat";
+ $("#t-feed span").textContent=t("Лента");$("#t-subs span").textContent=t("Подписки");$("#t-me span").textContent=t("Кабинет");$("#t-chats span").textContent=t("Сообщения");
+ const n=unread(),b=$("#t-badge");b.hidden=!n;b.textContent=n>99?"99+":n;
+ app.innerHTML=(({feed:vFeed,subs:vSubs,new:vNew,pending:vPending,open:vOpen,seller:vSeller,me:vMe,chats:vChats,chat:vChat})[S.view]?.()||vFeed())+sheet();
  $("#t-feed").classList.toggle("on",["feed","open"].includes(S.view));
  $("#t-subs").classList.toggle("on",S.view==="subs");
+ $("#t-chats").classList.toggle("on",S.view==="chats");
  $("#t-me").classList.toggle("on",S.view==="me");
+ if(S.view==="chat"){requestAnimationFrame(()=>window.scrollTo(0,document.body.scrollHeight));if(typing){const c=$("#c-text");if(c){c.focus();c.setSelectionRange(c.value.length,c.value.length)}}}
  const q=$("#q"); if(q){q.oninput=e=>{S.q=e.target.value;const p=q.selectionStart;render();const n=$("#q");n.focus();n.setSelectionRange(p,p)}}
 }
 
@@ -458,6 +606,9 @@ const mineById=id=>(S.mine||[]).find(a=>a.id==id);
 async function updAd(id,patch,msg){const {error}=await sb.from("ads").update(patch).eq("id",id);if(error)return fail(error);toast(msg);await openMe()}
 document.addEventListener("click",async e=>{
  if(e.target.closest("[data-pclose]")){S.pick=null;render();return}
+ if(e.target.closest("[data-rclose]")){S.report=null;render();return}
+ if(e.target.closest("[data-rulesx]")){S.rules=false;render();return}
+ if(e.target.closest("[data-rules]")){e.preventDefault();S.rules=true;render();return}
  const el=e.target.closest("button"); if(!el)return; const d=el.dataset;
  if(d.lang){S.lang=d.lang;S.pick=null;store.set("zb_lang",S.lang);if(S.me)sb.from("profiles").update({lang:S.lang}).eq("id",uid()).then(()=>{});render();return}
  if(d.pickopen){S.pick={step:"cc"};render();return}
@@ -469,10 +620,25 @@ document.addEventListener("click",async e=>{
  if(el.id==="retry"){boot();return}
  if(el.id==="swap"){S.authMode=S.authMode==="signup"?"login":"signup";S.err="";render();return}
  if(d.go){const v=d.go;if(v==="feed")return openFeed();if(v==="subs")return openSubs();if(v==="me")return openMe();
-  if(v==="new"){S.editId=null;S.draft=null}go(v);return}
+  if(v==="chats")return openChats();
+  if(v==="new"){S.editId=null;S.draft=null;S.photoFile=null}go(v);return}
  if(d.cc!==undefined){S.cc=d.cc;render();return}
  if(d.cat!==undefined){S.cat=d.cat;render();return}
+ if(d.chat)return openChat(d.chat,d.ad?Number(d.ad):null);
  if(d.open)return openAd(d.open);
+ if(d.blk){const id=d.blk,on=S.blocks.includes(id);
+  const r=on?await sb.from("blocks").delete().eq("blocker",uid()).eq("blocked",id):await sb.from("blocks").insert({blocker:uid(),blocked:id});
+  if(r.error)return fail(r.error);S.blocks=on?S.blocks.filter(x=>x!==id):[...S.blocks,id];
+  toast(on?t("Пользователь разблокирован"):t("Пользователь заблокирован"));render();return}
+ if(d.ruser!==undefined){S.report={ad:d.report?Number(d.report):null,user:d.ruser||null};render();return}
+ if(d.reason){const rp=S.report;S.report=null;if(!rp)return render();
+  const {error}=await sb.from("reports").insert({reporter:uid(),ad_id:rp.ad,reported_user:rp.user,reason:d.reason});
+  render();if(error)return fail(error);toast(t("Жалоба отправлена. Мы проверим её в течение 24 часов."));return}
+ if(el.id==="delacc"){S.confirmAcc=true;render();return}
+ if(el.id==="delacc0"){S.confirmAcc=false;render();return}
+ if(el.id==="delacc2"){if(S.busy)return;S.busy=true;render();const {error}=await sb.rpc("delete_my_account");S.busy=false;
+  if(error){render();return fail(error)}stopRealtime();await sb.auth.signOut().catch(()=>{});
+  Object.assign(S,{me:null,session:null,subs:[],mine:[],msgs:[],blocks:[],blockedBy:[],confirmAcc:false,view:"feed"});render();toast(t("Аккаунт удалён"));return}
  if(d.seller)return openSeller(d.seller);
  if(d.follow){const id=d.follow,on=S.subs.includes(id);
   const r=on?await sb.from("follows").delete().eq("follower",uid()).eq("seller",id):await sb.from("follows").insert({follower:uid(),seller:id});
@@ -480,7 +646,7 @@ document.addEventListener("click",async e=>{
   S.subs=on?S.subs.filter(x=>x!==id):[...S.subs,id];S.counts[id]=(S.counts[id]||0)+(on?-1:1);
   toast(on?t("Подписка отменена"):t("Вы подписались на {n}",{n:sname(prof(id))}));render();return}
  if(d.tab){S.tab=d.tab;render();return}
- if(d.edit){const a=mineById(d.edit);S.editId=a.id;S.draft={...a};go("new");return}
+ if(d.edit){const a=mineById(d.edit);S.editId=a.id;S.draft={...a};S.photoFile=null;go("new");return}
  if(d.sold)return updAd(d.sold,{status:"sold"},t("Отмечено как продано"));
  if(d.relist)return updAd(d.relist,{status:"active"},t("Объявление снова в продаже"));
  if(d.ask){S.confirmDel=d.ask;render();return}
@@ -489,7 +655,7 @@ document.addEventListener("click",async e=>{
  if(el.id==="editp"){S.editProfile=!S.editProfile;render();return}
  if(el.id==="copy"){const p=d.p;navigator.clipboard?.writeText(p).then(()=>toast(t("Номер скопирован")),()=>toast(t("Выделите номер и скопируйте")));return}
  if(el.id==="install"&&S.installEvt){S.installEvt.prompt();S.installEvt=null;render();return}
- if(el.id==="out"){await sb.auth.signOut();S.me=null;S.session=null;S.subs=[];S.mine=[];render()}
+ if(el.id==="out"){stopRealtime();await sb.auth.signOut();Object.assign(S,{me:null,session:null,subs:[],mine:[],msgs:[],blocks:[],blockedBy:[]});render()}
 });
 
 document.addEventListener("submit",async e=>{
@@ -501,15 +667,20 @@ document.addEventListener("submit",async e=>{
    if(!data.session){S.err=t("Мы отправили письмо на {e}. Откройте его, подтвердите почту и войдите.",{e:email});S.authMode="login";return render()}
   }else{const {error}=await sb.auth.signInWithPassword({email,password});S.busy=false;if(error){S.err=t("Неверная почта или пароль.");return render()}}
   return}
+ if(id==="chatf"){const inp=$("#c-text"),v=inp.value.trim();if(!v||!S.chatWith)return;
+  const row={sender:uid(),receiver:S.chatWith,body:v,ad_id:S.chatAd||null};S.chatDraft="";inp.value="";
+  const {data,error}=await sb.from("messages").insert(row).select().single();
+  if(error){S.chatDraft=v;render();return fail(error)}
+  S.msgs.push(data);render();const c=$("#c-text");if(c)c.focus();return}
  if(id==="onb"){const r=await sb.from("profiles").insert({...readProfile(),id:uid(),lang:S.lang}).select().single();if(r.error)return fail(r.error);S.me=r.data;S.profiles[uid()]=r.data;return openFeed()}
  if(id==="pf"){const r=await sb.from("profiles").update(readProfile()).eq("id",uid()).select().single();if(r.error)return fail(r.error);
   S.me=r.data;S.profiles[uid()]=r.data;S.editProfile=false;toast(t("Профиль сохранён"));return openMe()}
  if(id==="adf"){if(S.busy)return;
-  const f=$("#f-photo").files[0];
+  const f=S.photoFile;
   const row={cat:$("#f-cat").value,title:$("#f-title").value.trim(),probe:$("#f-probe").value,weight:+$("#f-weight").value,price:Math.round(+$("#f-price").value),seller_type:$("#f-seller").value,city:$("#f-city").value.trim(),dist:$("#f-dist").value.trim()||null};
   S.draft={...(S.draft||{}),...row};S.busy=true;render();
   try{
-   if(f)row.photo_url=await uploadPhoto(f);
+   if(f){row.photo_url=await uploadPhoto(f);S.photoFile=null}
    if(S.editId){const {error}=await sb.from("ads").update(row).eq("id",S.editId);if(error)throw error;S.busy=false;S.editId=null;toast(t("Изменения сохранены"));return openMe()}
    const {data,error}=await sb.from("ads").insert({...row,user_id:uid()}).select().single();if(error)throw error;S.busy=false;
    if(data.status==="pending"){go("pending");return}
@@ -517,6 +688,8 @@ document.addEventListener("submit",async e=>{
   catch(err){S.busy=false;render();fail(err)}}
 });
 /* поле формы теряет значения при перерисовке во время отправки — сохраняем черновик */
+document.addEventListener("input",e=>{if(e.target.id==="c-text")S.chatDraft=e.target.value});
+document.addEventListener("change",e=>{if(e.target.id==="f-cam"||e.target.id==="f-photo"){S.photoFile=e.target.files[0]||null;const el=$("#f-picked");if(el)el.textContent=S.photoFile?"✓ "+t("Фото выбрано"):""}});
 document.addEventListener("input",e=>{if(e.target.closest("#adf")){const g=i=>$(i)?.value;S.draft={...(S.draft||{}),cat:g("#f-cat"),title:g("#f-title"),probe:g("#f-probe"),weight:g("#f-weight"),price:g("#f-price"),seller_type:g("#f-seller"),city:g("#f-city")}}});
 
 document.addEventListener("input",e=>{if(e.target.id==="f-city"&&S.me){const l=(LOC[S.me.country]||{})[e.target.value.trim()]||[];const dl=$("#dists");if(dl)dl.innerHTML=l.map(x=>`<option value="${esc(x)}">`).join("")}});
@@ -526,10 +699,13 @@ if(!isNative&&"serviceWorker" in navigator)navigator.serviceWorker.register("sw.
 /* ---------- Запуск ---------- */
 async function boot(){S.err="";S.view="loading";render();
  try{await loadSettings();const {data}=await sb.auth.getSession();S.session=data.session;
-  if(S.session){await loadMe();await loadSubs()}
+  if(S.session){await loadMe();await afterLogin()}
   S.view="feed";render();if(S.session&&S.me)await openFeed()}
  catch(e){console.error(e);S.err=e.message||"error";render()}}
 sb.auth.onAuthStateChange(async(ev,session)=>{const was=S.session?.user?.id;S.session=session;
- if(ev==="SIGNED_IN"&&session&&session.user.id!==was){try{await loadMe();await loadSubs()}catch(e){fail(e)}openFeed()}});
+ if(ev==="SIGNED_IN"&&session&&session.user.id!==was){try{await loadMe();await afterLogin()}catch(e){fail(e)}openFeed()}
+ if(ev==="SIGNED_OUT")stopRealtime()});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&S.view==="chat"&&S.chatWith)markRead(S.chatWith).then(render)});
+if(LN())LN().addListener("localNotificationActionPerformed",a=>{const f=a?.notification?.extra?.from;if(f)openChat(f)});
 boot();
 (()=>{const sp=$("#splash");if(!sp)return;if(isNative){sp.remove();return}setTimeout(()=>{sp.classList.add("out");setTimeout(()=>sp.remove(),500)},1100)})();

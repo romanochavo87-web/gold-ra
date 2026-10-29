@@ -142,6 +142,37 @@ body.cover .chip.on{background:#d9a845;border-color:#d9a845;color:#1a1306}
 @media (prefers-reduced-motion:reduce){#splash{transition:none}}
 
 .authtop{display:flex;justify-content:flex-end}
+
+/* Чат, жалобы, правила */
+.tab{position:relative;min-width:56px}
+.dot{position:absolute;top:-4px;right:8px;min-width:18px;height:18px;border-radius:9px;background:#c0392b;color:#fff;font-size:11px;font-style:normal;font-weight:600;display:grid;place-items:center;padding:0 5px}
+.thread{display:flex;gap:12px;align-items:center;width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.tinfo{flex:1;min-width:0;display:grid;gap:1px}
+.tlast{color:var(--muted);font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tside{display:grid;justify-items:end;gap:4px;flex:none}
+.badge{background:var(--gold);color:#fff;border-radius:999px;font-size:12px;font-weight:600;min-width:20px;height:20px;display:grid;place-items:center;padding:0 6px}
+.chathead{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+.chathead .back{font-size:22px;padding:4px 8px 4px 0}
+.chathead .sellerrow{flex:1;min-width:0}
+.chathead .sellerrow b{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chatad{display:flex;gap:12px;align-items:center;width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.chatad .ph{width:56px;height:56px;flex:none;border-radius:10px;font-size:20px}
+.msgs{display:flex;flex-direction:column;gap:6px;margin-top:12px;padding-bottom:84px}
+.msg{max-width:80%;align-self:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px 16px 16px 4px;padding:8px 12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.me{align-self:flex-end;background:var(--gold);border-color:var(--gold);color:#fff;border-radius:16px 16px 4px 16px}
+.msg span{display:block;font-size:11px;opacity:.7;text-align:right;margin-top:2px}
+.composer{position:fixed;left:0;right:0;bottom:0;z-index:10;max-width:560px;margin:0 auto;display:flex;gap:8px;background:var(--card);border-top:1px solid var(--line);
+  padding:8px max(16px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.composer input{border-radius:999px}
+.composer .btn{width:50px;height:48px;flex:none;padding:0;border-radius:50%;font-size:19px}
+.btn.danger{background:#b3402f;color:#fff}
+.danger-text{color:#b3402f!important;text-align:center}
+.photopick{display:grid;gap:6px}
+.pickbtn{font-size:14px;justify-items:center;text-align:center;padding:12px 8px}
+.agree{display:flex!important;gap:10px;align-items:flex-start;font-size:13.5px}
+.agree input{width:20px;height:20px;flex:none;margin:1px 0 0;accent-color:var(--gold)}
+.agree a,.rules a{color:var(--gold)}
+.rules p{margin:0;padding:12px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
 </style>
 </head>
 <body>
@@ -150,6 +181,7 @@ body.cover .chip.on{background:#d9a845;border-color:#d9a845;color:#1a1306}
   <button class="tab" data-go="feed" id="t-feed">⌂<span>Лента</span></button>
   <button class="tab" data-go="subs" id="t-subs">♥<span>Подписки</span></button>
   <button class="plus" data-go="new" aria-label="+">+</button>
+  <button class="tab" data-go="chats" id="t-chats">✉<span>Сообщения</span><i class="dot" id="t-badge" hidden></i></button>
   <button class="tab" data-go="me" id="t-me">☺<span>Кабинет</span></button>
 </nav>
 <div class="toast" id="toast" hidden></div>
