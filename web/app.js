@@ -501,7 +501,7 @@ ${S.confirmAcc?`<div class="box"><b>${t("Удалить аккаунт и все
  :`<button class="back danger-text" id="delacc">${t("Удалить аккаунт")}</button>`}</div>`}
 
 /* ---------- QR-коды ---------- */
-const SITE=isNative||!/^https?:/.test(location.protocol)?"https://zolotoy-bazar.netlify.app/":location.origin+location.pathname;
+const SITE=isNative||!/^https?:/.test(location.protocol)?"https://romanochavo87-web.github.io/gold-ra/":location.origin+location.pathname;
 const sellerLink=id=>SITE+"#s="+id;
 (()=>{const m=location.hash.match(/s=([0-9a-f-]{36})/i);if(m){store.set("zb_deep",m[1]);history.replaceState(null,"",location.pathname+location.search)}})();
 function openDeep(){const id=store.get("zb_deep");if(!id||!S.me)return;store.set("zb_deep","");openSeller(id)}
