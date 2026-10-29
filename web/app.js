@@ -227,7 +227,7 @@ en:{"Сообщения":"Messages","Написать продавцу":"Message
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Report sent. We will review it within 24 hours.",
 "Сделать фото":"Take photo","Выбрать из галереи":"From gallery","Фото выбрано":"Photo selected",
 "Удалить аккаунт":"Delete account","Удалить аккаунт и все объявления? Это нельзя отменить.":"Delete your account and all listings? This cannot be undone.",
-"Да, удалить навсегда":"Yes, delete forever","Аккаунт удалён":"Account deleted","Правила Gold Ra":"Gold Ra rules","Я принимаю {r}":"I accept the {r}","правила":"rules","Правила":"Rules",
+"Да, удалить навсегда":"Yes, delete forever","Главное":"Main","Аккаунт удалён":"Account deleted","Правила Gold Ra":"Gold Ra rules","Я принимаю {r}":"I accept the {r}","правила":"rules","Правила":"Rules",
 [R1]:"Sell only genuine gold items and state the true fineness and weight.",
 [R2]:"Fakes, stolen goods, insults, threats, spam and any objectionable content are prohibited.",
 [R3]:"We block violators and remove their listings. Reports are reviewed within 24 hours.",
@@ -242,7 +242,7 @@ uz:{"Сообщения":"Xabarlar","Написать продавцу":"Sotuvch
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Shikoyat yuborildi. 24 soat ichida tekshiramiz.",
 "Сделать фото":"Rasmga olish","Выбрать из галереи":"Galereyadan","Фото выбрано":"Rasm tanlandi",
 "Удалить аккаунт":"Akkauntni o'chirish","Удалить аккаунт и все объявления? Это нельзя отменить.":"Akkaunt va barcha e'lonlar o'chirilsinmi? Buni qaytarib bo'lmaydi.",
-"Да, удалить навсегда":"Ha, butunlay o'chirish","Аккаунт удалён":"Akkaunt o'chirildi","Правила Gold Ra":"Gold Ra qoidalari","Я принимаю {r}":"Men {r}ni qabul qilaman","правила":"qoidalar","Правила":"Qoidalar",
+"Да, удалить навсегда":"Ha, butunlay o'chirish","Главное":"Asosiy","Аккаунт удалён":"Akkaunt o'chirildi","Правила Gold Ra":"Gold Ra qoidalari","Я принимаю {r}":"Men {r}ni qabul qilaman","правила":"qoidalar","Правила":"Qoidalar",
 [R1]:"Faqat haqiqiy oltin buyumlarni soting va proba hamda og'irlikni to'g'ri ko'rsating.",
 [R2]:"Qalbaki va o'g'irlangan buyumlar, haqorat, tahdid, spam va har qanday nomaqbul kontent taqiqlanadi.",
 [R3]:"Qoidabuzarlarni bloklaymiz va e'lonlarini o'chiramiz. Shikoyatlar 24 soat ichida ko'rib chiqiladi.",
@@ -257,7 +257,7 @@ kk:{"Сообщения":"Хабарламалар","Написать прода
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Шағым жіберілді. 24 сағат ішінде тексереміз.",
 "Сделать фото":"Суретке түсіру","Выбрать из галереи":"Галереядан","Фото выбрано":"Фото таңдалды",
 "Удалить аккаунт":"Аккаунтты жою","Удалить аккаунт и все объявления? Это нельзя отменить.":"Аккаунт пен барлық хабарландыру жойылсын ба? Мұны қайтару мүмкін емес.",
-"Да, удалить навсегда":"Иә, біржола жою","Аккаунт удалён":"Аккаунт жойылды","Правила Gold Ra":"Gold Ra ережелері","Я принимаю {r}":"Мен {r} қабылдаймын","правила":"ережелерді","Правила":"Ережелер",
+"Да, удалить навсегда":"Иә, біржола жою","Главное":"Басты","Аккаунт удалён":"Аккаунт жойылды","Правила Gold Ra":"Gold Ra ережелері","Я принимаю {r}":"Мен {r} қабылдаймын","правила":"ережелерді","Правила":"Ережелер",
 [R1]:"Тек нағыз алтын бұйымдарды сатыңыз және сынама мен салмақты дұрыс көрсетіңіз.",
 [R2]:"Жалған және ұрланған заттар, қорлау, қорқыту, спам және кез келген жол берілмейтін контентке тыйым салынады.",
 [R3]:"Ереже бұзушыларды бұғаттап, хабарландыруларын жоямыз. Шағымдар 24 сағат ішінде қаралады.",
@@ -272,7 +272,7 @@ ky:{"Сообщения":"Билдирүүлөр","Написать продав
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Даттануу жөнөтүлдү. 24 сааттын ичинде текшеребиз.",
 "Сделать фото":"Сүрөткө тартуу","Выбрать из галереи":"Галереядан","Фото выбрано":"Сүрөт тандалды",
 "Удалить аккаунт":"Аккаунтту өчүрүү","Удалить аккаунт и все объявления? Это нельзя отменить.":"Аккаунт жана бардык жарнамалар өчүрүлсүнбү? Муну кайтаруу мүмкүн эмес.",
-"Да, удалить навсегда":"Ооба, биротоло өчүрүү","Аккаунт удалён":"Аккаунт өчүрүлдү","Правила Gold Ra":"Gold Ra эрежелери","Я принимаю {r}":"Мен {r} кабыл алам","правила":"эрежелерди","Правила":"Эрежелер",
+"Да, удалить навсегда":"Ооба, биротоло өчүрүү","Главное":"Негизги","Аккаунт удалён":"Аккаунт өчүрүлдү","Правила Gold Ra":"Gold Ra эрежелери","Я принимаю {r}":"Мен {r} кабыл алам","правила":"эрежелерди","Правила":"Эрежелер",
 [R1]:"Чыныгы алтын буюмдарды гана сатыңыз жана пробасын, салмагын туура көрсөтүңүз.",
 [R2]:"Жасалма жана уурдалган буюмдар, кордоо, коркутуу, спам жана ар кандай жол берилбеген контентке тыюу салынат.",
 [R3]:"Эрежени бузгандарды бөгөттөп, жарнамаларын өчүрөбүз. Даттануулар 24 сааттын ичинде каралат.",
@@ -287,7 +287,7 @@ const S={session:null,me:null,settings:{free_until:"2026-11-27T00:00:00Z",paid_c
  ads:[],profiles:{},counts:{},subs:[],view:"loading",authMode:"signup",q:"",cat:"",cc:"",
  draft:null,editId:null,open:null,seller:null,back:"feed",tab:"active",editProfile:false,confirmDel:null,busy:false,err:"",
  lang:store.get("zb_lang")||(LANGS[navLang]?navLang:({kz:"kk",kg:"ky",be:"ru"}[navLang]||"ru")),installEvt:null,
- msgs:[],chatWith:null,chatAd:null,chatDraft:"",blocks:[],blockedBy:[],report:null,rules:false,confirmAcc:false,photoFile:null,adCache:{},
+ msgs:[],chatWith:null,chatAd:null,chatDraft:"",blocks:[],blockedBy:[],report:null,rules:false,confirmAcc:false,photos:[],adCache:{},
  pick:null,loc:(()=>{try{return JSON.parse(store.get("zb_loc"))||{cc:"",city:"",dist:""}}catch(e){return {cc:"",city:"",dist:""}}})()};
 
 /* ---------- Помощники ---------- */
@@ -428,7 +428,7 @@ function vNew(){const d=S.draft||{},editing=!!S.editId,me=S.me;return `
  <label>${t("Район")}<input id="f-dist" maxlength="80" list="dists" value="${esc(d.dist||"")}"></label></div>
  <datalist id="cities">${Object.keys(LOC[me.country]||{}).map(c=>`<option value="${esc(c)}">`).join("")}</datalist>
  <datalist id="dists">${((LOC[me.country]||{})[d.city||me.city]||[]).map(x=>`<option value="${esc(x)}">`).join("")}</datalist>
- <div class="photopick"><span class="meta">${t("Фото")}</span><div class="row2"><label class="btn ghost pickbtn">📷 ${t("Сделать фото")}<input id="f-cam" type="file" accept="image/*" capture="environment" hidden></label><label class="btn ghost pickbtn">🖼 ${t("Выбрать из галереи")}<input id="f-photo" type="file" accept="image/*" hidden></label></div><span class="meta" id="f-picked">${S.photoFile?"✓ "+t("Фото выбрано"):""}</span></div>
+ ${photoPicker()}
  <button class="btn gold" ${S.busy?"disabled":""}>${S.busy?t("Публикуем…"):(editing?t("Сохранить изменения"):t("Опубликовать бесплатно"))}</button>
 </form>`}
 
@@ -439,7 +439,7 @@ function vPending(){return `<h2>${t("Оплата размещения")}</h2>
 
 function vOpen(){const a=S.ads.find(x=>x.id==S.open)||S.mine?.find(x=>x.id==S.open);if(!a)return vFeed();const p=prof(a.user_id);return `
 <button class="back" data-go="${S.back||"feed"}">← ${t("Назад")}</button>
-<div class="screen" style="margin-top:6px">${ph(a,"big")}
+<div class="screen" style="margin-top:6px">${gallery(a)}
  <span class="tag">${esc(t(a.cat))}${a.status==="sold"?" · "+t("Продано"):""}${a.status==="pending"?" · "+t("Ждёт оплаты"):""}</span>
  <h2>${esc(a.title)}</h2><div class="price" style="font-size:22px">${money(a.price,a.country)}</div>
  <div class="box">
@@ -492,6 +492,15 @@ ${isNative?"":installBox()}
 <div class="form"><button class="btn ghost" id="out">${t("Выйти")}</button>
 ${S.confirmAcc?`<div class="box"><b>${t("Удалить аккаунт и все объявления? Это нельзя отменить.")}</b><button class="btn danger" id="delacc2" ${S.busy?"disabled":""}>${t("Да, удалить навсегда")}</button><button class="btn ghost" id="delacc0">${t("Отмена")}</button></div>`
  :`<button class="back danger-text" id="delacc">${t("Удалить аккаунт")}</button>`}</div>`}
+
+/* ---------- Фото: до 4 штук ---------- */
+const MAXPH=4;
+const adPhotos=a=>a.photos&&a.photos.length?a.photos:(a.photo_url?[a.photo_url]:[]);
+function gallery(a){const l=adPhotos(a);if(l.length<2)return ph({...a,photo_url:l[0]||null},"big");
+ return `<div class="gal"><div class="galtrack" id="gal">${l.map(u=>`<img class="big" src="${esc(u)}" alt="" loading="lazy">`).join("")}</div><span class="galn" id="galn">1/${l.length}</span></div>`}
+function photoPicker(){const n=S.photos.length;return `<div class="photopick"><span class="meta">${t("Фото")} · ${n}/${MAXPH}</span>
+ ${n?`<div class="thumbs">${S.photos.map((p,i)=>`<div class="thumb"><img src="${esc(p.url||p.prev)}" alt="">${i===0?`<span class="main">${t("Главное")}</span>`:""}<button type="button" class="rm" data-rmph="${i}" aria-label="${t("Удалить")}">✕</button></div>`).join("")}</div>`:""}
+ ${n<MAXPH?`<div class="row2"><label class="btn ghost pickbtn">📷 ${t("Сделать фото")}<input id="f-cam" type="file" accept="image/*" capture="environment" hidden></label><label class="btn ghost pickbtn">🖼 ${t("Выбрать из галереи")}<input id="f-photo" type="file" accept="image/*" multiple hidden></label></div>`:""}</div>`}
 
 /* ---------- Чат, жалобы, блокировка ---------- */
 const other=m=>m.sender===uid()?m.receiver:m.sender;
@@ -593,12 +602,16 @@ async function openAd(id){S.back=S.view==="open"?S.back:S.view;S.open=id;go("ope
  if(a){try{await loadProfiles([a.user_id]);await loadCounts([a.user_id]);render()}catch(e){fail(e)}}}
 
 /* ---------- Фото: уменьшаем перед загрузкой ---------- */
-function shrink(file){return new Promise((res,rej)=>{const img=new Image();const url=URL.createObjectURL(file);
- img.onload=()=>{const m=1280,k=Math.min(1,m/Math.max(img.width,img.height));const c=document.createElement("canvas");c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);
-  c.getContext("2d").drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(url);c.toBlob(b=>b?res(b):rej(new Error("image")),"image/jpeg",0.82)};
- img.onerror=()=>rej(new Error("image"));img.src=url})}
-async function uploadPhoto(file){const blob=await shrink(file);const path=`${uid()}/${Date.now()}.jpg`;
- const {error}=await sb.storage.from("ad-photos").upload(path,blob,{contentType:"image/jpeg"});if(error)throw error;
+function shrink(file){
+ const draw=(src,w,h)=>new Promise((res,rej)=>{const k=Math.min(1,1280/Math.max(w,h));const c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);
+  c.getContext("2d").drawImage(src,0,0,c.width,c.height);c.toBlob(b=>b?res(b):rej(new Error("image")),"image/jpeg",0.82)});
+ const viaImg=()=>new Promise((res,rej)=>{const img=new Image(),url=URL.createObjectURL(file);
+  img.onload=()=>{URL.revokeObjectURL(url);draw(img,img.naturalWidth,img.naturalHeight).then(res,rej)};img.onerror=()=>{URL.revokeObjectURL(url);rej(new Error("image"))};img.src=url});
+ const job=window.createImageBitmap?createImageBitmap(file).then(bm=>draw(bm,bm.width,bm.height).finally(()=>bm.close&&bm.close())).catch(viaImg):viaImg();
+ /* если телефон не смог уменьшить фото — загружаем как есть, чтобы публикация не зависла */
+ return Promise.race([job,new Promise(r=>setTimeout(()=>r(file),10000))]).catch(()=>file)}
+async function uploadPhoto(file){const blob=await shrink(file);const path=`${uid()}/${Date.now()}-${Math.random().toString(36).slice(2,7)}.jpg`;
+ const {error}=await sb.storage.from("ad-photos").upload(path,blob,{contentType:blob.type||"image/jpeg"});if(error)throw error;
  return sb.storage.from("ad-photos").getPublicUrl(path).data.publicUrl}
 
 /* ---------- Нажатия ---------- */
@@ -621,9 +634,10 @@ document.addEventListener("click",async e=>{
  if(el.id==="swap"){S.authMode=S.authMode==="signup"?"login":"signup";S.err="";render();return}
  if(d.go){const v=d.go;if(v==="feed")return openFeed();if(v==="subs")return openSubs();if(v==="me")return openMe();
   if(v==="chats")return openChats();
-  if(v==="new"){S.editId=null;S.draft=null;S.photoFile=null}go(v);return}
+  if(v==="new"){S.editId=null;S.draft=null;S.photos=[]}go(v);return}
  if(d.cc!==undefined){S.cc=d.cc;render();return}
  if(d.cat!==undefined){S.cat=d.cat;render();return}
+ if(d.rmph!==undefined){S.photos.splice(Number(d.rmph),1);render();return}
  if(d.chat)return openChat(d.chat,d.ad?Number(d.ad):null);
  if(d.open)return openAd(d.open);
  if(d.blk){const id=d.blk,on=S.blocks.includes(id);
@@ -646,7 +660,7 @@ document.addEventListener("click",async e=>{
   S.subs=on?S.subs.filter(x=>x!==id):[...S.subs,id];S.counts[id]=(S.counts[id]||0)+(on?-1:1);
   toast(on?t("Подписка отменена"):t("Вы подписались на {n}",{n:sname(prof(id))}));render();return}
  if(d.tab){S.tab=d.tab;render();return}
- if(d.edit){const a=mineById(d.edit);S.editId=a.id;S.draft={...a};S.photoFile=null;go("new");return}
+ if(d.edit){const a=mineById(d.edit);S.editId=a.id;S.draft={...a};S.photos=adPhotos(a).map(url=>({url}));go("new");return}
  if(d.sold)return updAd(d.sold,{status:"sold"},t("Отмечено как продано"));
  if(d.relist)return updAd(d.relist,{status:"active"},t("Объявление снова в продаже"));
  if(d.ask){S.confirmDel=d.ask;render();return}
@@ -676,11 +690,12 @@ document.addEventListener("submit",async e=>{
  if(id==="pf"){const r=await sb.from("profiles").update(readProfile()).eq("id",uid()).select().single();if(r.error)return fail(r.error);
   S.me=r.data;S.profiles[uid()]=r.data;S.editProfile=false;toast(t("Профиль сохранён"));return openMe()}
  if(id==="adf"){if(S.busy)return;
-  const f=S.photoFile;
+  
   const row={cat:$("#f-cat").value,title:$("#f-title").value.trim(),probe:$("#f-probe").value,weight:+$("#f-weight").value,price:Math.round(+$("#f-price").value),seller_type:$("#f-seller").value,city:$("#f-city").value.trim(),dist:$("#f-dist").value.trim()||null};
   S.draft={...(S.draft||{}),...row};S.busy=true;render();
   try{
-   if(f){row.photo_url=await uploadPhoto(f);S.photoFile=null}
+   const urls=[];for(const p of S.photos)urls.push(p.url||await uploadPhoto(p.file));
+   row.photos=urls;row.photo_url=urls[0]||null;S.photos=[];
    if(S.editId){const {error}=await sb.from("ads").update(row).eq("id",S.editId);if(error)throw error;S.busy=false;S.editId=null;toast(t("Изменения сохранены"));return openMe()}
    const {data,error}=await sb.from("ads").insert({...row,user_id:uid()}).select().single();if(error)throw error;S.busy=false;
    if(data.status==="pending"){go("pending");return}
@@ -689,8 +704,10 @@ document.addEventListener("submit",async e=>{
 });
 /* поле формы теряет значения при перерисовке во время отправки — сохраняем черновик */
 document.addEventListener("input",e=>{if(e.target.id==="c-text")S.chatDraft=e.target.value});
-document.addEventListener("change",e=>{if(e.target.id==="f-cam"||e.target.id==="f-photo"){S.photoFile=e.target.files[0]||null;const el=$("#f-picked");if(el)el.textContent=S.photoFile?"✓ "+t("Фото выбрано"):""}});
-document.addEventListener("input",e=>{if(e.target.closest("#adf")){const g=i=>$(i)?.value;S.draft={...(S.draft||{}),cat:g("#f-cat"),title:g("#f-title"),probe:g("#f-probe"),weight:g("#f-weight"),price:g("#f-price"),seller_type:g("#f-seller"),city:g("#f-city")}}});
+document.addEventListener("change",e=>{if(e.target.id==="f-cam"||e.target.id==="f-photo"){
+ for(const f of [...e.target.files]){if(S.photos.length>=MAXPH)break;S.photos.push({file:f,prev:URL.createObjectURL(f)})}render()}});
+document.addEventListener("scroll",e=>{if(e.target.id==="gal"){const g=e.target,n=$("#galn");if(n)n.textContent=(Math.round(g.scrollLeft/g.clientWidth)+1)+"/"+g.children.length}},true);
+document.addEventListener("input",e=>{if(e.target.closest("#adf")){const g=i=>$(i)?.value;S.draft={...(S.draft||{}),cat:g("#f-cat"),title:g("#f-title"),probe:g("#f-probe"),weight:g("#f-weight"),price:g("#f-price"),seller_type:g("#f-seller"),city:g("#f-city"),dist:g("#f-dist")}}});
 
 document.addEventListener("input",e=>{if(e.target.id==="f-city"&&S.me){const l=(LOC[S.me.country]||{})[e.target.value.trim()]||[];const dl=$("#dists");if(dl)dl.innerHTML=l.map(x=>`<option value="${esc(x)}">`).join("")}});
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();S.installEvt=e;if(S.view==="me")render()});
