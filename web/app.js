@@ -227,7 +227,7 @@ en:{"Сообщения":"Messages","Написать продавцу":"Message
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Report sent. We will review it within 24 hours.",
 "Сделать фото":"Take photo","Выбрать из галереи":"From gallery","Фото выбрано":"Photo selected",
 "Удалить аккаунт":"Delete account","Удалить аккаунт и все объявления? Это нельзя отменить.":"Delete your account and all listings? This cannot be undone.",
-"Да, удалить навсегда":"Yes, delete forever","Главное":"Main","Аккаунт удалён":"Account deleted","Правила Gold Ra":"Gold Ra rules","Я принимаю {r}":"I accept the {r}","правила":"rules","Правила":"Rules",
+"Да, удалить навсегда":"Yes, delete forever","Главное":"Main","Фото {i} из {n}…":"Photo {i} of {n}…","Аккаунт удалён":"Account deleted","Правила Gold Ra":"Gold Ra rules","Я принимаю {r}":"I accept the {r}","правила":"rules","Правила":"Rules",
 [R1]:"Sell only genuine gold items and state the true fineness and weight.",
 [R2]:"Fakes, stolen goods, insults, threats, spam and any objectionable content are prohibited.",
 [R3]:"We block violators and remove their listings. Reports are reviewed within 24 hours.",
@@ -242,7 +242,7 @@ uz:{"Сообщения":"Xabarlar","Написать продавцу":"Sotuvch
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Shikoyat yuborildi. 24 soat ichida tekshiramiz.",
 "Сделать фото":"Rasmga olish","Выбрать из галереи":"Galereyadan","Фото выбрано":"Rasm tanlandi",
 "Удалить аккаунт":"Akkauntni o'chirish","Удалить аккаунт и все объявления? Это нельзя отменить.":"Akkaunt va barcha e'lonlar o'chirilsinmi? Buni qaytarib bo'lmaydi.",
-"Да, удалить навсегда":"Ha, butunlay o'chirish","Главное":"Asosiy","Аккаунт удалён":"Akkaunt o'chirildi","Правила Gold Ra":"Gold Ra qoidalari","Я принимаю {r}":"Men {r}ni qabul qilaman","правила":"qoidalar","Правила":"Qoidalar",
+"Да, удалить навсегда":"Ha, butunlay o'chirish","Главное":"Asosiy","Фото {i} из {n}…":"Rasm {i} / {n}…","Аккаунт удалён":"Akkaunt o'chirildi","Правила Gold Ra":"Gold Ra qoidalari","Я принимаю {r}":"Men {r}ni qabul qilaman","правила":"qoidalar","Правила":"Qoidalar",
 [R1]:"Faqat haqiqiy oltin buyumlarni soting va proba hamda og'irlikni to'g'ri ko'rsating.",
 [R2]:"Qalbaki va o'g'irlangan buyumlar, haqorat, tahdid, spam va har qanday nomaqbul kontent taqiqlanadi.",
 [R3]:"Qoidabuzarlarni bloklaymiz va e'lonlarini o'chiramiz. Shikoyatlar 24 soat ichida ko'rib chiqiladi.",
@@ -257,7 +257,7 @@ kk:{"Сообщения":"Хабарламалар","Написать прода
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Шағым жіберілді. 24 сағат ішінде тексереміз.",
 "Сделать фото":"Суретке түсіру","Выбрать из галереи":"Галереядан","Фото выбрано":"Фото таңдалды",
 "Удалить аккаунт":"Аккаунтты жою","Удалить аккаунт и все объявления? Это нельзя отменить.":"Аккаунт пен барлық хабарландыру жойылсын ба? Мұны қайтару мүмкін емес.",
-"Да, удалить навсегда":"Иә, біржола жою","Главное":"Басты","Аккаунт удалён":"Аккаунт жойылды","Правила Gold Ra":"Gold Ra ережелері","Я принимаю {r}":"Мен {r} қабылдаймын","правила":"ережелерді","Правила":"Ережелер",
+"Да, удалить навсегда":"Иә, біржола жою","Главное":"Басты","Фото {i} из {n}…":"Фото {i} / {n}…","Аккаунт удалён":"Аккаунт жойылды","Правила Gold Ra":"Gold Ra ережелері","Я принимаю {r}":"Мен {r} қабылдаймын","правила":"ережелерді","Правила":"Ережелер",
 [R1]:"Тек нағыз алтын бұйымдарды сатыңыз және сынама мен салмақты дұрыс көрсетіңіз.",
 [R2]:"Жалған және ұрланған заттар, қорлау, қорқыту, спам және кез келген жол берілмейтін контентке тыйым салынады.",
 [R3]:"Ереже бұзушыларды бұғаттап, хабарландыруларын жоямыз. Шағымдар 24 сағат ішінде қаралады.",
@@ -272,7 +272,7 @@ ky:{"Сообщения":"Билдирүүлөр","Написать продав
 "Жалоба отправлена. Мы проверим её в течение 24 часов.":"Даттануу жөнөтүлдү. 24 сааттын ичинде текшеребиз.",
 "Сделать фото":"Сүрөткө тартуу","Выбрать из галереи":"Галереядан","Фото выбрано":"Сүрөт тандалды",
 "Удалить аккаунт":"Аккаунтту өчүрүү","Удалить аккаунт и все объявления? Это нельзя отменить.":"Аккаунт жана бардык жарнамалар өчүрүлсүнбү? Муну кайтаруу мүмкүн эмес.",
-"Да, удалить навсегда":"Ооба, биротоло өчүрүү","Главное":"Негизги","Аккаунт удалён":"Аккаунт өчүрүлдү","Правила Gold Ra":"Gold Ra эрежелери","Я принимаю {r}":"Мен {r} кабыл алам","правила":"эрежелерди","Правила":"Эрежелер",
+"Да, удалить навсегда":"Ооба, биротоло өчүрүү","Главное":"Негизги","Фото {i} из {n}…":"Сүрөт {i} / {n}…","Аккаунт удалён":"Аккаунт өчүрүлдү","Правила Gold Ra":"Gold Ra эрежелери","Я принимаю {r}":"Мен {r} кабыл алам","правила":"эрежелерди","Правила":"Эрежелер",
 [R1]:"Чыныгы алтын буюмдарды гана сатыңыз жана пробасын, салмагын туура көрсөтүңүз.",
 [R2]:"Жасалма жана уурдалган буюмдар, кордоо, коркутуу, спам жана ар кандай жол берилбеген контентке тыюу салынат.",
 [R3]:"Эрежени бузгандарды бөгөттөп, жарнамаларын өчүрөбүз. Даттануулар 24 сааттын ичинде каралат.",
@@ -429,7 +429,7 @@ function vNew(){const d=S.draft||{},editing=!!S.editId,me=S.me;return `
  <datalist id="cities">${Object.keys(LOC[me.country]||{}).map(c=>`<option value="${esc(c)}">`).join("")}</datalist>
  <datalist id="dists">${((LOC[me.country]||{})[d.city||me.city]||[]).map(x=>`<option value="${esc(x)}">`).join("")}</datalist>
  ${photoPicker()}
- <button class="btn gold" ${S.busy?"disabled":""}>${S.busy?t("Публикуем…"):(editing?t("Сохранить изменения"):t("Опубликовать бесплатно"))}</button>
+ <button class="btn gold" ${S.busy?"disabled":""}>${S.busy?(S.progress||t("Публикуем…")):(editing?t("Сохранить изменения"):t("Опубликовать бесплатно"))}</button>
 </form>`}
 
 function vPending(){return `<h2>${t("Оплата размещения")}</h2>
@@ -607,9 +607,9 @@ function shrink(file){
   c.getContext("2d").drawImage(src,0,0,c.width,c.height);c.toBlob(b=>b?res(b):rej(new Error("image")),"image/jpeg",0.82)});
  const viaImg=()=>new Promise((res,rej)=>{const img=new Image(),url=URL.createObjectURL(file);
   img.onload=()=>{URL.revokeObjectURL(url);draw(img,img.naturalWidth,img.naturalHeight).then(res,rej)};img.onerror=()=>{URL.revokeObjectURL(url);rej(new Error("image"))};img.src=url});
- const job=window.createImageBitmap?createImageBitmap(file).then(bm=>draw(bm,bm.width,bm.height).finally(()=>bm.close&&bm.close())).catch(viaImg):viaImg();
+ const job=window.createImageBitmap?createImageBitmap(file,{resizeWidth:1280,resizeQuality:"medium"}).catch(()=>createImageBitmap(file)).then(bm=>draw(bm,bm.width,bm.height).finally(()=>bm.close&&bm.close())).catch(viaImg):viaImg();
  /* если телефон не смог уменьшить фото — загружаем как есть, чтобы публикация не зависла */
- return Promise.race([job,new Promise(r=>setTimeout(()=>r(file),10000))]).catch(()=>file)}
+ return Promise.race([job,new Promise(r=>setTimeout(()=>r(file),6000))]).catch(()=>file)}
 async function uploadPhoto(file){const blob=await shrink(file);const path=`${uid()}/${Date.now()}-${Math.random().toString(36).slice(2,7)}.jpg`;
  const {error}=await sb.storage.from("ad-photos").upload(path,blob,{contentType:blob.type||"image/jpeg"});if(error)throw error;
  return sb.storage.from("ad-photos").getPublicUrl(path).data.publicUrl}
@@ -694,13 +694,15 @@ document.addEventListener("submit",async e=>{
   const row={cat:$("#f-cat").value,title:$("#f-title").value.trim(),probe:$("#f-probe").value,weight:+$("#f-weight").value,price:Math.round(+$("#f-price").value),seller_type:$("#f-seller").value,city:$("#f-city").value.trim(),dist:$("#f-dist").value.trim()||null};
   S.draft={...(S.draft||{}),...row};S.busy=true;render();
   try{
-   const urls=[];for(const p of S.photos)urls.push(p.url||await uploadPhoto(p.file));
+   const urls=[],todo=S.photos.filter(p=>!p.url).length;let k=0;
+   for(const p of S.photos){if(p.url){urls.push(p.url);continue}k++;S.progress=t("Фото {i} из {n}…",{i:k,n:todo});render();urls.push(await uploadPhoto(p.file))}
+   S.progress="";
    row.photos=urls;row.photo_url=urls[0]||null;S.photos=[];
    if(S.editId){const {error}=await sb.from("ads").update(row).eq("id",S.editId);if(error)throw error;S.busy=false;S.editId=null;toast(t("Изменения сохранены"));return openMe()}
    const {data,error}=await sb.from("ads").insert({...row,user_id:uid()}).select().single();if(error)throw error;S.busy=false;
    if(data.status==="pending"){go("pending");return}
    toast(t("Объявление опубликовано бесплатно"));return openFeed()}
-  catch(err){S.busy=false;render();fail(err)}}
+  catch(err){S.busy=false;S.progress="";render();fail(err)}}
 });
 /* поле формы теряет значения при перерисовке во время отправки — сохраняем черновик */
 document.addEventListener("input",e=>{if(e.target.id==="c-text")S.chatDraft=e.target.value});
