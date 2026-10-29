@@ -97,7 +97,9 @@ kk:{"Золотой Базар":"Алтын Базар","5 стран":"5 ел",
 /* ===== Золотой Базар — рабочая версия на Supabase ===== */
 const SB_URL="https://zhzvwzsmscsdyztelvmi.supabase.co";
 const SB_KEY="sb_publishable_GmABLepcccmopGVEIN-eFQ_FxrfWCLh";
-const sb=window.supabase.createClient(SB_URL,SB_KEY);
+/* lock — без блокировки между вкладками: иначе старая открытая вкладка может «держать» вход,
+   и новая навсегда зависает на «Загрузке» до первого запроса к базе */
+const sb=window.supabase.createClient(SB_URL,SB_KEY,{auth:{lock:async(_name,_timeout,fn)=>await fn()}});
 
 const CATS=["Цепь","Браслет","Кольцо","Серьги","Часы","Кулон","Крест","Монеты и слитки","Лом","Другое"];
 const TYPES=["Частник","Магазин","Лом"];

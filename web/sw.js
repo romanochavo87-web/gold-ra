@@ -1,4 +1,4 @@
-const C="goldra-v2";const SHELL=["./","index.html","app.js","manifest.webmanifest","icon-192.png","logo.png","vendor/supabase.js"];
+const C="goldra-v3";const SHELL=["./","index.html","app.js","manifest.webmanifest","icon-192.png","logo.png","vendor/supabase.js"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(SHELL)));self.skipWaiting()});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))));self.clients.claim()});
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET"||u.origin!==location.origin)return;
