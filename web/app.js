@@ -297,6 +297,8 @@ const allOf=c=>({ru:ALL_RU[c],en:"All of "+cname(c),uz:cname(c)+" bo'ylab",kk:"�
 const locLabel=()=>!S.loc.cc?t("Все страны"):S.loc.city?S.loc.city+(S.loc.dist?", "+S.loc.dist:""):allOf(S.loc.cc);
 const inLoc=a=>(!S.loc.cc||a.country===S.loc.cc)&&(!S.loc.city||a.city===S.loc.city)&&(!S.loc.dist||a.dist===S.loc.dist);
 const place=a=>`${FLAG[a.country]||""} ${esc(a.city)}${a.dist?", "+esc(a.dist):""}`;
+/* на netlify.app хостинг сам рисует плашку внизу справа — поднимаем поле чата над ней */
+if(/netlify\.app$/.test(location.hostname))document.documentElement.classList.add("nf");
 const isNative=!!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform());
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
