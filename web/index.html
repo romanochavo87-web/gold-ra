@@ -190,6 +190,7 @@ html.nf .msgs{padding-bottom:150px}
 .qrbox b{font-size:17px}.qrbox .note{margin:0;max-width:320px}
 .qrlink{overflow-wrap:anywhere;font-size:11.5px}
 .qrbox .row2{width:100%}
+.rstars{color:#d4a017;letter-spacing:1px}.starpick{display:flex;gap:6px;margin:8px 0}.starpick .star{background:none;border:0;font-size:32px;line-height:1;color:#ccc;cursor:pointer;padding:0}.starpick .star.on{color:#d4a017}#revf textarea,.repf textarea{width:100%;box-sizing:border-box;border-radius:12px;padding:10px;font:inherit;margin-bottom:8px;border:1px solid rgba(128,128,128,.35);background:transparent;color:inherit}.review .reply{border-left:3px solid #d4a017;padding-left:10px;margin-top:8px}.repf{margin-top:8px}
 </style>
 </head>
 <body>
@@ -207,7 +208,7 @@ html.nf .msgs{padding-bottom:150px}
 <script>/* если своя копия библиотеки не загрузилась — берём её с CDN */
 if(!window.supabase)document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>')</script>
 <script src="qrcode.js?v=6"></script>
-<script src="app.js?v=6"></script>
+<script src="app.js?v=7"></script>
 <script>/* страховка: заставка не должна висеть, даже если что-то сломалось */
 setTimeout(function(){var sp=document.getElementById("splash");if(sp){sp.classList.add("out");setTimeout(function(){sp.remove()},500)}},4000)</script>
 </body>

@@ -283,12 +283,18 @@ ky:{"Сообщения":"Билдирүүлөр","Написать продав
 for(const l in CHAT_I18N)Object.assign(I18N[l],CHAT_I18N[l]);
 const QR_I18N={"en": {"Мой QR": "My QR", "QR приложения": "App QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "Show this QR to a buyer — it opens your page in Gold Ra.", "Отсканируйте, чтобы открыть Gold Ra.": "Scan to open Gold Ra.", "Поделиться": "Share", "Скачать картинку": "Save image", "Ссылка скопирована": "Link copied", "Сканируйте — мои изделия в Gold Ra": "Scan to see my items on Gold Ra", "Покупка и продажа золота": "Buy and sell gold"}, "uz": {"Мой QR": "Mening QR", "QR приложения": "Ilova QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "QR ni xaridorga ko'rsating — u Gold Ra'da sahifangizni ochadi.", "Отсканируйте, чтобы открыть Gold Ra.": "Gold Ra'ni ochish uchun skanerlang.", "Поделиться": "Ulashish", "Скачать картинку": "Rasmni saqlash", "Ссылка скопирована": "Havola nusxalandi", "Сканируйте — мои изделия в Gold Ra": "Skanerlang — Gold Ra'dagi buyumlarim", "Покупка и продажа золота": "Oltin sotib olish va sotish"}, "kk": {"Мой QR": "Менің QR", "QR приложения": "Қосымша QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "QR-ды сатып алушыға көрсетіңіз — ол Gold Ra-да парақшаңызды ашады.", "Отсканируйте, чтобы открыть Gold Ra.": "Gold Ra ашу үшін сканерлеңіз.", "Поделиться": "Бөлісу", "Скачать картинку": "Суретті сақтау", "Ссылка скопирована": "Сілтеме көшірілді", "Сканируйте — мои изделия в Gold Ra": "Сканерлеңіз — Gold Ra-дағы бұйымдарым", "Покупка и продажа золота": "Алтын сату және сатып алу"}, "ky": {"Мой QR": "Менин QR", "QR приложения": "Колдонмо QR", "Покажите QR покупателю — он сразу откроет вашу страницу в Gold Ra.": "QRды сатып алуучуга көрсөтүңүз — ал Gold Ra'да барагыңызды ачат.", "Отсканируйте, чтобы открыть Gold Ra.": "Gold Ra ачуу үчүн сканерлеңиз.", "Поделиться": "Бөлүшүү", "Скачать картинку": "Сүрөттү сактоо", "Ссылка скопирована": "Шилтеме көчүрүлдү", "Сканируйте — мои изделия в Gold Ra": "Сканерлеңиз — Gold Ra'дагы буюмдарым", "Покупка и продажа золота": "Алтын сатуу жана сатып алуу"}};
 for(const l in QR_I18N)Object.assign(I18N[l],QR_I18N[l]);
+const REV_I18N={
+en:{"Отзывы":"Reviews","отзывов":"reviews","Нет отзывов":"No reviews","Оставить отзыв":"Leave a review","Ваш отзыв":"Your review","Расскажите, как прошла сделка":"Tell how the deal went","Отправить":"Send","Удалить отзыв":"Delete review","Отзыв сохранён":"Review saved","Отзыв удалён":"Review deleted","Ответ продавца":"Seller's reply","Ответить":"Reply","Ваш ответ":"Your reply","Ответ сохранён":"Reply saved","Выберите оценку":"Choose a rating","У продавца пока нет отзывов.":"This seller has no reviews yet.","Войдите, чтобы оставить отзыв.":"Log in to leave a review.","Изменить отзыв":"Edit review"},
+uz:{"Отзывы":"Sharhlar","отзывов":"sharh","Нет отзывов":"Sharh yo'q","Оставить отзыв":"Sharh qoldirish","Ваш отзыв":"Sizning sharhingiz","Расскажите, как прошла сделка":"Savdo qanday o'tganini yozing","Отправить":"Yuborish","Удалить отзыв":"Sharhni o'chirish","Отзыв сохранён":"Sharh saqlandi","Отзыв удалён":"Sharh o'chirildi","Ответ продавца":"Sotuvchi javobi","Ответить":"Javob berish","Ваш ответ":"Sizning javobingiz","Ответ сохранён":"Javob saqlandi","Выберите оценку":"Bahoni tanlang","У продавца пока нет отзывов.":"Sotuvchida hozircha sharh yo'q.","Войдите, чтобы оставить отзыв.":"Sharh qoldirish uchun kiring.","Изменить отзыв":"Sharhni o'zgartirish"},
+kk:{"Отзывы":"Пікірлер","отзывов":"пікір","Нет отзывов":"Пікір жоқ","Оставить отзыв":"Пікір қалдыру","Ваш отзыв":"Сіздің пікіріңіз","Расскажите, как прошла сделка":"Мәміле қалай өткенін жазыңыз","Отправить":"Жіберу","Удалить отзыв":"Пікірді жою","Отзыв сохранён":"Пікір сақталды","Отзыв удалён":"Пікір жойылды","Ответ продавца":"Сатушының жауабы","Ответить":"Жауап беру","Ваш ответ":"Сіздің жауабыңыз","Ответ сохранён":"Жауап сақталды","Выберите оценку":"Бағаны таңдаңыз","У продавца пока нет отзывов.":"Сатушыда әзірге пікір жоқ.","Войдите, чтобы оставить отзыв.":"Пікір қалдыру үшін кіріңіз.","Изменить отзыв":"Пікірді өзгерту"},
+ky:{"Отзывы":"Пикирлер","отзывов":"пикир","Нет отзывов":"Пикир жок","Оставить отзыв":"Пикир калтыруу","Ваш отзыв":"Сиздин пикириңиз","Расскажите, как прошла сделка":"Бүтүм кандай өткөнүн жазыңыз","Отправить":"Жөнөтүү","Удалить отзыв":"Пикирди өчүрүү","Отзыв сохранён":"Пикир сакталды","Отзыв удалён":"Пикир өчүрүлдү","Ответ продавца":"Сатуучунун жообу","Ответить":"Жооп берүү","Ваш ответ":"Сиздин жообуңуз","Ответ сохранён":"Жооп сакталды","Выберите оценку":"Бааны тандаңыз","У продавца пока нет отзывов.":"Сатуучуда азырынча пикир жок.","Войдите, чтобы оставить отзыв.":"Пикир калтыруу үчүн кириңиз.","Изменить отзыв":"Пикирди өзгөртүү"}};
+for(const l in REV_I18N)if(I18N[l])Object.assign(I18N[l],REV_I18N[l]);
 
 /* ---------- Состояние ---------- */
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const navLang=(navigator.language||"ru").slice(0,2).toLowerCase();
 const S={session:null,me:null,settings:{free_until:"2026-11-27T00:00:00Z",paid_countries:["RU"]},
- ads:[],profiles:{},counts:{},subs:[],view:"loading",authMode:"signup",q:"",cat:"",cc:"",
+ ads:[],profiles:{},counts:{},ratings:{},reviews:[],revStar:0,revEdit:false,subs:[],view:"loading",authMode:"signup",q:"",cat:"",cc:"",
  draft:null,editId:null,open:null,seller:null,back:"feed",tab:"active",editProfile:false,confirmDel:null,busy:false,err:"",
  lang:store.get("zb_lang")||(LANGS[navLang]?navLang:({kz:"kk",kg:"ky",be:"ru"}[navLang]||"ru")),installEvt:null,
  msgs:[],chatWith:null,chatAd:null,chatDraft:"",blocks:[],blockedBy:[],report:null,rules:false,qr:null,confirmAcc:false,photos:[],adCache:{},
@@ -331,6 +337,8 @@ const card=a=>`<button class="item" data-open="${a.id}">${ph(a,"ph")}
   <div class="t"><span class="tag">${esc(t(a.cat))}</span>
   <span class="price">${money(a.price,a.country)}</span><span class="name">${esc(a.title)}</span>
   <span class="meta">${esc(a.probe)} ${t("проба")} · ${Number(a.weight)} ${t("г")} · ${place(a)}</span></div></button>`;
+const starsTxt=n=>"★★★★★".slice(0,Math.round(n))+"☆☆☆☆☆".slice(0,5-Math.round(n));
+const ratingLine=id=>{const r=S.ratings[id];return r&&r.n?`<span class="rstars">${starsTxt(r.avg)}</span> ${r.avg} · ${r.n} ${t("отзывов")}`:t("Нет отзывов")};
 const followBtn=id=>id===uid()?"":`<button class="btn ${S.subs.includes(id)?"ghost":"gold"} follow" data-follow="${id}">${S.subs.includes(id)?"✓ "+t("Вы подписаны"):t("Подписаться")}</button>`;
 const installBox=()=>window.matchMedia("(display-mode: standalone)").matches?"":`<div class="box" style="margin-top:12px"><b>${t("Установить приложение")}</b>
  ${S.installEvt?`<button class="btn gold" id="install">${t("Установить")}</button>`:`<p class="note" style="margin:0">${t("Добавьте на главный экран: меню браузера → «На главный экран».")}</p>`}</div>`;
@@ -342,6 +350,11 @@ async function loadProfiles(ids){const need=[...new Set(ids)].filter(id=>id&&!S.
 async function loadCounts(ids){const list=[...new Set(ids)].filter(Boolean);if(!list.length)return;
  const {data,error}=await sb.from("follower_counts").select("seller,followers").in("seller",list);if(error)throw error;
  list.forEach(id=>S.counts[id]=0);data.forEach(r=>S.counts[r.seller]=r.followers)}
+async function loadRatings(ids){const list=[...new Set(ids)].filter(Boolean);if(!list.length)return;
+ const {data,error}=await sb.from("seller_ratings").select("seller,avg_rating,reviews").in("seller",list);if(error)throw error;
+ list.forEach(id=>S.ratings[id]={avg:0,n:0});data.forEach(r=>S.ratings[r.seller]={avg:r.avg_rating,n:r.reviews})}
+async function loadReviews(id){const {data,error}=await sb.from("reviews").select("*").eq("seller",id).order("created_at",{ascending:false}).limit(200);if(error)throw error;
+ S.reviews=data;await loadProfiles(data.map(r=>r.author))}
 async function loadFeed(){const {data,error}=await sb.from("ads").select("*").eq("status","active").order("created_at",{ascending:false}).limit(300);
  if(error)throw error;S.ads=data;await loadProfiles(data.map(a=>a.user_id))}
 async function loadMine(){if(!uid())return [];const {data,error}=await sb.from("ads").select("*").eq("user_id",uid()).order("created_at",{ascending:false});if(error)throw error;return data}
@@ -456,7 +469,7 @@ function vOpen(){const a=S.ads.find(x=>x.id==S.open)||S.mine?.find(x=>x.id==S.op
   <div class="kv"><span>${t("Город")}</span><span>${place(a)}, ${esc(cname(a.country))}</span></div>
  </div>
  <div class="box">
-  <button class="sellerrow" data-seller="${a.user_id}">${ava(a.user_id)}<span><b>${esc(sname(p))}</b><br><span class="meta">${esc(t(stype(p)))} · ${followers(a.user_id)} ${t("подписчиков")}</span></span><span class="meta">›</span></button>
+  <button class="sellerrow" data-seller="${a.user_id}">${ava(a.user_id)}<span><b>${esc(sname(p))}</b><br><span class="meta">${esc(t(stype(p)))} · ${followers(a.user_id)} ${t("подписчиков")}<br>${ratingLine(a.user_id)}</span></span><span class="meta">›</span></button>
   ${a.user_id===uid()?`<span class="note">${t("Это ваше объявление")}</span>`:followBtn(a.user_id)}
  </div>
  ${a.user_id===uid()?"":`<button class="btn gold" data-chat="${a.user_id}" data-ad="${a.id}">💬 ${t("Написать продавцу")}</button>`}
@@ -469,10 +482,31 @@ function vOpen(){const a=S.ads.find(x=>x.id==S.open)||S.mine?.find(x=>x.id==S.op
 function vSeller(){const id=S.seller,p=prof(id);const list=(S.sellerAds||[]);return `
 <button class="back" data-go="${S.back||"feed"}">← ${t("Назад")}</button>
 <div class="profile">${ava(id,1)}<div style="min-width:0"><h2>${esc(sname(p))}</h2><span class="meta">${esc(t(stype(p)))} · ${esc(p.city)}, ${esc(cname(p.country))}</span></div></div>
-<div class="stats"><div><b>${list.length}</b><span>${t("объявлений")}</span></div><div><b>${followers(id)}</b><span>${t("подписчиков")}</span></div></div>
+<div class="stats"><div><b>${list.length}</b><span>${t("объявлений")}</span></div><div><b>${followers(id)}</b><span>${t("подписчиков")}</span></div><div><b>${(S.ratings[id]||{}).n?"★ "+S.ratings[id].avg:"—"}</b><span>${t("отзывов")}: ${(S.ratings[id]||{}).n||0}</span></div></div>
 ${id===uid()?`<p class="note">${t("Это ваша страница. Так её видят покупатели.")}</p><button class="btn gold" data-qr="seller">▦ ${t("Мой QR")}</button>`:`<div class="row2"><div>${followBtn(id)}</div><button class="btn ghost follow" data-chat="${id}">💬 ${t("Сообщения")}</button></div>`+`<p class="note">${t("Когда продавец выставит новое изделие, оно появится у вас в «Подписках».")}</p>`+safetyRow(id,null)}
 <h2 style="margin-top:8px;font-size:18px">${t("Объявления продавца")}</h2>
-<div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${t("У продавца пока нет активных объявлений.")}</div>`}</div>`}
+<div class="feed">${list.length?list.map(card).join(""):`<div class="empty">${t("У продавца пока нет активных объявлений.")}</div>`}</div>
+${vReviews(id)}`}
+
+function vReviews(id){const mine=S.reviews.find(r=>r.author===uid()),own=id===uid();
+ const form=()=>{const st=S.revStar||(mine?mine.rating:0);return `<form id="revf" class="box">
+  <b>${mine?t("Изменить отзыв"):t("Оставить отзыв")}</b>
+  <div class="starpick">${[1,2,3,4,5].map(n=>`<button type="button" class="star${n<=st?" on":""}" data-star="${n}" aria-label="${n}">★</button>`).join("")}</div>
+  <textarea id="rv-body" maxlength="1000" rows="3" placeholder="${t("Расскажите, как прошла сделка")}">${esc(mine?.body||"")}</textarea>
+  <button class="btn gold">${t("Отправить")}</button></form>`};
+ let top="";
+ if(!own){if(!uid())top=`<p class="note">${t("Войдите, чтобы оставить отзыв.")}</p>`;
+  else if(!mine||S.revEdit)top=form();}
+ const item=r=>{const a=prof(r.author),me=r.author===uid();return `<div class="box review">
+  <div class="kv"><b>${esc(sname(a))}</b><span class="meta">${new Date(r.created_at).toLocaleDateString()}</span></div>
+  <div class="rstars">${starsTxt(r.rating)}</div>
+  ${r.body?`<p style="margin:4px 0;white-space:pre-wrap">${esc(r.body)}</p>`:""}
+  ${r.reply?`<div class="reply"><span class="meta">${t("Ответ продавца")}</span><p style="margin:2px 0;white-space:pre-wrap">${esc(r.reply)}</p></div>`:""}
+  ${own?`<form class="repf" data-rid="${r.id}"><textarea maxlength="1000" rows="2" placeholder="${t("Ваш ответ")}">${esc(r.reply||"")}</textarea><button class="btn ghost">${t("Ответить")}</button></form>`:""}
+  ${me&&!S.revEdit?`<div class="row2"><button class="btn ghost" data-revedit="1">${t("Изменить отзыв")}</button><button class="btn ghost" data-revdel="${r.id}">${t("Удалить отзыв")}</button></div>`:""}
+ </div>`};
+ return `<h2 style="margin-top:16px;font-size:18px">${t("Отзывы")} · ${ratingLine(id)}</h2>${top}
+ ${S.reviews.length?S.reviews.map(item).join(""):`<div class="empty">${t("У продавца пока нет отзывов.")}</div>`}`}
 
 function vMe(){const u=S.me,mine=S.mine||[];const act=mine.filter(a=>a.status!=="sold"),sold=mine.filter(a=>a.status==="sold");
  const list=S.tab==="sold"?sold:act;return `
@@ -623,12 +657,12 @@ function render(){
 async function openFeed(){S.view="feed";render();try{await loadFeed();render()}catch(e){fail(e)}}
 async function openSubs(){go("subs");try{await loadSubs();await loadFeed();await loadProfiles(S.subs);render()}catch(e){fail(e)}}
 async function openMe(){try{S.mine=await loadMine();await loadCounts([uid()])}catch(e){fail(e)}go("me")}
-async function openSeller(id){S.back=S.view==="seller"?S.back:S.view;S.seller=id;S.sellerAds=[];go("seller");
- try{await loadProfiles([id]);await loadCounts([id]);const {data,error}=await sb.from("ads").select("*").eq("user_id",id).eq("status","active").order("created_at",{ascending:false});if(error)throw error;S.sellerAds=data;render()}catch(e){fail(e)}}
+async function openSeller(id){S.back=S.view==="seller"?S.back:S.view;S.seller=id;S.sellerAds=[];S.reviews=[];S.revStar=0;S.revEdit=false;go("seller");
+ try{await loadProfiles([id]);await loadCounts([id]);await loadRatings([id]);loadReviews(id).then(render).catch(fail);const {data,error}=await sb.from("ads").select("*").eq("user_id",id).eq("status","active").order("created_at",{ascending:false});if(error)throw error;S.sellerAds=data;render()}catch(e){fail(e)}}
 async function openAd(id){S.back=S.view==="open"?S.back:S.view;S.open=id;go("open");
  const a=S.ads.find(x=>x.id==id)||S.mine?.find(x=>x.id==id)||S.sellerAds?.find(x=>x.id==id);
  if(a&&!S.ads.includes(a))S.ads.push(a);
- if(a){try{await loadProfiles([a.user_id]);await loadCounts([a.user_id]);render()}catch(e){fail(e)}}}
+ if(a){try{await loadProfiles([a.user_id]);await loadCounts([a.user_id]);await loadRatings([a.user_id]);render()}catch(e){fail(e)}}}
 
 /* ---------- Фото: уменьшаем перед загрузкой ---------- */
 function shrink(file){
@@ -690,6 +724,10 @@ document.addEventListener("click",async e=>{
   if(error){render();return fail(error)}stopRealtime();await sb.auth.signOut().catch(()=>{});
   Object.assign(S,{me:null,session:null,subs:[],mine:[],msgs:[],blocks:[],blockedBy:[],confirmAcc:false,view:"feed"});render();toast(t("Аккаунт удалён"));return}
  if(d.seller)return openSeller(d.seller);
+ if(d.star){S.revStar=+d.star;const f=$("#rv-body");const keep=f?f.value:null;render();if(keep!==null&&$("#rv-body"))$("#rv-body").value=keep;return}
+ if(d.revedit){S.revEdit=true;S.revStar=0;render();return}
+ if(d.revdel){const {error}=await sb.from("reviews").delete().eq("id",d.revdel).eq("author",uid());if(error)return fail(error);
+  toast(t("Отзыв удалён"));S.revEdit=false;S.revStar=0;await loadReviews(S.seller);await loadRatings([S.seller]);render();return}
  if(d.follow){const id=d.follow,on=S.subs.includes(id);
   const r=on?await sb.from("follows").delete().eq("follower",uid()).eq("seller",id):await sb.from("follows").insert({follower:uid(),seller:id});
   if(r.error)return fail(r.error);
@@ -710,6 +748,14 @@ document.addEventListener("click",async e=>{
 
 document.addEventListener("submit",async e=>{
  e.preventDefault();const id=e.target.id;
+ if(e.target.classList.contains("repf")){const rid=+e.target.dataset.rid,v=e.target.querySelector("textarea").value;
+  const {error}=await sb.rpc("reply_review",{p_id:rid,p_reply:v});if(error)return fail(error);
+  toast(t("Ответ сохранён"));await loadReviews(S.seller);render();return}
+ if(id==="revf"){if(!uid())return;const mine=S.reviews.find(r=>r.author===uid());const rating=S.revStar||(mine?mine.rating:0);
+  if(!rating)return toast(t("Выберите оценку"));const body=$("#rv-body").value.trim().slice(0,1000)||null;
+  const r=mine?await sb.from("reviews").update({rating,body}).eq("id",mine.id):await sb.from("reviews").insert({seller:S.seller,author:uid(),rating,body});
+  if(r.error)return fail(r.error);toast(t("Отзыв сохранён"));S.revEdit=false;S.revStar=0;
+  await loadReviews(S.seller);await loadRatings([S.seller]);render();return}
  if(id==="auth"){const email=$("#a-email").value.trim(),password=$("#a-pass").value;S.err="";S.busy=true;
   if(S.authMode==="signup"){const p=readProfile();store.set("zb_pending",JSON.stringify(p));
    const {data,error}=await sb.auth.signUp({email,password});S.busy=false;
