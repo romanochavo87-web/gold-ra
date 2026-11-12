@@ -410,7 +410,7 @@ function vAuth(){const up=S.authMode==="signup";return `
 
 function profileFields(u){return `
   <div class="row2"><label>${t("Страна")}<select id="p-country">${Object.keys(COUNTRIES).map(k=>`<option value="${k}" ${u.country===k?"selected":""}>${cname(k)}</option>`).join("")}</select></label>
-  <label>${t("Город")}<input id="p-city" required maxlength="80" list="pcities" autocomplete="off" value="${esc(u.city)}" placeholder="${t("Москва")}"></label></div>
+  <label>${t("Город")}<input id="p-city" required readonly class="citybtn" data-citycc="p-country" maxlength="80" value="${esc(u.city)}" placeholder="${t("Москва")}"></label></div>
   <datalist id="pcities">${cityOpts(u.country||"RU")}</datalist>
   <label>${t("Имя")}<input id="p-name" required maxlength="80" value="${esc(u.name)}" placeholder="${t("Как к вам обращаться")}"></label>
   <label>${t("Телефон")}<input id="p-phone" required type="tel" maxlength="30" value="${esc(u.phone)}" placeholder="+7 900 000-00-00"></label>
@@ -454,7 +454,7 @@ function vNew(){const d=S.draft||{},editing=!!S.editId,me=S.me;return `
   <label>${t("Цена")}, ${CUR[S.lang][me.country]}<input id="f-price" required type="number" min="1" step="1" value="${esc(d.price)}"></label>
   <label>${t("Кто продаёт")}<select id="f-seller">${TYPES.map(p=>`<option value="${p}" ${(d.seller_type||stype(me))===p?"selected":""}>${t(p)}</option>`).join("")}</select></label>
  </div>
- <div class="row2"><label>${t("Город")}<input id="f-city" required maxlength="80" list="cities" value="${esc(d.city||me.city)}"></label>
+ <div class="row2"><label>${t("Город")}<input id="f-city" required readonly class="citybtn" maxlength="80" value="${esc(d.city||me.city)}"></label>
  <label>${t("Район")}<input id="f-dist" maxlength="80" list="dists" value="${esc(d.dist||"")}"></label></div>
  <datalist id="cities">${cityOpts(me.country)}</datalist>
  <datalist id="dists">${((LOC[me.country]||{})[d.city||me.city]||[]).map(x=>`<option value="${esc(x)}">`).join("")}</datalist>
@@ -828,3 +828,25 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden&&S.view===
 if(LN())LN().addListener("localNotificationActionPerformed",a=>{const f=a?.notification?.extra?.from;if(f)openChat(f)});
 boot();
 (()=>{const sp=$("#splash");if(!sp)return;if(isNative){sp.remove();return}setTimeout(()=>{sp.classList.add("out");setTimeout(()=>sp.remove(),500)},1100)})();
+
+/* ---------- Выбор города: своё окно со списком и поиском (подсказки браузера на Android работают ненадёжно) ---------- */
+function openCityPick(inp){
+ const cc=inp.dataset.citycc?($("#"+inp.dataset.citycc)||{}).value:S.me?.country;const list=cityList(cc||"RU");
+ const wrap=document.createElement("div");wrap.id="citypick";
+ wrap.innerHTML=`<div class="sheet-bg" data-cpclose="1"></div><div class="sheet" role="dialog"><div class="sheet-h"><span></span><b>${t("Город")}</b><button type="button" class="back" data-cpclose="1">✕</button></div>
+ <input id="cpq" class="psearch" type="search" autocomplete="off" placeholder="${t("Поиск города")}">
+ <div class="sheet-list">${list.map(c=>`<button type="button" class="prow ${inp.value===c?"on":""}" data-cpick="${esc(c)}">${esc(c)}</button>`).join("")}
+ <button type="button" class="prow strong" data-cpick="" id="cpown" hidden></button></div></div>`;
+ document.body.appendChild(wrap);
+ const close=()=>wrap.remove();
+ const q=wrap.querySelector("#cpq"),own=wrap.querySelector("#cpown");
+ q.addEventListener("input",()=>{const v=q.value.trim(),l=v.toLowerCase();let n=0;
+  wrap.querySelectorAll("[data-cpick]:not(#cpown)").forEach(b=>{const h=!!l&&!b.dataset.cpick.toLowerCase().includes(l);b.hidden=h;if(!h)n++});
+  own.hidden=!v||list.some(c=>c.toLowerCase()===l);own.dataset.cpick=v;own.textContent="+ "+v});
+ wrap.addEventListener("click",e=>{e.stopPropagation();const b=e.target.closest("[data-cpick],[data-cpclose]");if(!b)return;
+  if(b.dataset.cpick!==undefined&&b.dataset.cpick){inp.value=b.dataset.cpick;inp.dispatchEvent(new Event("input",{bubbles:true}))}
+  close()});
+ setTimeout(()=>q.focus(),50)}
+document.addEventListener("click",e=>{const i=e.target.closest("input.citybtn");if(i){e.preventDefault();openCityPick(i)}});
+document.addEventListener("focusin",e=>{if(e.target.matches?.("input.citybtn"))e.target.blur()});
+document.addEventListener("submit",e=>{const i=e.target.querySelector?.("input.citybtn");if(i&&!i.value.trim()){e.preventDefault();e.stopImmediatePropagation();toast(t("Город"));openCityPick(i)}},true);
