@@ -299,6 +299,11 @@ kk:{"Отзывы":"Пікірлер","отзывов":"пікір","Нет от
 ky:{"Отзывы":"Пикирлер","отзывов":"пикир","Нет отзывов":"Пикир жок","Оставить отзыв":"Пикир калтыруу","Ваш отзыв":"Сиздин пикириңиз","Расскажите, как прошла сделка":"Бүтүм кандай өткөнүн жазыңыз","Отправить":"Жөнөтүү","Удалить отзыв":"Пикирди өчүрүү","Отзыв сохранён":"Пикир сакталды","Отзыв удалён":"Пикир өчүрүлдү","Ответ продавца":"Сатуучунун жообу","Ответить":"Жооп берүү","Ваш ответ":"Сиздин жообуңуз","Ответ сохранён":"Жооп сакталды","Выберите оценку":"Бааны тандаңыз","У продавца пока нет отзывов.":"Сатуучуда азырынча пикир жок.","Войдите, чтобы оставить отзыв.":"Пикир калтыруу үчүн кириңиз.","Изменить отзыв":"Пикирди өзгөртүү"}};
 for(const l in REV_I18N)if(I18N[l])Object.assign(I18N[l],REV_I18N[l]);
 
+const WARN="Перед покупкой проверьте изделие лично. Не отправляйте задаток или предоплату, если не уверены в продавце.";
+I18N.en[WARN]="Check the item in person before buying. Don't send a deposit or prepayment if you're not sure about the seller.";
+I18N.uz[WARN]="Sotib olishdan oldin buyumni shaxsan tekshiring. Sotuvchiga ishonchingiz komil bo'lmasa, zaklad yoki oldindan to'lov yubormang.";
+I18N.kk[WARN]="Сатып алмас бұрын бұйымды өзіңіз тексеріңіз. Сатушыға сенімді болмасаңыз, кепілақы немесе алдын ала төлем жібермеңіз.";
+I18N.ky[WARN]="Сатып алардан мурун буюмду өзүңүз текшериңиз. Сатуучуга ишенбесеңиз, күрөө же алдын ала төлөм жөнөтпөңүз.";
 /* ---------- Состояние ---------- */
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const navLang=(navigator.language||"ru").slice(0,2).toLowerCase();
@@ -479,6 +484,7 @@ function vOpen(){const a=S.ads.find(x=>x.id==S.open)||S.mine?.find(x=>x.id==S.op
   <div class="kv"><span>${t("Кто продаёт")}</span><span>${esc(t(a.seller_type))}</span></div>
   <div class="kv"><span>${t("Город")}</span><span>${place(a)}, ${esc(cname(a.country))}</span></div>
  </div>
+ ${a.user_id===uid()?"":`<div class="warnbox">⚠️ ${t(WARN)}</div>`}
  <div class="box">
   <button class="sellerrow" data-seller="${a.user_id}">${ava(a.user_id)}<span><b>${esc(sname(p))}</b><br><span class="meta">${esc(t(stype(p)))} · ${followers(a.user_id)} ${t("подписчиков")}<br>${ratingLine(a.user_id)}</span></span><span class="meta">›</span></button>
   ${a.user_id===uid()?`<span class="note">${t("Это ваше объявление")}</span>`:followBtn(a.user_id)}
