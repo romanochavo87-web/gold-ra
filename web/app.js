@@ -144,9 +144,9 @@ for(const cc in CITIES){CITIES[cc]=[...new Set(CITIES[cc])];LOC[cc]=LOC[cc]||{};
 const cityList=cc=>Object.keys(LOC[cc]||{});
 const ALL_RU={RU:"Вся Россия",KZ:"Весь Казахстан",BY:"Вся Беларусь",KG:"Весь Кыргызстан",UZ:"Весь Узбекистан"};
 const MORE_LOC={
-en:{"Выберите страну":"Choose a country","Весь город":"Whole city","Район":"District","Где искать":"Where to search","Поиск города":"Search city"},
-uz:{"Выберите страну":"Davlatni tanlang","Весь город":"Butun shahar","Район":"Tuman","Где искать":"Qayerdan qidirish","Поиск города":"Shaharni qidirish"},
-kk:{"Выберите страну":"Елді таңдаңыз","Весь город":"Бүкіл қала","Район":"Аудан","Где искать":"Қайдан іздеу","Поиск города":"Қаланы іздеу"}};
+en:{"Выберите город":"Choose a city","Выберите страну":"Choose a country","Весь город":"Whole city","Район":"District","Где искать":"Where to search","Поиск города":"Search city"},
+uz:{"Выберите город":"Shaharni tanlang","Выберите страну":"Davlatni tanlang","Весь город":"Butun shahar","Район":"Tuman","Где искать":"Qayerdan qidirish","Поиск города":"Shaharni qidirish"},
+kk:{"Выберите город":"Қаланы таңдаңыз","Выберите страну":"Елді таңдаңыз","Весь город":"Бүкіл қала","Район":"Аудан","Где искать":"Қайдан іздеу","Поиск города":"Қаланы іздеу"}};
 
 
 
@@ -415,11 +415,12 @@ function vAuth(){const up=S.authMode==="signup";return `
 
 function profileFields(u){return `
   <div class="row2"><label>${t("Страна")}<select id="p-country">${Object.keys(COUNTRIES).map(k=>`<option value="${k}" ${u.country===k?"selected":""}>${cname(k)}</option>`).join("")}</select></label>
-  <label>${t("Город")}<input id="p-city" required readonly class="citybtn" data-citycc="p-country" maxlength="80" value="${esc(u.city)}" placeholder="${t("Москва")}"></label></div>
+  <label>${t("Город")}<input id="p-city" required readonly class="citybtn" data-citycc="p-country" maxlength="80" value="${esc(okCity(u.country,u.city))}" placeholder="${t("Выберите город")}"></label></div>
   <datalist id="pcities">${cityOpts(u.country||"RU")}</datalist>
   <label>${t("Имя")}<input id="p-name" required maxlength="80" value="${esc(u.name)}" placeholder="${t("Как к вам обращаться")}"></label>
   <label>${t("Телефон")}<input id="p-phone" required type="tel" maxlength="30" value="${esc(u.phone)}" placeholder="+7 900 000-00-00"></label>
   <label>${t("Название магазина (если есть)")}<input id="p-shop" maxlength="80" value="${esc(u.shop)}"></label>`}
+const okCity=(cc,c)=>c&&cityList(cc||"RU").includes(c)?c:"";
 const cityOpts=cc=>cityList(cc).map(c=>`<option value="${esc(c)}">`).join("");
 const readProfile=()=>({name:$("#p-name").value.trim(),phone:$("#p-phone").value.trim(),city:$("#p-city").value.trim(),country:$("#p-country").value,shop:$("#p-shop").value.trim()||null});
 
@@ -459,7 +460,7 @@ function vNew(){const d=S.draft||{},editing=!!S.editId,me=S.me;return `
   <label>${t("Цена")}, ${CUR[S.lang][me.country]}<input id="f-price" required type="number" min="1" step="1" value="${esc(d.price)}"></label>
   <label>${t("Кто продаёт")}<select id="f-seller">${TYPES.map(p=>`<option value="${p}" ${(d.seller_type||stype(me))===p?"selected":""}>${t(p)}</option>`).join("")}</select></label>
  </div>
- <div class="row2"><label>${t("Город")}<input id="f-city" required readonly class="citybtn" maxlength="80" value="${esc(d.city||me.city)}"></label>
+ <div class="row2"><label>${t("Город")}<input id="f-city" required readonly class="citybtn" maxlength="80" value="${esc(d.city||okCity(me.country,me.city))}"></label>
  <label>${t("Район")}<input id="f-dist" maxlength="80" list="dists" value="${esc(d.dist||"")}"></label></div>
  <datalist id="cities">${cityOpts(me.country)}</datalist>
  <datalist id="dists">${((LOC[me.country]||{})[d.city||me.city]||[]).map(x=>`<option value="${esc(x)}">`).join("")}</datalist>
@@ -528,7 +529,7 @@ function vReviews(id){const mine=S.reviews.find(r=>r.author===uid()),own=id===ui
 function vMe(){const u=S.me,mine=S.mine||[];const act=mine.filter(a=>a.status!=="sold"),sold=mine.filter(a=>a.status==="sold");
  const list=S.tab==="sold"?sold:act;return `
 <h1>${t("Личный кабинет")}</h1>
-<div class="profile" style="margin-top:12px">${ava(u.id,1)}<div style="min-width:0"><h2>${esc(sname(u))}</h2><span class="meta">${esc(u.city)}, ${esc(cname(u.country))} · ${esc(u.phone)}</span></div></div>
+<div class="profile" style="margin-top:12px">${ava(u.id,1)}<div style="min-width:0"><h2>${esc(sname(u))}</h2><span class="meta">${okCity(u.country,u.city)?esc(u.city)+", ":""}${esc(cname(u.country))} · ${esc(u.phone)}</span></div></div>
 <div class="stats"><div><b>${act.length}</b><span>${t("Активные")}</span></div><div><b>${sold.length}</b><span>${t("Проданные")}</span></div><div><b>${followers(u.id)}</b><span>${t("Подписчики")}</span></div></div>
 <div class="row2"><button class="btn ghost" data-seller="${u.id}">${t("Моя страница")}</button><button class="btn ghost" id="editp">${t("Редактировать профиль")}</button></div>
 ${S.editProfile?`<form class="form box" id="pf" style="margin-top:12px">${profileFields(u)}<button class="btn gold">${t("Сохранить")}</button></form>`:""}
@@ -810,7 +811,7 @@ document.addEventListener("change",e=>{if(e.target.id==="f-cam"||e.target.id==="
 document.addEventListener("scroll",e=>{if(e.target.id==="gal"){const g=e.target,n=$("#galn");if(n)n.textContent=(Math.round(g.scrollLeft/g.clientWidth)+1)+"/"+g.children.length}},true);
 document.addEventListener("input",e=>{if(e.target.closest("#adf")){const g=i=>$(i)?.value;S.draft={...(S.draft||{}),cat:g("#f-cat"),title:g("#f-title"),probe:g("#f-probe"),weight:g("#f-weight"),price:g("#f-price"),seller_type:g("#f-seller"),city:g("#f-city"),dist:g("#f-dist")}}});
 
-document.addEventListener("change",e=>{if(e.target.id==="p-country"){const cc=e.target.value,dl=$("#pcities"),ci=$("#p-city");if(dl)dl.innerHTML=cityOpts(cc);if(ci&&!cityList(cc).includes(ci.value.trim())){ci.value="";ci.placeholder=cityList(cc)[0]||""}}});
+document.addEventListener("change",e=>{if(e.target.id==="p-country"){const cc=e.target.value,dl=$("#pcities"),ci=$("#p-city");if(dl)dl.innerHTML=cityOpts(cc);if(ci&&!cityList(cc).includes(ci.value.trim())){ci.value="";ci.placeholder=t("Выберите город")}}});
 document.addEventListener("input",e=>{if(e.target.id==="pq"){const q=e.target.value.trim().toLowerCase();document.querySelectorAll(".sheet-list [data-pcity]").forEach(b=>{b.hidden=!!q&&!b.dataset.pcity.toLowerCase().includes(q)})}});
 document.addEventListener("input",e=>{if(e.target.id==="f-city"&&S.me){const l=(LOC[S.me.country]||{})[e.target.value.trim()]||[];const dl=$("#dists");if(dl)dl.innerHTML=l.map(x=>`<option value="${esc(x)}">`).join("")}});
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();S.installEvt=e;if(S.view==="me")render()});
